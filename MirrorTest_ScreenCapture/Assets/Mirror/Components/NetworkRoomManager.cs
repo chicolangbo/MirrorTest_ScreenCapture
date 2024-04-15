@@ -136,6 +136,7 @@ namespace Mirror
             if (gamePlayer == null)
             {
                 // get start position from base class
+                Debug.Log("NetworkRoomManager : SceneLoadedForPlayer");
                 Transform startPos = GetStartPosition();
                 gamePlayer = startPos != null
                     ? Instantiate(playerPrefab, startPos.position, startPos.rotation)

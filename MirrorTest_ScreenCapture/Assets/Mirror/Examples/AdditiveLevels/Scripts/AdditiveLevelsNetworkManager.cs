@@ -171,6 +171,7 @@ namespace Mirror.Examples.AdditiveLevels
 
             // Instantiate player as child of start position - this will place it in the additive scene
             // This also lets player object "inherit" pos and rot from start position transform
+            Debug.Log("AddictiveLevelsNetworkManager : AddPlayerDelayed");
             GameObject player = Instantiate(playerPrefab, start);
             // now set parent null to get it out from under the Start Position object
             player.transform.SetParent(null);

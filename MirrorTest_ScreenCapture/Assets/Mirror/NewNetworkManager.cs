@@ -155,14 +155,6 @@ public class NewNetworkManager : NetworkManager
         Debug.Log("NewNetworkManager : OnServerAddPlayer");
 
         //base.OnServerAddPlayer(conn);
-        if(numPlayers <= 1)
-        {
-            name = "host";
-        }
-        else
-        {
-            name = "client" + numPlayers;
-        }
         Transform startPos = GetStartPosition();
         GameObject player = startPos != null
             ? Instantiate(playerPrefab, startPos)

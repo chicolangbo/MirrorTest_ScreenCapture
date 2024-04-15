@@ -21,12 +21,23 @@ public class UserCapture : NetworkBehaviour
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
         name = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
         GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>().onClick.AddListener(SetProfileImage);
+
+
+        // 수정 필요
+        var num = NetworkServer.connections.Count;
+        if (num <= 0)
+        {
+            name.text = "host";
+        }
+        else
+        {
+            name.text = "client" + num;
+        }
     }
 
     private void Start()
     {
         Debug.Log("UserCapture : Start");
-        name.text = NewNetworkManager.singleton.name;
         SetProfileImage();
         SetMainScreen();
     }
@@ -40,14 +51,14 @@ public class UserCapture : NetworkBehaviour
     // 내 사진 업데이트 for user, other clients
     public void SetProfileImage()
     {
+
         if(isLocalPlayer)
         {
-            Debug.Log("UserCapture : SetProfileImage");
+            // 프로필 이미지를 모든 클라이언트에게 동기화
+            Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
             var texture = CaptureScreen();
             curTexture = texture;
             profileImage.sprite = GetImageFromTexture2D(texture);
-
-            // 프로필 이미지를 모든 클라이언트에게 동기화
             CmdUpdateProfileImage(texture);
         }
     }
@@ -70,17 +81,18 @@ public class UserCapture : NetworkBehaviour
     public void SetMainScreen()
     {
         Debug.Log("UserCapture : SetMainScreen");
-        mainScreen.sprite = GetImageFromTexture2D(curTexture);
+        Debug.Log($"main screen is null? : {mainScreen == null}");
+        Debug.Log($"texture is null? : {curTexture == null}");
+        if(curTexture != null)
+        {
+            mainScreen.sprite = GetImageFromTexture2D(curTexture);
+        }
     }
 
     [ClientRpc]
     public void RpcReceiveProfileImage(Texture2D texture)
     {
-        // 내꺼 아니어도, Receive해서 반영해야 하니까 isLocalPlayer 빼기
-        //if(isLocalPlayer || isServer)
-        //{
-            Debug.Log("UserCapture : RpcReceiveProfileImage");
-            profileImage.sprite = GetImageFromTexture2D(texture);
-        //}
+        Debug.Log("UserCapture : RpcReceiveProfileImage");
+        profileImage.sprite = GetImageFromTexture2D(texture);
     }
 }
