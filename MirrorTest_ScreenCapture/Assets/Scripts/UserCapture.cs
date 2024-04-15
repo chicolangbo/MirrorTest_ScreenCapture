@@ -12,14 +12,14 @@ public class UserCapture : NetworkBehaviour
 
     private Image profileImage;
     private Image mainScreen;
-    private TextMeshProUGUI name;
+    private TextMeshProUGUI playerName;
 
     private void Awake()
     {
         Debug.Log("UserCapture : Awake");
         profileImage = GetComponent<Image>();
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
-        name = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
+        playerName = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
         GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>().onClick.AddListener(SetProfileImage);
 
 
@@ -27,11 +27,11 @@ public class UserCapture : NetworkBehaviour
         var num = NetworkServer.connections.Count;
         if (num <= 0)
         {
-            name.text = "host";
+            playerName.text = "host";
         }
         else
         {
-            name.text = "client" + num;
+            playerName.text = "client" + num;
         }
     }
 
@@ -51,15 +51,23 @@ public class UserCapture : NetworkBehaviour
     // 내 사진 업데이트 for user, other clients
     public void SetProfileImage()
     {
-
         if(isLocalPlayer)
         {
             // 프로필 이미지를 모든 클라이언트에게 동기화
-            Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
+            //Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
             var texture = CaptureScreen();
             curTexture = texture;
             profileImage.sprite = GetImageFromTexture2D(texture);
             CmdUpdateProfileImage(texture);
+            //ProfileManager.instance.CmdAddAndUpdateProfiles(gameObject.GetComponent<RectTransform>(), texture);
+        }
+        else
+        {
+            Debug.Log($"UserCapture : cur texture is null? {curTexture == null}");
+            if (curTexture != null)
+            {
+                profileImage.sprite = GetImageFromTexture2D(curTexture);
+            }
         }
     }
 

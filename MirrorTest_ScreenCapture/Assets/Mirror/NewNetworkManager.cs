@@ -13,7 +13,6 @@ public class NewNetworkManager : NetworkManager
 {
     // Overrides the base singleton so we don't
     // have to cast to this type everywhere.
-    public string name;
 
     public static new NewNetworkManager singleton => (NewNetworkManager)NetworkManager.singleton;
 

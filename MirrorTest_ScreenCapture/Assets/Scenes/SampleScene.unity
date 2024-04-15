@@ -507,7 +507,6 @@ MonoBehaviour:
   evaluationMethod: 0
   evaluationInterval: 3
   timeInterpolationGui: 0
-  name: 
 --- !u!4 &578036715
 Transform:
   m_ObjectHideFlags: 0

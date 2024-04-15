@@ -387,7 +387,6 @@
 "Assets/Scripts/CallBackEventType.cs"
 "Assets/Scripts/EventManager.cs"
 "Assets/Scripts/ImageRatioSetter.cs"
-"Assets/Scripts/InitializeClient.cs"
 "Assets/Scripts/UIManager.cs"
 "Assets/Scripts/UIVerticalRatioSetter.cs"
 "Assets/Scripts/UserCapture.cs"
