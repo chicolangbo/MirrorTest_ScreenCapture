@@ -10,6 +10,7 @@ namespace Mirror
     {
         public void Awake()
         {
+            Debug.Log("NetworkStartPosition : Awake");
             NetworkManager.RegisterStartPosition(transform);
         }
 

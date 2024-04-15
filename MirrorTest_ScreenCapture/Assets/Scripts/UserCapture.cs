@@ -14,6 +14,7 @@ public class UserCapture : NetworkBehaviour
 
     private void Awake()
     {
+        Debug.Log("UserCapture : Awake");
         profileImage = GetComponent<Image>();
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
         GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>().onClick.AddListener(SetProfileImage);
