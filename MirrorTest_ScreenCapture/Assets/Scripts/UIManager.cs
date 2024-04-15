@@ -14,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("UIManager");
+        Debug.Log("UIManager : Start");
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, uiVerticalRatioSetter.SetUISize);
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, SetScreenHeight);
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, imageRatioSetter.SetImageSize);
@@ -24,6 +24,7 @@ public class UIManager : MonoBehaviour
 
     public void SetScreenHeight()
     {
+        Debug.Log("UIManager : SetScreenHeight");
         var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y;
         height -= 37;
         for(int i = 1; i< imageRatioSetter.images.Count; ++i)

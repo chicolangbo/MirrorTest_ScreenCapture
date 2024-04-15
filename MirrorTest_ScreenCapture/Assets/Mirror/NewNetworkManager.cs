@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using Mirror;
+using System.Runtime.Serialization.Formatters;
 
 /*
 	Documentation: https://mirror-networking.gitbook.io/docs/components/network-manager
@@ -12,6 +13,8 @@ public class NewNetworkManager : NetworkManager
 {
     // Overrides the base singleton so we don't
     // have to cast to this type everywhere.
+    public string name;
+
     public static new NewNetworkManager singleton => (NewNetworkManager)NetworkManager.singleton;
 
     /// <summary>
@@ -149,7 +152,17 @@ public class NewNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
+        Debug.Log("NewNetworkManager : OnServerAddPlayer");
+
         //base.OnServerAddPlayer(conn);
+        if(numPlayers <= 1)
+        {
+            name = "host";
+        }
+        else
+        {
+            name = "client" + numPlayers;
+        }
         Transform startPos = GetStartPosition();
         GameObject player = startPos != null
             ? Instantiate(playerPrefab, startPos)

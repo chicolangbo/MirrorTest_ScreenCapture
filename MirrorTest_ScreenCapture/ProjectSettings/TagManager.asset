@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SendBtn
   - MainScreen
+  - Name
   layers:
   - Default
   - TransparentFX

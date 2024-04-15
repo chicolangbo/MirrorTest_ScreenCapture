@@ -1127,7 +1127,7 @@ namespace Mirror
         // and singleton may not exist yet
         public static void RegisterStartPosition(Transform start)
         {
-            Debug.Log($"RegisterStartPosition: {start.gameObject.name} {start.position}");
+            //Debug.Log($"RegisterStartPosition: {start.gameObject.name} {start.position}");
             startPositions.Add(start);
 
             // reorder the list so that round-robin spawning uses the start positions
@@ -1163,9 +1163,7 @@ namespace Mirror
             }
             else
             {
-                Debug.Log($"스타트포지션 인덱스 : {startPositionIndex}");
                 Transform startPosition = startPositions[startPositionIndex];
-                Debug.Log($"스타트포지션 게임오브젝트 : {startPosition.gameObject.name}");
                 startPositionIndex = (startPositionIndex + 1) % startPositions.Count;
                 return startPosition;
             }
@@ -1217,7 +1215,7 @@ namespace Mirror
 
         void OnServerAddPlayerInternal(NetworkConnectionToClient conn, AddPlayerMessage msg)
         {
-            //Debug.Log("NetworkManager.OnServerAddPlayer");
+            Debug.Log("NetworkManager.OnServerAddPlayer");
 
             if (autoCreatePlayer && playerPrefab == null)
             {

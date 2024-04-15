@@ -11,13 +11,13 @@ public class UIVerticalRatioSetter : MonoBehaviour
 
     private void OnEnable()
     {
-        Debug.Log("UIVerticalRatioSetter");
+        Debug.Log("UIVerticalRatioSetter : OnEnable");
         curScreenHeight = Display.main.systemHeight;
     }
 
     public void SetUISize()
     {
-        Debug.Log("SetUISize");
+        Debug.Log("UIVerticalRatioSetter : SetUISize");
         for (int i = 0; i < uiObjects.Count; ++i)
         {
             var sizeDelta = uiObjects[i].sizeDelta;
