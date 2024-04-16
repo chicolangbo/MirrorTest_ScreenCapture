@@ -23,7 +23,8 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    public RectTransform mainScreen;
+    public RectTransform mainScreenBg;
+    private RectTransform mainScreen;
     public int ratioX;
     public int ratioY;
     public Vector2 ClientProfileSize { get; private set; }
@@ -45,17 +46,36 @@ public class UIManager : MonoBehaviour
         EventManager.instance.RunEvent(CallBackEventType.TYPES.OnUISet);
     }
 
+    private void Update()
+    {
+    }
+
+    private void OnDisable()
+    {
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
+    }
+
     public void SetMainScreenSize()
     {
         Debug.Log("UIManager : SetMainScreenSize");
         var height = uiVerticalRatioSetter.uiObjects[1].sizeDelta.y - 50;
-        mainScreen.sizeDelta = Utils.SetImageSizeByRatio(height, ratioX, ratioY);
+        var bgSize = Utils.GetImageSizeByRatio(height, ratioX, ratioY);
+        mainScreenBg.sizeDelta = bgSize;
+        mainScreen = mainScreenBg.GetChild(0).GetComponent<RectTransform>();
+        mainScreen.sizeDelta = Utils.GetChildRectAdjusted(bgSize, 10f);
     }
 
     public void SetClientProfileSize()
     {
         Debug.Log("UIManager : SetClientProfileSize");
         var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y - 20;
-        ClientProfileSize = Utils.SetImageSizeByRatio(height, ratioX, ratioY);
+        ClientProfileSize = Utils.GetImageSizeByRatio(height, ratioX, ratioY);
+    }
+
+    public void ExitApplication()
+    {
+        Application.Quit();
     }
 }

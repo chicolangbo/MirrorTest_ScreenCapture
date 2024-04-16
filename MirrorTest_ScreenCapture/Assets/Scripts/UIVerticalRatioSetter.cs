@@ -18,11 +18,24 @@ public class UIVerticalRatioSetter : MonoBehaviour
     public void SetUISize()
     {
         Debug.Log("UIVerticalRatioSetter : SetUISize");
+        float tempHeight = 0f;
         for (int i = 0; i < uiObjects.Count; ++i)
         {
-            var sizeDelta = uiObjects[i].sizeDelta;
-            sizeDelta.y = curScreenHeight * ratio[i];
-            uiObjects[i].sizeDelta = sizeDelta;
+            // size setting
+            //var sizeDelta = uiObjects[i].sizeDelta;
+            var sizeX = Display.main.systemWidth; // 전체 너비
+            var tempSize = new Vector2(sizeX, curScreenHeight * ratio[i]);
+            //sizeDelta.y = curScreenHeight * ratio[i];
+            uiObjects[i].sizeDelta = tempSize;
+
+            // position setting
+            if(i > 0)
+            {
+                var newPos = new Vector3(0, uiObjects[i - 1].position.y - tempHeight, 0);
+                uiObjects[i].position = newPos;
+            }
+
+            tempHeight = tempSize.y;
         }
     }
 }

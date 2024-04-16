@@ -4,7 +4,7 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static Vector2 SetImageSizeByRatio(float height, float ratioX, float ratioY)
+    public static Vector2 GetImageSizeByRatio(float height, float ratioX, float ratioY)
     {
         Debug.Log("Utils : SetImageSizeByRatio");
         float offset = 100f;
@@ -20,5 +20,10 @@ public static class Utils
         }
 
         return sizeDelta;
+    }
+
+    public static Vector2 GetChildRectAdjusted(Vector2 parentSize, float offset)
+    {
+        return parentSize - new Vector2(offset, offset);
     }
 }

@@ -17,13 +17,12 @@ public class UserCapture : NetworkBehaviour
     private TextMeshProUGUI playerName;
 
     private Transform contents;
-    private bool isInited;
 
 
     private void Awake()
     {
         Debug.Log("UserCapture : Awake");
-        profileImage = GetComponent<Image>();
+        profileImage = transform.GetChild(0).GetComponent<Image>();
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
         playerName = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
         contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
@@ -47,14 +46,6 @@ public class UserCapture : NetworkBehaviour
         SetParent();
         SetProfileImage();
         SetMainScreen();
-    }
-
-    private void Update()
-    {
-        //if (!isInited)
-        //{
-        //    Init();
-        //}
     }
 
     // ½º¼¦ ÇÔ¼ö for user
@@ -104,8 +95,6 @@ public class UserCapture : NetworkBehaviour
     public void SetMainScreen()
     {
         Debug.Log("UserCapture : SetMainScreen");
-        //Debug.Log($"main screen is null? : {mainScreen == null}");
-        //Debug.Log($"texture is null? : {curTexture == null}");
         if(curTexture != null)
         {
             mainScreen.sprite = GetImageFromTexture2D(curTexture);
@@ -128,5 +117,9 @@ public class UserCapture : NetworkBehaviour
         var tempPos = rect.position;
         tempPos.z = 0f;
         rect.localPosition = tempPos;
+
+        // ÀÚ½Äµµ ¸ÂÃçÁà¾ß ÇÔ
+        var childRect = rect.GetChild(0).GetComponent<RectTransform>();
+        childRect.sizeDelta = Utils.GetChildRectAdjusted(rect.sizeDelta, 10f);
     }
 }
