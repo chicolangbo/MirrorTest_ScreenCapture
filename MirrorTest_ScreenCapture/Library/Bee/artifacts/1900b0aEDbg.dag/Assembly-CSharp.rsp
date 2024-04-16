@@ -388,6 +388,7 @@
 "Assets/Scripts/EventManager.cs"
 "Assets/Scripts/ImageRatioSetter.cs"
 "Assets/Scripts/OrderTest.cs"
+"Assets/Scripts/StartUIManager.cs"
 "Assets/Scripts/UIManager.cs"
 "Assets/Scripts/UIVerticalRatioSetter.cs"
 "Assets/Scripts/UserCapture.cs"

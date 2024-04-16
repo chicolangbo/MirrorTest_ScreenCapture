@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 61906370}
   - component: {fileID: 61906369}
   m_Layer: 5
-  m_Name: LobbyPannel
+  m_Name: StartUIPanel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199,6 +199,56 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 61906367}
   m_CullTransparentMesh: 1
+--- !u!1 &105034594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 105034596}
+  - component: {fileID: 105034595}
+  m_Layer: 0
+  m_Name: <StartUIManager>
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &105034595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105034594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b932221264930374cb04fa3d1dec01c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startUIPanel: {fileID: 61906367}
+  IpAddress: {fileID: 622179378}
+  userName: {fileID: 983329007}
+  startHostBtn: {fileID: 722400867}
+  startClientBtn: {fileID: 2098047933}
+  manager: {fileID: 578036714}
+--- !u!4 &105034596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 105034594}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 339.122, y: 420.59897, z: -0.5748492}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159334231
 GameObject:
   m_ObjectHideFlags: 0
@@ -2519,7 +2569,7 @@ GameObject:
   - component: {fileID: 1308083911}
   m_Layer: 5
   m_Name: MainScreenBg
-  m_TagString: MainScreen
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4699,3 +4749,4 @@ SceneRoots:
   - {fileID: 1933740747}
   - {fileID: 1997217581}
   - {fileID: 244814602}
+  - {fileID: 105034596}

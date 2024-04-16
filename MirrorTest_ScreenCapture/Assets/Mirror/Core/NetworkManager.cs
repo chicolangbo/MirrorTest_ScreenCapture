@@ -444,6 +444,7 @@ namespace Mirror
             RegisterClientMessages();
 
             NetworkClient.Connect(networkAddress);
+            Debug.Log("匙飘况农 林家" + networkAddress);
 
             OnStartClient();
         }
