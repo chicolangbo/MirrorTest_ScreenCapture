@@ -152,17 +152,7 @@ public class NewNetworkManager : NetworkManager
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         Debug.Log("NewNetworkManager : OnServerAddPlayer");
-
-        //base.OnServerAddPlayer(conn);
-        Transform startPos = GetStartPosition();
-        GameObject player = startPos != null
-            ? Instantiate(playerPrefab, startPos)
-            : Instantiate(playerPrefab);
-
-        // instantiating a "Player" prefab gives it the name "Player(clone)"
-        // => appending the connectionId is WAY more useful for debugging!
-        player.name = $"{playerPrefab.name} [connId={conn.connectionId}]";
-        NetworkServer.AddPlayerForConnection(conn, player);
+        base.OnServerAddPlayer(conn);
     }
 
     /// <summary>

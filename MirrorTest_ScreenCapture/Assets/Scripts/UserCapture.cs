@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using TMPro;
+using static UnityEditor.Timeline.TimelinePlaybackControls;
+using System.Runtime.CompilerServices;
 
 public class UserCapture : NetworkBehaviour
 {
@@ -14,14 +16,18 @@ public class UserCapture : NetworkBehaviour
     private Image mainScreen;
     private TextMeshProUGUI playerName;
 
+    private Transform contents;
+    private bool isInited;
+
+
     private void Awake()
     {
         Debug.Log("UserCapture : Awake");
         profileImage = GetComponent<Image>();
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
         playerName = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
+        contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
         GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>().onClick.AddListener(SetProfileImage);
-
 
         // 수정 필요
         var num = NetworkServer.connections.Count;
@@ -38,8 +44,17 @@ public class UserCapture : NetworkBehaviour
     private void Start()
     {
         Debug.Log("UserCapture : Start");
+        SetParent();
         SetProfileImage();
         SetMainScreen();
+    }
+
+    private void Update()
+    {
+        //if (!isInited)
+        //{
+        //    Init();
+        //}
     }
 
     // 스샷 함수 for user
@@ -89,8 +104,8 @@ public class UserCapture : NetworkBehaviour
     public void SetMainScreen()
     {
         Debug.Log("UserCapture : SetMainScreen");
-        Debug.Log($"main screen is null? : {mainScreen == null}");
-        Debug.Log($"texture is null? : {curTexture == null}");
+        //Debug.Log($"main screen is null? : {mainScreen == null}");
+        //Debug.Log($"texture is null? : {curTexture == null}");
         if(curTexture != null)
         {
             mainScreen.sprite = GetImageFromTexture2D(curTexture);
@@ -102,5 +117,16 @@ public class UserCapture : NetworkBehaviour
     {
         Debug.Log("UserCapture : RpcReceiveProfileImage");
         profileImage.sprite = GetImageFromTexture2D(texture);
+    }
+
+    public void SetParent()
+    {
+        transform.SetParent(contents);
+        var rect = GetComponent<RectTransform>();
+        rect.sizeDelta = UIManager.Instance.ClientProfileSize;
+        rect.localScale = new Vector3(1, 1, 1);
+        var tempPos = rect.position;
+        tempPos.z = 0f;
+        rect.localPosition = tempPos;
     }
 }

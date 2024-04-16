@@ -4,19 +4,21 @@ using UnityEngine;
 
 public static class Utils
 {
-    public static void SetImageSizeByRatio(RectTransform rect, float ratioX, float ratioY)
+    public static Vector2 SetImageSizeByRatio(float height, float ratioX, float ratioY)
     {
         Debug.Log("Utils : SetImageSizeByRatio");
-        var sizeDelta = rect.sizeDelta;
-        sizeDelta.x = sizeDelta.y / ratioY * ratioX;
-        rect.sizeDelta = sizeDelta;
-    }
+        float offset = 100f;
+        var sizeDelta = new Vector2();
+        sizeDelta.x = height / ratioY * ratioX;
+        sizeDelta.y = height;
 
-    public static void SetImageHeight(RectTransform rect, float height)
-    {
-        Debug.Log("Utils : SetImageHeight");
-        var tempRect = rect.sizeDelta;
-        tempRect.y = height;
-        rect.sizeDelta = tempRect;
+        if(sizeDelta.x >= Display.main.systemWidth - offset)
+        {
+            sizeDelta.x = Display.main.systemWidth - offset;
+            // y값 맞춰주기
+            sizeDelta.y = sizeDelta.x * ratioY / ratioX;
+        }
+
+        return sizeDelta;
     }
 }

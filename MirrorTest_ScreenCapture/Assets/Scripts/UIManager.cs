@@ -5,33 +5,57 @@ using System;
 
 public class UIManager : MonoBehaviour
 {
-    public ImageRatioSetter imageRatioSetter;
-    public UIVerticalRatioSetter uiVerticalRatioSetter;
+    private static UIManager _instance;
+    public static UIManager Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<UIManager>();
+                if (_instance == null)
+                {
+                    GameObject singletonObject = new GameObject("UIManager");
+                    _instance = singletonObject.AddComponent<UIManager>();
+                }
+            }
+            return _instance;
+        }
+    }
+
+    public RectTransform mainScreen;
+    public int ratioX;
+    public int ratioY;
+    public Vector2 ClientProfileSize { get; private set; }
+
+    private UIVerticalRatioSetter uiVerticalRatioSetter;
 
     private void OnEnable()
     {
+        uiVerticalRatioSetter = GetComponent<UIVerticalRatioSetter>();
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
     }
 
     private void Start()
     {
         Debug.Log("UIManager : Start");
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, uiVerticalRatioSetter.SetUISize);
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, SetScreenHeight);
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIStarted, imageRatioSetter.SetImageSize);
-
-        EventManager.instance.RunEvent(CallBackEventType.TYPES.OnUIStarted);
+        EventManager.instance.RunEvent(CallBackEventType.TYPES.OnUIFrameSet);
+        EventManager.instance.RunEvent(CallBackEventType.TYPES.OnUISet);
     }
 
-    public void SetScreenHeight()
+    public void SetMainScreenSize()
     {
-        Debug.Log("UIManager : SetScreenHeight");
-        var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y;
-        height -= 37;
-        for(int i = 1; i< imageRatioSetter.images.Count; ++i)
-        {
-            var tempRect = imageRatioSetter.images[i].sizeDelta;
-            tempRect.y = height;
-            imageRatioSetter.images[i].sizeDelta = tempRect;
-        }
+        Debug.Log("UIManager : SetMainScreenSize");
+        var height = uiVerticalRatioSetter.uiObjects[1].sizeDelta.y - 50;
+        mainScreen.sizeDelta = Utils.SetImageSizeByRatio(height, ratioX, ratioY);
+    }
+
+    public void SetClientProfileSize()
+    {
+        Debug.Log("UIManager : SetClientProfileSize");
+        var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y - 20;
+        ClientProfileSize = Utils.SetImageSizeByRatio(height, ratioX, ratioY);
     }
 }
