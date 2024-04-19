@@ -154,7 +154,8 @@
         146,
         147,
         148,
-        149
+        149,
+        150
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -308,7 +309,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 17159,
+      "PayloadLength": 17299,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -404,10 +405,11 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.dll",
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
-        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Transports.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Components.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Telepathy.dll",
@@ -1334,6 +1336,18 @@
       "DebugActionIndex": 84
     },
     {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.dll",
+      "DisplayName": "Copying Unity.MemoryProfiler.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.dll"
+      ],
+      "DebugActionIndex": 85
+    },
+    {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.dll",
       "DisplayName": "Copying Mirror.dll",
       "ActionType": "CopyFiles",
@@ -1343,7 +1357,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 86
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -1354,18 +1368,6 @@
       ],
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.dll"
-      ],
-      "DebugActionIndex": 86
-    },
-    {
-      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll",
-      "DisplayName": "Copying UnityEngine.UI.dll",
-      "ActionType": "CopyFiles",
-      "Inputs": [
-        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
-      ],
-      "Outputs": [
-        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll"
       ],
       "DebugActionIndex": 87
     },
@@ -1382,6 +1384,18 @@
       "DebugActionIndex": 88
     },
     {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll",
+      "DisplayName": "Copying UnityEngine.UI.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll"
+      ],
+      "DebugActionIndex": 89
+    },
+    {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.dll",
       "DisplayName": "Copying Mirror.Components.dll",
       "ActionType": "CopyFiles",
@@ -1391,7 +1405,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 90
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -1403,7 +1417,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.dll",
@@ -1415,7 +1429,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 92
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.dll",
@@ -1427,7 +1441,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.dll",
@@ -1439,7 +1453,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.dll",
@@ -1451,7 +1465,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 95
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.dll",
@@ -1463,7 +1477,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.dll",
@@ -1475,7 +1489,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 97
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.dll",
@@ -1487,7 +1501,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 98
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.dll",
@@ -1499,7 +1513,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/BouncyCastle.Cryptography.dll",
@@ -1511,7 +1525,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/BouncyCastle.Cryptography.dll"
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -1523,7 +1537,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.dll",
@@ -1535,7 +1549,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.dll"
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/netstandard.dll",
@@ -1547,7 +1561,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mono.Security.dll",
@@ -1559,7 +1573,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.ComponentModel.Composition.dll",
@@ -1571,7 +1585,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 105
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Configuration.dll",
@@ -1583,7 +1597,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Core.dll",
@@ -1595,7 +1609,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -1607,7 +1621,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.dll",
@@ -1619,7 +1633,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Drawing.dll",
@@ -1631,7 +1645,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.EnterpriseServices.dll",
@@ -1643,7 +1657,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -1655,7 +1669,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.dll",
@@ -1667,7 +1681,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Net.Http.dll",
@@ -1679,7 +1693,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Numerics.dll",
@@ -1691,7 +1705,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Runtime.Serialization.dll",
@@ -1703,7 +1717,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Security.dll",
@@ -1715,7 +1729,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.ServiceModel.Internals.dll",
@@ -1727,7 +1741,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Transactions.dll",
@@ -1739,7 +1753,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.Linq.dll",
@@ -1751,7 +1765,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.dll",
@@ -1763,7 +1777,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.dll",
@@ -1775,7 +1789,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/mscorlib.dll",
@@ -1787,20 +1801,20 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 17331,
+      "PayloadOffset": 17471,
       "PayloadLength": 39,
       "PayloadDebugContentSnippet": "DefaultCompany\nMirrorTest_Scre",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/app.info",
@@ -1813,9 +1827,9 @@
         "Build/MirrorTest_ScreenCapture_Data/app.info"
       ],
       "ToBuildDependencies": [
-        123
+        124
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources",
@@ -1827,7 +1841,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture.exe",
@@ -1839,7 +1853,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture.exe"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -1851,7 +1865,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -1863,7 +1877,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -1875,7 +1889,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -1887,7 +1901,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -1899,7 +1913,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -1911,7 +1925,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -1923,7 +1937,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -1935,7 +1949,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -1947,7 +1961,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -1959,7 +1973,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -1971,7 +1985,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -1983,7 +1997,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -1995,7 +2009,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -2007,7 +2021,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -2019,7 +2033,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -2031,7 +2045,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -2043,7 +2057,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -2055,7 +2069,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/config",
@@ -2067,7 +2081,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -2079,7 +2093,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles Build/UnityCrashHandler64.exe",
@@ -2091,7 +2105,7 @@
       "Outputs": [
         "Build/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles Build/UnityPlayer.dll",
@@ -2103,7 +2117,7 @@
       "Outputs": [
         "Build/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "Player",
@@ -2231,7 +2245,7 @@
         120,
         121,
         122,
-        124,
+        123,
         125,
         126,
         127,
@@ -2255,10 +2269,11 @@
         145,
         146,
         147,
-        148
+        148,
+        149
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 149
+      "DebugActionIndex": 150
     }
   ],
   "FileSignatures": [
@@ -2459,7 +2474,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 149
+          "Player": 150
         }
 ,  "DefaultNodes": [
     0

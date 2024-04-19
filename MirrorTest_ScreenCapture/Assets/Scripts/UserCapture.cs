@@ -9,8 +9,8 @@ using TMPro;
 
 public class UserCapture : NetworkBehaviour
 {
-    [SyncVar]
-    private Texture2D curTexture;
+    [SyncVar(hook = nameof(OnProfileImageChanged))]
+    private byte[] curTextureData;
 
     public LogManager logManager;
 
@@ -29,7 +29,9 @@ public class UserCapture : NetworkBehaviour
         playerName = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
         contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
         logManager = GameObject.FindGameObjectWithTag("LogManager").GetComponent<LogManager>();
-        GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>().onClick.AddListener(SetProfileImage);
+
+        var sendBtn = GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>();
+        sendBtn.onClick.AddListener(SetProfileImage);
 
         // 수정 필요
         var num = NetworkServer.connections.Count;
@@ -52,36 +54,40 @@ public class UserCapture : NetworkBehaviour
         SetMainScreen();
     }
 
-    // 스샷 함수 for user
     public Texture2D CaptureScreen()
     {
         Debug.Log("UserCapture : CaptureScreen");
         return ScreenCapture.CaptureScreenshotAsTexture();
     }
 
-    // 내 사진 업데이트 for user, other clients
+    private void OnProfileImageChanged(byte[] oldData, byte[] newData)
+    {
+        if(!isLocalPlayer && newData != null)
+        {
+            var texture = new Texture2D(1, 1);
+            texture.LoadImage(newData);
+            profileImage.sprite = GetImageFromTexture2D(texture);
+        }
+    }    
+
     public void SetProfileImage()
     {
         if (isLocalPlayer)
         {
-            // 프로필 이미지를 모든 클라이언트에게 동기화
             Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
             var texture = CaptureScreen();
-            var textureToByte = texture.EncodeToJPG();
-            //profileImage.sprite = GetImageFromTexture2D(texture);
-
-            //curTexture = texture;
-
-            CmdUpdateProfileImage(textureToByte);
-            //ProfileManager.instance.CmdAddAndUpdateProfiles(gameObject.GetComponent<RectTransform>(), texture);
+            curTextureData = texture.EncodeToJPG();
+            CmdUpdateProfileImage(curTextureData);
         }
     }
 
     public void SetOtherClientsImage()
     {
-        if(!isLocalPlayer && curTexture != null)
+        if(!isLocalPlayer && curTextureData != null)
         {
-            profileImage.sprite = GetImageFromTexture2D(curTexture);
+            Texture2D texture = new Texture2D(1, 1);
+            texture.LoadImage(curTextureData);
+            profileImage.sprite = GetImageFromTexture2D(texture);
         }
     }
 
@@ -89,21 +95,9 @@ public class UserCapture : NetworkBehaviour
     private void CmdUpdateProfileImage(/*Texture2D texture*/ byte[] receivedByte)
     {
         Debug.Log("UserCapture : CmdUpdateProfileImage");
-        
-        // origin code
-        //curTexture = texture;
-        ////profileImage.sprite = GetImageFromTexture2D(texture);
-        //var textureToByte = texture.EncodeToPNG();
-        //RpcReceiveProfileImage(textureToByte);
 
-        // new code
+        curTextureData = receivedByte;
         RpcReceiveProfileImage(receivedByte);
-
-        //var texture = new Texture2D(1, 1);
-        //texture.LoadImage(receivedByte);
-        //curTexture = texture;
-        //profileImage.sprite = GetImageFromTexture2D(texture);
-        //Debug.Log(profileImage.sprite.texture);
     }
 
     public Sprite GetImageFromTexture2D(Texture2D texture)
@@ -114,27 +108,23 @@ public class UserCapture : NetworkBehaviour
     public void SetMainScreen()
     {
         Debug.Log("UserCapture : SetMainScreen");
-        if(curTexture != null)
+
+        if(curTextureData != null)
         {
-            mainScreen.sprite = GetImageFromTexture2D(curTexture);
+            var texture = new Texture2D(1, 1);
+            texture.LoadImage(curTextureData);
+            mainScreen.sprite = GetImageFromTexture2D(texture);
         }
     }
 
     [ClientRpc]
-    public void RpcReceiveProfileImage(/*Texture2D texture*/ byte[] receivedByte)
+    public void RpcReceiveProfileImage(byte[] receivedByte)
     {
-        // origin code working in editor mode
         Debug.Log("UserCapture : RpcReceiveProfileImage");
-        //profileImage.sprite = GetImageFromTexture2D(texture);
 
+        curTextureData = receivedByte;
         var texture = new Texture2D(1, 1);
         texture.LoadImage(receivedByte);
-
-        curTexture = texture;
-        //if(curTexture == null)
-        //{
-        //}
-
         profileImage.sprite = GetImageFromTexture2D(texture);
     }
 

@@ -318,6 +318,7 @@
 -r:"Library/Bee/artifacts/1900b0aP.dag/Mirror.Transports.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/SimpleWebTransport.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Telepathy.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aP.dag/Unity.MemoryProfiler.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.TextMeshPro.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.Timeline.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aP.dag/Unity.VisualScripting.Core.ref.dll"
