@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using TMPro;
-using static UnityEditor.Timeline.TimelinePlaybackControls;
-using System.Runtime.CompilerServices;
+//using static UnityEditor.Timeline.TimelinePlaybackControls;
+//using System.Runtime.CompilerServices;
 
 public class UserCapture : NetworkBehaviour
 {

@@ -25,31 +25,42 @@ public class StartUIManager : MonoBehaviour
 
     public void StartButtons()
     {
-        if(!NetworkClient.active)
+        if (!NetworkClient.active)
         {
             startHostBtn.onClick.RemoveAllListeners();
-            startHostBtn.onClick.AddListener(() => { manager.StartHost(); DeactivateStartUIPanel(); });
+            startHostBtn.onClick.AddListener(() => { SetIpAddress(); SetPortId(); manager.StartHost(); DeactivateStartUIPanel(); });
 
             startClientBtn.onClick.RemoveAllListeners();
-            startClientBtn.onClick.AddListener(() => { manager.StartClient(); DeactivateStartUIPanel(); });
+            startClientBtn.onClick.AddListener(() => { SetIpAddress(); SetPortId(); manager.StartClient(); DeactivateStartUIPanel(); });
+        }
+        else
+        {
+            Debug.Log($"Connecting to {manager.networkAddress}..");
+        }
+    }
 
-            if(IpAddress != null && IpAddress.text != "")
-            {
-                Debug.Log("ip 있음" + IpAddress.text);
-                manager.networkAddress = IpAddress.text;
-            }
-            else
-            {
-                manager.networkAddress = "localhost";
-                Debug.Log("ip 없음" + manager.networkAddress);
-            }
+    public void SetIpAddress()
+    {
+        Debug.Log("StartUIManager : SetIpAddress");
+        if (IpAddress != null && IpAddress.text != "")
+        {
+            manager.networkAddress = IpAddress.text;
+            Debug.Log("ip 있음" + manager.networkAddress);
+        }
+        else
+        {
+            manager.networkAddress = "localhost";
+            Debug.Log("ip 없음" + manager.networkAddress);
+        }
+    }
 
-            if(Transport.active is PortTransport portTransport)
+    public void SetPortId()
+    {
+        if (Transport.active is PortTransport portTransport)
+        {
+            if (ushort.TryParse(portTransport.Port.ToString(), out ushort port))
             {
-                if(ushort.TryParse(portTransport.Port.ToString(), out ushort port))
-                {
-                    portTransport.Port = port;
-                }
+                portTransport.Port = port;
             }
         }
     }
