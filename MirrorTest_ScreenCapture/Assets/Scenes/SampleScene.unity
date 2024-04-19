@@ -1805,12 +1805,12 @@ MonoBehaviour:
   NoDelay: 1
   SendTimeout: 5000
   ReceiveTimeout: 30000
-  serverMaxMessageSize: 5000000
-  serverMaxReceivesPerTick: 5000000
+  serverMaxMessageSize: 15000000
+  serverMaxReceivesPerTick: 15000000
   serverSendQueueLimitPerConnection: 10000
   serverReceiveQueueLimitPerConnection: 10000
-  clientMaxMessageSize: 5000000
-  clientMaxReceivesPerTick: 5000000
+  clientMaxMessageSize: 15000000
+  clientMaxReceivesPerTick: 15000000
   clientSendQueueLimit: 10000
   clientReceiveQueueLimit: 10000
 --- !u!1 &579217471

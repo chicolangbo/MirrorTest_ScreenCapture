@@ -48,12 +48,14 @@ public class UserCapture : NetworkBehaviour
         Debug.Log("UserCapture : Start");
         SetParent();
         SetProfileImage();
+        SetOtherClientsImage();
         SetMainScreen();
     }
 
     // 스샷 함수 for user
     public Texture2D CaptureScreen()
     {
+        Debug.Log("UserCapture : CaptureScreen");
         return ScreenCapture.CaptureScreenshotAsTexture();
     }
 
@@ -63,30 +65,23 @@ public class UserCapture : NetworkBehaviour
         if (isLocalPlayer)
         {
             // 프로필 이미지를 모든 클라이언트에게 동기화
-            //Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
+            Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
             var texture = CaptureScreen();
-
-            //foreach(var pixel in texture.GetPixels())
-            //{
-            //    logManager.ShowTransparencyOfSendingTexture(pixel);
-            //}
-            logManager.AddText($"capture texture transparency : {texture.GetPixel(0,0).a}");
-            logManager.AddText($"capture texture transparency : {texture.GetPixel(100,100).a}");
-
-            curTexture = texture;
-            profileImage.sprite = GetImageFromTexture2D(texture);
-
             var textureToByte = texture.EncodeToJPG();
+            //profileImage.sprite = GetImageFromTexture2D(texture);
+
+            //curTexture = texture;
+
             CmdUpdateProfileImage(textureToByte);
             //ProfileManager.instance.CmdAddAndUpdateProfiles(gameObject.GetComponent<RectTransform>(), texture);
         }
-        else
+    }
+
+    public void SetOtherClientsImage()
+    {
+        if(!isLocalPlayer && curTexture != null)
         {
-            Debug.Log($"UserCapture : cur texture is null? {curTexture == null}");
-            if (curTexture != null)
-            {
-                profileImage.sprite = GetImageFromTexture2D(curTexture);
-            }
+            profileImage.sprite = GetImageFromTexture2D(curTexture);
         }
     }
 
@@ -103,6 +98,12 @@ public class UserCapture : NetworkBehaviour
 
         // new code
         RpcReceiveProfileImage(receivedByte);
+
+        //var texture = new Texture2D(1, 1);
+        //texture.LoadImage(receivedByte);
+        //curTexture = texture;
+        //profileImage.sprite = GetImageFromTexture2D(texture);
+        //Debug.Log(profileImage.sprite.texture);
     }
 
     public Sprite GetImageFromTexture2D(Texture2D texture)
@@ -126,9 +127,14 @@ public class UserCapture : NetworkBehaviour
         Debug.Log("UserCapture : RpcReceiveProfileImage");
         //profileImage.sprite = GetImageFromTexture2D(texture);
 
-        // new code
         var texture = new Texture2D(1, 1);
         texture.LoadImage(receivedByte);
+
+        curTexture = texture;
+        //if(curTexture == null)
+        //{
+        //}
+
         profileImage.sprite = GetImageFromTexture2D(texture);
     }
 
