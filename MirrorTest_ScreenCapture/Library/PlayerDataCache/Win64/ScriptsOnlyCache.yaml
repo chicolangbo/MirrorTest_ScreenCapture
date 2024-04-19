@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - EventManager
+    - LogManager
     - NewNetworkManager
     - OrderTest
     - StartUIManager
@@ -41,6 +42,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.ContentSizeFitter
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.GridLayoutGroup
     - UnityEngine.UI.HorizontalLayoutGroup
     - UnityEngine.UI.Image
     - UnityEngine.UI.LayoutElement
@@ -158,6 +160,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 19892}
     - Class: 114
+      Script: {instanceID: 20220}
+    - Class: 114
       Script: {instanceID: 20376}
     - Class: 114
       Script: {instanceID: 20510}
@@ -170,23 +174,25 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 21418}
     - Class: 114
-      Script: {instanceID: 21536}
+      Script: {instanceID: 21600}
     - Class: 114
-      Script: {instanceID: 21602}
+      Script: {instanceID: 21604}
     - Class: 114
-      Script: {instanceID: 21606}
+      Script: {instanceID: 21616}
     - Class: 114
-      Script: {instanceID: 21618}
+      Script: {instanceID: 21798}
     - Class: 114
-      Script: {instanceID: 21800}
+      Script: {instanceID: 21808}
     - Class: 114
-      Script: {instanceID: 21810}
+      Script: {instanceID: 22254}
     - Class: 114
-      Script: {instanceID: 22256}
+      Script: {instanceID: 22646}
     - Class: 114
-      Script: {instanceID: 22648}
+      Script: {instanceID: 23014}
     - Class: 114
-      Script: {instanceID: 23016}
+      Script: {instanceID: 23888}
+    - Class: 114
+      Script: {instanceID: 23892}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1520,12 +1526,6 @@ ScriptsOnlyBuild:
     className: MatchNetworkManager
   - hash:
       serializedVersion: 2
-      Hash: cc0e2eb0e7289b6e34390f604f416990
-    assemblyName: Assembly-CSharp
-    namespaceName: 
-    className: UserCapture
-  - hash:
-      serializedVersion: 2
       Hash: f4205ef240eaa2010581acacd4e036f2
     assemblyName: Mirror.Examples
     namespaceName: StinkySteak.NetcodeBenchmark
@@ -2154,6 +2154,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 733e212f5337929d3ff360dd670d519c
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UserCapture
+  - hash:
+      serializedVersion: 2
+      Hash: ec5ceff6b9635f9613c0e43d73223a29
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: LogManager
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity

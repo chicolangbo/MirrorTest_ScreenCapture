@@ -8,6 +8,7 @@ TagManager:
   - MainScreen
   - Name
   - Contents
+  - LogManager
   layers:
   - Default
   - TransparentFX
