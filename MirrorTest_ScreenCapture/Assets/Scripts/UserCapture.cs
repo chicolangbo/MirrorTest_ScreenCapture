@@ -9,11 +9,12 @@ using TMPro;
 
 public class UserCapture : NetworkBehaviour
 {
-    [SyncVar(hook = nameof(OnProfileImageChanged))]
+    [SyncVar/*(hook = nameof(OnProfileImageChanged))*/]
     private byte[] curTextureData;
 
     public LogManager logManager;
 
+    private Texture2D tempTexture;
     private Image profileImage;
     private Image mainScreen;
     private TextMeshProUGUI playerName;
@@ -24,6 +25,16 @@ public class UserCapture : NetworkBehaviour
     private void Awake()
     {
         Debug.Log("UserCapture : Awake");
+
+        if(isLocalPlayer)
+        {
+            Debug.Log("로컬 어웨이크");
+        }
+        else
+        {
+            Debug.Log("아더 어웨이크");
+        }
+
         profileImage = transform.GetChild(0).GetComponent<Image>();
         mainScreen = GameObject.FindGameObjectWithTag("MainScreen").GetComponent<Image>();
         playerName = GameObject.FindGameObjectWithTag("Name").GetComponent<TextMeshProUGUI>();
@@ -50,8 +61,11 @@ public class UserCapture : NetworkBehaviour
         Debug.Log("UserCapture : Start");
         SetParent();
         SetProfileImage();
-        SetOtherClientsImage();
-        SetMainScreen();
+        //SetOtherClientsImage();
+        if (isLocalPlayer)
+        {
+            SetMainScreen();
+        }
     }
 
     public Texture2D CaptureScreen()
@@ -60,43 +74,61 @@ public class UserCapture : NetworkBehaviour
         return ScreenCapture.CaptureScreenshotAsTexture();
     }
 
-    private void OnProfileImageChanged(byte[] oldData, byte[] newData)
-    {
-        if(!isLocalPlayer && newData != null)
-        {
-            var texture = new Texture2D(1, 1);
-            texture.LoadImage(newData);
-            profileImage.sprite = GetImageFromTexture2D(texture);
-        }
-    }    
+    //private void OnProfileImageChanged(byte[] oldData, byte[] newData)
+    //{
+    //    if(!isLocalPlayer && newData != null)
+    //    {
+    //        Debug.Log("UserCapture : OnProfileImageChanged => true!");
+    //        tempTexture.LoadImage(newData);
+    //        //var texture = new Texture2D(1, 1);
+    //        //texture.LoadImage(newData);
+    //        profileImage.sprite = GetImageFromTexture2D(tempTexture);
+    //    }
+    //    else
+    //    {
+    //        Debug.Log("UserCapture : OnProfileImageChanged => false!");
+    //    }
+    //}    
 
     public void SetProfileImage()
     {
         if (isLocalPlayer)
         {
             Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
-            var texture = CaptureScreen();
-            curTextureData = texture.EncodeToJPG();
+            tempTexture = CaptureScreen();
+            curTextureData = tempTexture.EncodeToJPG();
             CmdUpdateProfileImage(curTextureData);
+            //Destroy(tempTexture);
+        }
+        else
+        {
+            if(tempTexture == null)
+            {
+                tempTexture = new Texture2D(1, 1);
+            }
+            tempTexture.LoadImage(curTextureData);
+            profileImage.sprite = GetImageFromTexture2D(tempTexture);
         }
     }
 
-    public void SetOtherClientsImage()
-    {
-        if(!isLocalPlayer && curTextureData != null)
-        {
-            Texture2D texture = new Texture2D(1, 1);
-            texture.LoadImage(curTextureData);
-            profileImage.sprite = GetImageFromTexture2D(texture);
-        }
-    }
+    //public void SetOtherClientsImage()
+    //{
+    //    if(!isLocalPlayer && curTextureData != null)
+    //    {
+    //        Debug.Log($"{gameObject.name} : UserCapture : SetOtherClientsImage");
+    //        Texture2D texture = new Texture2D(1, 1);
+    //        texture.LoadImage(curTextureData);
+    //        profileImage.sprite = GetImageFromTexture2D(texture);
+    //        Destroy(texture);
+    //    }
+    //}
 
     [Command]
-    private void CmdUpdateProfileImage(/*Texture2D texture*/ byte[] receivedByte)
+    private void CmdUpdateProfileImage(byte[] receivedByte)
     {
         Debug.Log("UserCapture : CmdUpdateProfileImage");
 
-        curTextureData = receivedByte;
+        //curTextureData = receivedByte;
         RpcReceiveProfileImage(receivedByte);
     }
 
@@ -111,9 +143,16 @@ public class UserCapture : NetworkBehaviour
 
         if(curTextureData != null)
         {
-            var texture = new Texture2D(1, 1);
-            texture.LoadImage(curTextureData);
-            mainScreen.sprite = GetImageFromTexture2D(texture);
+            //var texture = new Texture2D(1, 1);
+            //texture.LoadImage(curTextureData);
+            if(tempTexture == null)
+            {
+                Debug.Log("텍스처 생성!");
+                tempTexture = new Texture2D(1, 1);
+            }
+            tempTexture.LoadImage(curTextureData);
+            mainScreen.sprite = GetImageFromTexture2D(tempTexture);
+            //Destroy(texture);
         }
     }
 
@@ -122,10 +161,17 @@ public class UserCapture : NetworkBehaviour
     {
         Debug.Log("UserCapture : RpcReceiveProfileImage");
 
-        curTextureData = receivedByte;
-        var texture = new Texture2D(1, 1);
-        texture.LoadImage(receivedByte);
-        profileImage.sprite = GetImageFromTexture2D(texture);
+        //Debug.Log($"curTextureData is null? : {curTextureData == null}");
+        //Debug.Log($"tempTexturevvvvvvv is null? : {tempTexture == null}");
+        //Debug.Log($"profileImage is null? : {profileImage == null}");
+        curTextureData = receivedByte; // 동기화 ㅇ
+        if (tempTexture == null)
+        {
+            Debug.Log("텍스처 생성!");
+            tempTexture = new Texture2D(1, 1);
+        }
+        tempTexture.LoadImage(receivedByte);
+        profileImage.sprite = GetImageFromTexture2D(tempTexture);
     }
 
     public void SetParent()
