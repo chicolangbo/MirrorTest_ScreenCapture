@@ -151,6 +151,7 @@ public class UserCapture : NetworkBehaviour
                 tempTexture = new Texture2D(1, 1);
             }
             tempTexture.LoadImage(curTextureData);
+            Destroy(mainScreen.sprite);
             mainScreen.sprite = GetImageFromTexture2D(tempTexture);
             //Destroy(texture);
         }
