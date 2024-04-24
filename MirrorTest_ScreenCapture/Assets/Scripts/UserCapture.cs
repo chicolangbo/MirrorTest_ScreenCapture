@@ -65,7 +65,7 @@ public class UserCapture : NetworkBehaviour
         {
             Debug.Log($"{gameObject.name} : UserCapture : SetProfileImage");
             tempTexture = CaptureScreen();
-            GC.Collect();
+            //GC.Collect();
             curTextureData = tempTexture.EncodeToJPG();
             CmdUpdateProfileImage(curTextureData);
         }
@@ -76,7 +76,7 @@ public class UserCapture : NetworkBehaviour
                 tempTexture = new Texture2D(1, 1);
             }
             tempTexture.LoadImage(curTextureData);
-            GC.Collect(); // test
+            //GC.Collect(); // test
             profileImage.sprite = GetImageFromTexture2D(tempTexture);
         }
     }
@@ -106,7 +106,7 @@ public class UserCapture : NetworkBehaviour
                 tempTexture = new Texture2D(1, 1);
             }
             tempTexture.LoadImage(curTextureData);
-            GC.Collect();
+            //GC.Collect();
             Destroy(mainScreen.sprite);
             mainScreen.sprite = GetImageFromTexture2D(tempTexture);
         }
@@ -123,7 +123,7 @@ public class UserCapture : NetworkBehaviour
             tempTexture = new Texture2D(1, 1);
         }
         tempTexture.LoadImage(receivedByte);
-        GC.Collect();
+        //GC.Collect();
         profileImage.sprite = GetImageFromTexture2D(tempTexture);
     }
 
