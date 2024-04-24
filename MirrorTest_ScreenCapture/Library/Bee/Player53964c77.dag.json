@@ -155,7 +155,93 @@
         147,
         148,
         149,
-        150
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        209,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235,
+        236
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -1804,6 +1890,1026 @@
       "DebugActionIndex": 123
     },
     {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.pdb",
+      "DisplayName": "Copying UnityEngine.AIModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AIModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.pdb"
+      ],
+      "DebugActionIndex": 124
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.pdb",
+      "DisplayName": "Copying UnityEngine.ARModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ARModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.pdb"
+      ],
+      "DebugActionIndex": 125
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.pdb",
+      "DisplayName": "Copying UnityEngine.AccessibilityModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AccessibilityModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.pdb"
+      ],
+      "DebugActionIndex": 126
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
+      "DisplayName": "Copying UnityEngine.AndroidJNIModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AndroidJNIModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.pdb"
+      ],
+      "DebugActionIndex": 127
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.pdb",
+      "DisplayName": "Copying UnityEngine.AnimationModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AnimationModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.pdb"
+      ],
+      "DebugActionIndex": 128
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.pdb",
+      "DisplayName": "Copying UnityEngine.AssetBundleModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AssetBundleModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.pdb"
+      ],
+      "DebugActionIndex": 129
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.pdb",
+      "DisplayName": "Copying UnityEngine.AudioModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AudioModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.pdb"
+      ],
+      "DebugActionIndex": 130
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.pdb",
+      "DisplayName": "Copying UnityEngine.ClothModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClothModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.pdb"
+      ],
+      "DebugActionIndex": 131
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.pdb",
+      "DisplayName": "Copying UnityEngine.ClusterInputModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterInputModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.pdb"
+      ],
+      "DebugActionIndex": 132
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
+      "DisplayName": "Copying UnityEngine.ClusterRendererModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterRendererModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.pdb"
+      ],
+      "DebugActionIndex": 133
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.pdb",
+      "DisplayName": "Copying UnityEngine.ContentLoadModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ContentLoadModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.pdb"
+      ],
+      "DebugActionIndex": 134
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.pdb",
+      "DisplayName": "Copying UnityEngine.CoreModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CoreModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.pdb"
+      ],
+      "DebugActionIndex": 135
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.pdb",
+      "DisplayName": "Copying UnityEngine.CrashReportingModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CrashReportingModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.pdb"
+      ],
+      "DebugActionIndex": 136
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.pdb",
+      "DisplayName": "Copying UnityEngine.DSPGraphModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DSPGraphModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.pdb"
+      ],
+      "DebugActionIndex": 137
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.pdb",
+      "DisplayName": "Copying UnityEngine.DirectorModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DirectorModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.pdb"
+      ],
+      "DebugActionIndex": 138
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.pdb",
+      "DisplayName": "Copying UnityEngine.GIModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GIModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.pdb"
+      ],
+      "DebugActionIndex": 139
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.pdb",
+      "DisplayName": "Copying UnityEngine.GameCenterModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GameCenterModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.pdb"
+      ],
+      "DebugActionIndex": 140
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.pdb",
+      "DisplayName": "Copying UnityEngine.GridModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GridModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.pdb"
+      ],
+      "DebugActionIndex": 141
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.pdb",
+      "DisplayName": "Copying UnityEngine.HotReloadModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.HotReloadModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.pdb"
+      ],
+      "DebugActionIndex": 142
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.pdb",
+      "DisplayName": "Copying UnityEngine.IMGUIModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.IMGUIModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.pdb"
+      ],
+      "DebugActionIndex": 143
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.pdb",
+      "DisplayName": "Copying UnityEngine.ImageConversionModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ImageConversionModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.pdb"
+      ],
+      "DebugActionIndex": 144
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.pdb",
+      "DisplayName": "Copying UnityEngine.InputLegacyModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputLegacyModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.pdb"
+      ],
+      "DebugActionIndex": 145
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.pdb",
+      "DisplayName": "Copying UnityEngine.InputModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.pdb"
+      ],
+      "DebugActionIndex": 146
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
+      "DisplayName": "Copying UnityEngine.JSONSerializeModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.JSONSerializeModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.pdb"
+      ],
+      "DebugActionIndex": 147
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.pdb",
+      "DisplayName": "Copying UnityEngine.LocalizationModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.LocalizationModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.pdb"
+      ],
+      "DebugActionIndex": 148
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.pdb",
+      "DisplayName": "Copying UnityEngine.NVIDIAModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.NVIDIAModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.pdb"
+      ],
+      "DebugActionIndex": 149
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
+      "DisplayName": "Copying UnityEngine.ParticleSystemModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ParticleSystemModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.pdb"
+      ],
+      "DebugActionIndex": 150
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
+      "DisplayName": "Copying UnityEngine.PerformanceReportingModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PerformanceReportingModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.pdb"
+      ],
+      "DebugActionIndex": 151
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.pdb",
+      "DisplayName": "Copying UnityEngine.Physics2DModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.Physics2DModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.pdb"
+      ],
+      "DebugActionIndex": 152
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.pdb",
+      "DisplayName": "Copying UnityEngine.PhysicsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PhysicsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.pdb"
+      ],
+      "DebugActionIndex": 153
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.pdb",
+      "DisplayName": "Copying UnityEngine.ProfilerModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ProfilerModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.pdb"
+      ],
+      "DebugActionIndex": 154
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.pdb",
+      "DisplayName": "Copying UnityEngine.PropertiesModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PropertiesModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.pdb"
+      ],
+      "DebugActionIndex": 155
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
+      "DisplayName": "Copying UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb"
+      ],
+      "DebugActionIndex": 156
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
+      "DisplayName": "Copying UnityEngine.ScreenCaptureModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ScreenCaptureModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.pdb"
+      ],
+      "DebugActionIndex": 157
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
+      "DisplayName": "Copying UnityEngine.SharedInternalsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SharedInternalsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.pdb"
+      ],
+      "DebugActionIndex": 158
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
+      "DisplayName": "Copying UnityEngine.SpriteMaskModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteMaskModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.pdb"
+      ],
+      "DebugActionIndex": 159
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
+      "DisplayName": "Copying UnityEngine.SpriteShapeModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteShapeModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.pdb"
+      ],
+      "DebugActionIndex": 160
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.pdb",
+      "DisplayName": "Copying UnityEngine.StreamingModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.StreamingModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.pdb"
+      ],
+      "DebugActionIndex": 161
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.pdb",
+      "DisplayName": "Copying UnityEngine.SubstanceModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubstanceModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.pdb"
+      ],
+      "DebugActionIndex": 162
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.pdb",
+      "DisplayName": "Copying UnityEngine.SubsystemsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubsystemsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.pdb"
+      ],
+      "DebugActionIndex": 163
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.pdb",
+      "DisplayName": "Copying UnityEngine.TLSModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TLSModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.pdb"
+      ],
+      "DebugActionIndex": 164
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.pdb",
+      "DisplayName": "Copying UnityEngine.TerrainModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.pdb"
+      ],
+      "DebugActionIndex": 165
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
+      "DisplayName": "Copying UnityEngine.TerrainPhysicsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainPhysicsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb"
+      ],
+      "DebugActionIndex": 166
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
+      "DisplayName": "Copying UnityEngine.TextCoreFontEngineModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreFontEngineModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb"
+      ],
+      "DebugActionIndex": 167
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
+      "DisplayName": "Copying UnityEngine.TextCoreTextEngineModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreTextEngineModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb"
+      ],
+      "DebugActionIndex": 168
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.pdb",
+      "DisplayName": "Copying UnityEngine.TextRenderingModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextRenderingModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.pdb"
+      ],
+      "DebugActionIndex": 169
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.pdb",
+      "DisplayName": "Copying UnityEngine.TilemapModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TilemapModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.pdb"
+      ],
+      "DebugActionIndex": 170
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.pdb",
+      "DisplayName": "Copying UnityEngine.UIElementsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIElementsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.pdb"
+      ],
+      "DebugActionIndex": 171
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.pdb",
+      "DisplayName": "Copying UnityEngine.UIModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.pdb"
+      ],
+      "DebugActionIndex": 172
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.pdb",
+      "DisplayName": "Copying UnityEngine.UmbraModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UmbraModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.pdb"
+      ],
+      "DebugActionIndex": 173
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityAnalyticsCommonModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb"
+      ],
+      "DebugActionIndex": 174
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityAnalyticsModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb"
+      ],
+      "DebugActionIndex": 175
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityConnectModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityConnectModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.pdb"
+      ],
+      "DebugActionIndex": 176
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityCurlModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityCurlModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.pdb"
+      ],
+      "DebugActionIndex": 177
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityTestProtocolModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityTestProtocolModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb"
+      ],
+      "DebugActionIndex": 178
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityWebRequestAssetBundleModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb"
+      ],
+      "DebugActionIndex": 179
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityWebRequestAudioModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAudioModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb"
+      ],
+      "DebugActionIndex": 180
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityWebRequestModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.pdb"
+      ],
+      "DebugActionIndex": 181
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityWebRequestTextureModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestTextureModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb"
+      ],
+      "DebugActionIndex": 182
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
+      "DisplayName": "Copying UnityEngine.UnityWebRequestWWWModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestWWWModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb"
+      ],
+      "DebugActionIndex": 183
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.pdb",
+      "DisplayName": "Copying UnityEngine.VFXModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VFXModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.pdb"
+      ],
+      "DebugActionIndex": 184
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.pdb",
+      "DisplayName": "Copying UnityEngine.VRModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.pdb"
+      ],
+      "DebugActionIndex": 185
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.pdb",
+      "DisplayName": "Copying UnityEngine.VehiclesModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VehiclesModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.pdb"
+      ],
+      "DebugActionIndex": 186
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.pdb",
+      "DisplayName": "Copying UnityEngine.VideoModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VideoModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.pdb"
+      ],
+      "DebugActionIndex": 187
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
+      "DisplayName": "Copying UnityEngine.VirtualTexturingModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VirtualTexturingModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.pdb"
+      ],
+      "DebugActionIndex": 188
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.pdb",
+      "DisplayName": "Copying UnityEngine.WindModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.pdb"
+      ],
+      "DebugActionIndex": 189
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.pdb",
+      "DisplayName": "Copying UnityEngine.XRModule.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.pdb"
+      ],
+      "DebugActionIndex": 190
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.pdb",
+      "DisplayName": "Copying UnityEngine.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.pdb"
+      ],
+      "DebugActionIndex": 191
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.pdb",
+      "DisplayName": "Copying Assembly-CSharp.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.pdb"
+      ],
+      "DebugActionIndex": 192
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.pdb",
+      "DisplayName": "Copying Unity.MemoryProfiler.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.pdb"
+      ],
+      "DebugActionIndex": 193
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.pdb",
+      "DisplayName": "Copying Mirror.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.pdb"
+      ],
+      "DebugActionIndex": 194
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.pdb",
+      "DisplayName": "Copying Unity.VisualScripting.Core.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.pdb"
+      ],
+      "DebugActionIndex": 195
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.pdb",
+      "DisplayName": "Copying Mirror.Transports.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Transports.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.pdb"
+      ],
+      "DebugActionIndex": 196
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb",
+      "DisplayName": "Copying UnityEngine.UI.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb"
+      ],
+      "DebugActionIndex": 197
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.pdb",
+      "DisplayName": "Copying Mirror.Components.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Components.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.pdb"
+      ],
+      "DebugActionIndex": 198
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.pdb",
+      "DisplayName": "Copying Unity.VisualScripting.Flow.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.pdb"
+      ],
+      "DebugActionIndex": 199
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.pdb",
+      "DisplayName": "Copying Telepathy.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Telepathy.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.pdb"
+      ],
+      "DebugActionIndex": 200
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.pdb",
+      "DisplayName": "Copying Unity.Timeline.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.pdb"
+      ],
+      "DebugActionIndex": 201
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.pdb",
+      "DisplayName": "Copying SimpleWebTransport.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/SimpleWebTransport.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.pdb"
+      ],
+      "DebugActionIndex": 202
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.pdb",
+      "DisplayName": "Copying Mirror.Authenticators.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Authenticators.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.pdb"
+      ],
+      "DebugActionIndex": 203
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.pdb",
+      "DisplayName": "Copying Mirror.Examples.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Examples.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.pdb"
+      ],
+      "DebugActionIndex": 204
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.pdb",
+      "DisplayName": "Copying Unity.TextMeshPro.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.pdb"
+      ],
+      "DebugActionIndex": 205
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.pdb",
+      "DisplayName": "Copying Unity.VisualScripting.State.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.pdb"
+      ],
+      "DebugActionIndex": 206
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.pdb",
+      "DisplayName": "Copying kcp2k.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/kcp2k.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.pdb"
+      ],
+      "DebugActionIndex": 207
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.pdb",
+      "DisplayName": "Copying Newtonsoft.Json.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/AOT/Newtonsoft.Json.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.pdb"
+      ],
+      "DebugActionIndex": 208
+    },
+    {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
@@ -1814,7 +2920,7 @@
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 209
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/app.info",
@@ -1827,21 +2933,21 @@
         "Build/MirrorTest_ScreenCapture_Data/app.info"
       ],
       "ToBuildDependencies": [
-        124
+        209
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources",
       "DisplayName": "Copying unity default resources",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/Data/Resources/unity default resources"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/Data/Resources/unity default resources"
       ],
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 211
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture.exe",
@@ -1853,271 +2959,283 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture.exe"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 212
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
       "DisplayName": "Copying mono-2.0-bdwgc.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
       "DisplayName": "Copying MonoPosixHelper.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
       "DisplayName": "Copying Compat.browser",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
       "DisplayName": "Copying DefaultWsdlHelpGenerator.aspx",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
       "DisplayName": "Copying machine.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/2.0/machine.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
       "DisplayName": "Copying settings.map",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/2.0/settings.map"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config",
       "DisplayName": "Copying web.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/2.0/web.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
       "DisplayName": "Copying Compat.browser",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
       "DisplayName": "Copying DefaultWsdlHelpGenerator.aspx",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
       "DisplayName": "Copying machine.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.0/machine.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
       "DisplayName": "Copying settings.map",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.0/settings.map"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config",
       "DisplayName": "Copying web.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.0/web.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
       "DisplayName": "Copying Compat.browser",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
       "DisplayName": "Copying DefaultWsdlHelpGenerator.aspx",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
       "DisplayName": "Copying machine.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.5/machine.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
       "DisplayName": "Copying settings.map",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.5/settings.map"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config",
       "DisplayName": "Copying web.config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/4.5/web.config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini",
       "DisplayName": "Copying browscap.ini",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/browscap.ini"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/config",
       "DisplayName": "Copying config",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/config"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/config"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
       "DisplayName": "Copying config.xml",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/MonoBleedingEdge/etc/mono/mconfig/config.xml"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "CopyFiles Build/UnityCrashHandler64.exe",
       "DisplayName": "Copying UnityCrashHandler64.exe",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/UnityCrashHandler64.exe"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/UnityCrashHandler64.exe"
       ],
       "Outputs": [
         "Build/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "CopyFiles Build/UnityPlayer.dll",
       "DisplayName": "Copying UnityPlayer.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/UnityPlayer.dll"
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/UnityPlayer.dll"
       ],
       "Outputs": [
         "Build/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 234
+    },
+    {
+      "Annotation": "CopyFiles Build/WinPixEventRuntime.dll",
+      "DisplayName": "Copying WinPixEventRuntime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/WinPixEventRuntime.dll"
+      ],
+      "Outputs": [
+        "Build/WinPixEventRuntime.dll"
+      ],
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "Player",
@@ -2246,6 +3364,7 @@
         121,
         122,
         123,
+        124,
         125,
         126,
         127,
@@ -2270,10 +3389,95 @@
         146,
         147,
         148,
-        149
+        149,
+        150,
+        151,
+        152,
+        153,
+        154,
+        155,
+        156,
+        157,
+        158,
+        159,
+        160,
+        161,
+        162,
+        163,
+        164,
+        165,
+        166,
+        167,
+        168,
+        169,
+        170,
+        171,
+        172,
+        173,
+        174,
+        175,
+        176,
+        177,
+        178,
+        179,
+        180,
+        181,
+        182,
+        183,
+        184,
+        185,
+        186,
+        187,
+        188,
+        189,
+        190,
+        191,
+        192,
+        193,
+        194,
+        195,
+        196,
+        197,
+        198,
+        199,
+        200,
+        201,
+        202,
+        203,
+        204,
+        205,
+        206,
+        207,
+        208,
+        210,
+        211,
+        212,
+        213,
+        214,
+        215,
+        216,
+        217,
+        218,
+        219,
+        220,
+        221,
+        222,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        235
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 150
+      "DebugActionIndex": 236
     }
   ],
   "FileSignatures": [
@@ -2403,13 +3607,337 @@
       "File": "Build/UnityCommon.props"
     },
     {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Facades/netstandard.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/Mono.Security.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/mscorlib.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ComponentModel.Composition.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Configuration.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Core.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Data.DataSetExtensions.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Data.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Drawing.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.EnterpriseServices.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.IO.Compression.FileSystem.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.IO.Compression.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Net.Http.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Numerics.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Runtime.Serialization.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Security.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.ServiceModel.Internals.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Transactions.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Xml.Linq.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32/System.Xml.pdb"
+    },
+    {
       "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport"
     },
     {
-      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono"
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AccessibilityModule.pdb"
     },
     {
-      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/Data/Resources"
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AIModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AndroidJNIModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AnimationModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ARModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AssetBundleModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.AudioModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClothModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterInputModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ClusterRendererModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ContentLoadModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CoreModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.CrashReportingModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DirectorModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.DSPGraphModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GameCenterModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GIModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.GridModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.HotReloadModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ImageConversionModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.IMGUIModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputLegacyModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.InputModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.JSONSerializeModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.LocalizationModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.NVIDIAModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ParticleSystemModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PerformanceReportingModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.Physics2DModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PhysicsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ProfilerModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.PropertiesModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.ScreenCaptureModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SharedInternalsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteMaskModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SpriteShapeModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.StreamingModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubstanceModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.SubsystemsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TerrainPhysicsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreFontEngineModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextCoreTextEngineModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TextRenderingModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TilemapModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.TLSModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIElementsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UIModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UmbraModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityAnalyticsModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityConnectModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityCurlModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityTestProtocolModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestAudioModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestTextureModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.UnityWebRequestWWWModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VehiclesModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VFXModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VideoModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VirtualTexturingModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.VRModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.WindModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.XRModule.pdb"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono"
+    },
+    {
+      "File": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/Data/Resources"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Assets/Mirror/Plugins/BouncyCastle/BouncyCastle.Cryptography.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/kcp2k.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Authenticators.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Components.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Examples.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Transports.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/SimpleWebTransport.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Telepathy.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/AOT/Newtonsoft.Json.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.pdb"
     },
     {
       "File": "Library/Bee/Player53964c77-inputdata.json"
@@ -2424,11 +3952,11 @@
       "Path": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport"
     },
     {
-      "Path": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono",
+      "Path": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono",
       "Recurse": 1
     },
     {
-      "Path": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_nondevelopment_mono/Data/Resources",
+      "Path": "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/win64_player_development_mono/Data/Resources",
       "Recurse": 1
     },
     {
@@ -2474,7 +4002,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 150
+          "Player": 236
         }
 ,  "DefaultNodes": [
     0

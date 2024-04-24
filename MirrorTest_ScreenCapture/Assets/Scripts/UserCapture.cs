@@ -77,6 +77,7 @@ public class UserCapture : NetworkBehaviour
             }
             tempTexture.LoadImage(curTextureData);
             //GC.Collect(); // test
+            Destroy(profileImage.sprite);
             profileImage.sprite = GetImageFromTexture2D(tempTexture);
         }
     }
@@ -124,6 +125,7 @@ public class UserCapture : NetworkBehaviour
         }
         tempTexture.LoadImage(receivedByte);
         //GC.Collect();
+        Destroy(profileImage.sprite);
         profileImage.sprite = GetImageFromTexture2D(tempTexture);
     }
 
