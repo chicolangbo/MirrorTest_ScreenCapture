@@ -35,7 +35,9 @@ public class UIManager : MonoBehaviour
     {
         uiVerticalRatioSetter = GetComponent<UIVerticalRatioSetter>();
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
+        
+        //for imageScene
+        //EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
     }
 
@@ -53,7 +55,9 @@ public class UIManager : MonoBehaviour
     private void OnDisable()
     {
         EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
-        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
+
+        //for imageScene
+        //EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetMainScreenSize);
         EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
     }
 
@@ -71,6 +75,7 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("UIManager : SetClientProfileSize");
         var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y - 20;
+        Debug.Log($"height : {height}");
         ClientProfileSize = Utils.GetImageSizeByRatio(height, ratioX, ratioY);
     }
 
