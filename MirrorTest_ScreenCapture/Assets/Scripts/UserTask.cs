@@ -4,50 +4,46 @@ using Mirror;
 using TMPro;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor.SceneManagement;
 
 public class UserTask : NetworkBehaviour
 {
-    [SyncVar]
     public bool isDone;
+    public int stageNum = 1;
 
-    private List<Toggle> tasks = new List<Toggle>();
-    private Button CompletionBtn;
     private Transform contents;
 
     private static string working = "Working...";
     private static string done = "Done";
     private static string myColor = "#FFEE4C";
+    private TextMeshProUGUI workStage;
     private TextMeshProUGUI workState;
+
+    //[SyncVar]
+    //public List<UserTask> userTasks = new List<UserTask>();
+    private StageManager stageManager;
 
     private void Awake()
     {
         Debug.Log("UserTask : Awake");
-
-        var task = GameObject.FindGameObjectWithTag("Task");
-        var taskObjs = task.GetComponentsInChildren<Toggle>();
-        foreach(var t in taskObjs)
-        {
-            t.onValueChanged.AddListener( delegate { CheckCompletion(t); });
-            tasks.Add(t);
-        }
-
-        CompletionBtn = GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>();
-
         contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
-
-        workState = GetComponentInChildren<TextMeshProUGUI>();
+        workStage = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
+        workState = transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
+        stageManager = GameObject.FindGameObjectWithTag("StageManager").GetComponent<StageManager>();
     }
 
     private void OnEnable()
     {
         Debug.Log("UserTask : OnEnable");
-        CompletionBtn.onClick.AddListener(CmdUpdateWorkState);
+        UIManager.Instance.CompletionBtn.onClick.AddListener(CmdUpdateWorkState);
+        stageManager.CmdRegisterUserTask(this);
     }
 
     private void OnDisable()
     {
         Debug.Log("UserTask : OnDisable");
-        CompletionBtn.onClick.RemoveListener(CmdUpdateWorkState);
+        UIManager.Instance.CompletionBtn.onClick.RemoveListener(CmdUpdateWorkState);
+        stageManager.CmdUnregisterUserTask(this);
     }
 
     private void Start()
@@ -89,23 +85,6 @@ public class UserTask : NetworkBehaviour
         }
     }
 
-
-    public bool IsTaskDone(Toggle changedValue)
-    {
-        return tasks.All(toggle => toggle.isOn);
-    }
-
-    public void CheckCompletion(Toggle changedValue)
-    {
-        if(IsTaskDone(changedValue))
-        {
-            Debug.Log("CheckCompletion => complete!");
-            isDone = true;
-            CompletionBtn.interactable = true;
-        }
-        Debug.Log("CheckCompletion => not yet!");
-    }
-
     [Command]
     public void CmdUpdateWorkState()
     {
@@ -118,5 +97,54 @@ public class UserTask : NetworkBehaviour
     {
         Debug.Log("UserTask : RpcReceiveWorkState");
         workState.text = done;
+
+        if(isLocalPlayer)
+        {
+            isDone = true;
+            stageNum++;
+            UIManager.Instance.SetNextStage(stageNum);
+            //stageManager.CmdCheckAllUsersDone();
+        }
     }
+
+    public void SetNextStage()
+    {
+        isDone = false;
+        workStage.text = $"stage {stageNum}";
+        workState.text = working;
+    }
+
+    ////[Command]
+    //public void CmdRegisterUserTask(UserTask userTask)
+    //{
+    //    if (!userTasks.Contains(userTask))
+    //    {
+    //        userTasks.Add(userTask);
+    //    }
+    //}
+
+    ////[Command]
+    //public void CmdUnregisterUserTask(UserTask userTask)
+    //{
+    //    if (userTasks.Contains(userTask))
+    //    {
+    //        userTasks.Remove(userTask);
+    //    }
+    //}
+
+    ////[Command]
+    //public void CmdCheckAllUsersDone()
+    //{
+    //    if (userTasks != null && userTasks.All(ut => ut.isDone))
+    //    {
+    //        Debug.Log($"All users are done! {userTasks.Count}");
+    //        RpcNotifyAllUsersDone();
+    //    }
+    //}
+
+    //[ClientRpc]
+    //private void RpcNotifyAllUsersDone()
+    //{
+    //    UIManager.Instance.WaitPanelActive(false);
+    //}
 }

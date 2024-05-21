@@ -10,6 +10,8 @@ TagManager:
   - Contents
   - LogManager
   - Task
+  - Wait
+  - StageManager
   layers:
   - Default
   - TransparentFX
