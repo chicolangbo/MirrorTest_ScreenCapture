@@ -1,4 +1,5 @@
 using Mirror;
+using Mono.CecilX.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,22 +7,25 @@ using UnityEngine;
 
 public class StageManager : NetworkBehaviour
 {
-    [SyncVar]
-    public List<UserTask> userTasks = new List<UserTask>();
+
+    public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
+
+    public SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
 
 
     [Command]
-    public void CmdRegisterUserTask(UserTask userTask)
+    public void CmdRegisterUserTask(NetworkIdentity userTask)
     {
+        Debug.Log("CmdRegisterUserTask");
         if (!userTasks.Contains(userTask))
             {
                 userTasks.Add(userTask);
+                Debug.Log($"CmdRegisterUserTask : {userTasks.Count}");
             }
-
     }
 
     [Command]
-    public void CmdUnregisterUserTask(UserTask userTask)
+    public void CmdUnregisterUserTask(NetworkIdentity userTask)
     {
         if (userTasks.Contains(userTask))
         {
@@ -29,16 +33,21 @@ public class StageManager : NetworkBehaviour
         }
     }
 
-    //[Command]
+    [Command]
     public void CmdCheckAllUsersDone()
     {
-        if(isServer)
+        if (isServer)
         {
-            if (userTasks != null && userTasks.All(ut => ut.isDone))
+            if (userTasks != null && userTasks.All(ut => ut.GetComponent<UserTask>().isDone))
             {
                 Debug.Log($"All users are done! {userTasks.Count}");
                 RpcNotifyAllUsersDone();
             }
+            Debug.Log($"is Server : not all users{userTasks.Count}");
+        }
+        else
+        {
+            Debug.Log($"is Not Server : {userTasks.Count}");
         }
     }
 
@@ -46,12 +55,23 @@ public class StageManager : NetworkBehaviour
     private void RpcNotifyAllUsersDone()
     {
         UIManager.Instance.WaitPanelActive(false);
+
         foreach(var userTask in userTasks)
         {
-            if (userTask.isDone)
+            if(userTask == null)
             {
-                userTask.SetNextStage();
+                Debug.Log("user task identity null");
+                continue;
             }
+
+            var ut = userTask.GetComponent<UserTask>();
+            if (ut == null)
+            {
+                Debug.Log("user task null");
+                continue;
+            }
+
+            ut.SetNextStage();
         }
     }
 }

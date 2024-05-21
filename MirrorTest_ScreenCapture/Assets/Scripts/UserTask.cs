@@ -33,14 +33,17 @@ public class UserTask : NetworkBehaviour
     {
         Debug.Log("UserTask : OnEnable");
         UIManager.Instance.CompletionBtn.onClick.AddListener(CmdUpdateWorkState);
-        stageManager.CmdRegisterUserTask(this);
     }
 
     private void OnDisable()
     {
         Debug.Log("UserTask : OnDisable");
         UIManager.Instance.CompletionBtn.onClick.RemoveListener(CmdUpdateWorkState);
-        stageManager.CmdUnregisterUserTask(this);
+
+        if (isClient && authority)
+        {
+            CmdUnregisterUserTaskOnServer();
+        }
     }
 
     private void Start()
@@ -48,6 +51,11 @@ public class UserTask : NetworkBehaviour
         Debug.Log("UserTask : Start");
         SetParent();
         SetColor();
+
+        if (isClient && authority)
+        {
+            CmdRegisterUserTaskOnServer();
+        }
     }
 
     public void SetParent()
@@ -71,12 +79,9 @@ public class UserTask : NetworkBehaviour
         {
             Debug.Log("is local player");
             var bg = GetComponent<Image>();
-            Debug.Log(bg==null);
-            Debug.Log(bg.color);
             Color newColor;
             if (ColorUtility.TryParseHtmlString(myColor, out newColor))
             {
-                Debug.Log(bg.color);
                 bg.color = newColor;
             }
         }
@@ -86,62 +91,53 @@ public class UserTask : NetworkBehaviour
     public void CmdUpdateWorkState()
     {
         Debug.Log("UserTask : CmdUpdateWorkState");
+
+        isDone = true; // in server
+        stageNum++;
+
         RpcReceiveWorkState();
+
+        // 서버에 직접 모든 클라이언트 상태를 확인하도록 요청
+        stageManager.CmdCheckAllUsersDone(); // after work state update, state check
     }
 
     [ClientRpc]
     public void RpcReceiveWorkState()
     {
         Debug.Log("UserTask : RpcReceiveWorkState");
-        workState.text = done;
 
-        if(isLocalPlayer)
+        if(!isDone) // host 이중 방지
         {
             isDone = true;
             stageNum++;
+        }
+        workState.text = done;
+
+        if (isLocalPlayer)
+        {
+
             UIManager.Instance.SetNextStage(stageNum);
-            //stageManager.CmdCheckAllUsersDone();
         }
     }
 
     public void SetNextStage()
     {
+        Debug.Log("SetNextStage");
         isDone = false;
         workStage.text = $"stage {stageNum}";
         workState.text = working;
     }
 
-    ////[Command]
-    //public void CmdRegisterUserTask(UserTask userTask)
-    //{
-    //    if (!userTasks.Contains(userTask))
-    //    {
-    //        userTasks.Add(userTask);
-    //    }
-    //}
+    [Command]
+    private void CmdRegisterUserTaskOnServer()
+    {
+        stageManager.CmdRegisterUserTask(GetComponent<NetworkIdentity>());
+    }
 
-    ////[Command]
-    //public void CmdUnregisterUserTask(UserTask userTask)
-    //{
-    //    if (userTasks.Contains(userTask))
-    //    {
-    //        userTasks.Remove(userTask);
-    //    }
-    //}
+    [Command]
+    private void CmdUnregisterUserTaskOnServer()
+    {
+        stageManager.CmdUnregisterUserTask(GetComponent<NetworkIdentity>());
+    }
 
-    ////[Command]
-    //public void CmdCheckAllUsersDone()
-    //{
-    //    if (userTasks != null && userTasks.All(ut => ut.isDone))
-    //    {
-    //        Debug.Log($"All users are done! {userTasks.Count}");
-    //        RpcNotifyAllUsersDone();
-    //    }
-    //}
-
-    //[ClientRpc]
-    //private void RpcNotifyAllUsersDone()
-    //{
-    //    UIManager.Instance.WaitPanelActive(false);
-    //}
 }
