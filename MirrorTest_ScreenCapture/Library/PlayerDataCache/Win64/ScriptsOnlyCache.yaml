@@ -5,10 +5,11 @@ ScriptsOnlyBuild:
     - LogManager
     - NewNetworkManager
     - OrderTest
+    - StageManager
     - StartUIManager
     - UIManager
     - UIVerticalRatioSetter
-    - UserCapture
+    - UserTask
     Mirror.Transports.dll:
     - Mirror.TelepathyTransport
     Mirror.dll:
@@ -16,6 +17,8 @@ ScriptsOnlyBuild:
     - Mirror.NetworkManagerHUD
     ParrelSync.dll:
     - ParrelSync.ClonesManagerWindow
+    Unity.Mobile.AndroidLogcat.Editor.dll:
+    - Unity.Android.Logcat.AndroidLogcatManager
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -50,6 +53,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RectMask2D
     - UnityEngine.UI.ScrollRect
     - UnityEngine.UI.Scrollbar
+    - UnityEngine.UI.Text
+    - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
   serializedClasses:
     Mirror:
@@ -88,15 +93,14 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.AnimationTriggers
     - UnityEngine.UI.Button/ButtonClickedEvent
     - UnityEngine.UI.ColorBlock
+    - UnityEngine.UI.FontData
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.ScrollRect/ScrollRectEvent
     - UnityEngine.UI.Scrollbar/ScrollEvent
     - UnityEngine.UI.SpriteState
+    - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
-  - assembly: Assembly-CSharp
-    fullTypeName: UserCapture
-    methodName: SetMainScreen
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ExitApplication
@@ -104,7 +108,7 @@ ScriptsOnlyBuild:
     fullTypeName: UIManager
     methodName: ExitApplication
   sceneClasses:
-    Assets/Scenes/SampleScene.unity:
+    Assets/Scenes/EventScene.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -128,6 +132,8 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 16606}
+    - Class: 114
       Script: {instanceID: 16608}
     - Class: 114
       Script: {instanceID: 16610}
@@ -148,51 +154,55 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18666}
     - Class: 114
-      Script: {instanceID: 19418}
+      Script: {instanceID: 19326}
     - Class: 114
-      Script: {instanceID: 19568}
+      Script: {instanceID: 19420}
     - Class: 114
-      Script: {instanceID: 19688}
+      Script: {instanceID: 19570}
     - Class: 114
-      Script: {instanceID: 19702}
+      Script: {instanceID: 19690}
     - Class: 114
-      Script: {instanceID: 19980}
+      Script: {instanceID: 19704}
     - Class: 114
-      Script: {instanceID: 20014}
+      Script: {instanceID: 19982}
     - Class: 114
-      Script: {instanceID: 20122}
+      Script: {instanceID: 20016}
     - Class: 114
-      Script: {instanceID: 20456}
+      Script: {instanceID: 20124}
     - Class: 114
-      Script: {instanceID: 20624}
+      Script: {instanceID: 20458}
     - Class: 114
-      Script: {instanceID: 20764}
+      Script: {instanceID: 20626}
     - Class: 114
-      Script: {instanceID: 20848}
+      Script: {instanceID: 20694}
     - Class: 114
-      Script: {instanceID: 21512}
+      Script: {instanceID: 20766}
     - Class: 114
-      Script: {instanceID: 21650}
+      Script: {instanceID: 20850}
     - Class: 114
-      Script: {instanceID: 21738}
+      Script: {instanceID: 21514}
     - Class: 114
-      Script: {instanceID: 21864}
+      Script: {instanceID: 21652}
     - Class: 114
-      Script: {instanceID: 21934}
+      Script: {instanceID: 21740}
     - Class: 114
-      Script: {instanceID: 21938}
+      Script: {instanceID: 21936}
     - Class: 114
-      Script: {instanceID: 21950}
+      Script: {instanceID: 21940}
     - Class: 114
-      Script: {instanceID: 22146}
+      Script: {instanceID: 21952}
     - Class: 114
-      Script: {instanceID: 22158}
+      Script: {instanceID: 22148}
     - Class: 114
-      Script: {instanceID: 22636}
+      Script: {instanceID: 22160}
     - Class: 114
-      Script: {instanceID: 23052}
+      Script: {instanceID: 22638}
     - Class: 114
-      Script: {instanceID: 23444}
+      Script: {instanceID: 23054}
+    - Class: 114
+      Script: {instanceID: 23446}
+    - Class: 114
+      Script: {instanceID: 43974}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -852,6 +862,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnPointerExitMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: ebaf38e1a617c698ad327e9cbefa3a4f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UserTask
   - hash:
       serializedVersion: 2
       Hash: 8a64c0f8522bcdc3b5511041fb34cc1e
@@ -1868,7 +1884,7 @@ ScriptsOnlyBuild:
     className: UnityOnSubmitMessageListener
   - hash:
       serializedVersion: 2
-      Hash: 621e1ca22c2a7f9b7e9914a85b5a911a
+      Hash: a0f9e6727bea95fb42426c96814b5299
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: UIManager
@@ -2166,7 +2182,13 @@ ScriptsOnlyBuild:
     assemblyName: Unity.VisualScripting.Core
     namespaceName: Unity.VisualScripting
     className: UnityOnSliderValueChangedMessageListener
+  - hash:
+      serializedVersion: 2
+      Hash: 1756e44032fb8d3cf0848f3bce43bd58
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: StageManager
   platform: 19
   scenePathNames:
-  - Assets/Scenes/SampleScene.unity
+  - Assets/Scenes/EventScene.unity
   playerPath: C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Build/MirrorTest_ScreenCapture.exe

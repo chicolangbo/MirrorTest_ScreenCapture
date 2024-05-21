@@ -2,9 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using TMPro;
-using System.Collections.Generic;
-using System.Linq;
-using UnityEditor.SceneManagement;
 
 public class UserTask : NetworkBehaviour
 {
