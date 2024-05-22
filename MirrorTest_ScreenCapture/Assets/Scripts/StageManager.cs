@@ -25,15 +25,20 @@ public class StageManager : NetworkBehaviour
     public readonly SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
 
 
+
     //[Command]
-    public void CmdRegisterUserTask(NetworkIdentity userTask)
+    public void CmdRegisterUserTask(NetworkIdentity userTask, bool naming)
     {
         Debug.Log("CmdRegisterUserTask");
         if (!userTasks.Contains(userTask))
+        {
+            userTasks.Add(userTask);
+            Debug.Log($"CmdRegisterUserTask : {userTasks.Count}");
+            if(naming)
             {
-                userTasks.Add(userTask);
-                Debug.Log($"CmdRegisterUserTask : {userTasks.Count}");
+                RpcSetUserName(userTask, userTasks.Count);
             }
+        }
     }
 
     //[Command]
@@ -86,4 +91,27 @@ public class StageManager : NetworkBehaviour
 
         ut.SetNextStage();
     }
+
+    [ClientRpc]
+    private void RpcSetUserName(NetworkIdentity ni, int i)
+    {
+        Debug.Log("RpcSetUserName");
+
+        var ut = ni.GetComponent<UserTask>();
+        if(ut == null)
+        {
+            Debug.Log("user task null");
+            return;
+        }
+
+        if(isLocalPlayer)
+        {
+            ut.clientName.text = "You";
+        }
+        else
+        {
+            ut.clientName.text = $"user {i}";
+        }
+
+    }    
 }

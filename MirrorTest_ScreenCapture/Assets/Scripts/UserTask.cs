@@ -14,17 +14,16 @@ public class UserTask : NetworkBehaviour
     private static string working = "Working...";
     private static string done = "Done";
     private static string myColor = "#FFEE4C";
-    private TextMeshProUGUI workStage;
-    private TextMeshProUGUI workState;
-    private NetworkIdentity id;
+
+    public TextMeshProUGUI clientName;
+    public TextMeshProUGUI stage;
+    public TextMeshProUGUI workState;
+    public NetworkIdentity id;
 
     private void Awake()
     {
         Debug.Log("UserTask : Awake");
         contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
-        workStage = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
-        workState = transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
-        id = GetComponent<NetworkIdentity>();
     }
 
     private void OnEnable()
@@ -50,13 +49,14 @@ public class UserTask : NetworkBehaviour
         SetParent();
         SetColor();
 
-        if(isClient && authority && isLocalPlayer)
+        if(isClient && isLocalPlayer)
         {
+            clientName.text = "You";
             CmdRegisterUserTaskOnServer();
         }
         else if(isServer)
         {
-            StageManager.Instance.CmdRegisterUserTask(id);
+            StageManager.Instance.CmdRegisterUserTask(id, true);
         }
     }
 
@@ -125,7 +125,7 @@ public class UserTask : NetworkBehaviour
     {
         Debug.Log("SetNextStage");
         isDone = false;
-        workStage.text = $"stage {stageNum}";
+        stage.text = $"stage {stageNum}";
         workState.text = working;
     }
 
@@ -136,7 +136,7 @@ public class UserTask : NetworkBehaviour
         if(isLocalPlayer)
         {
             Debug.Log("CmdRegisterUserTaskOnServer local");
-            StageManager.Instance.CmdRegisterUserTask(id);
+            StageManager.Instance.CmdRegisterUserTask(id, false);
         }
         else
         {
