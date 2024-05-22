@@ -22,7 +22,7 @@ public class StageManager : NetworkBehaviour
 
     public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
 
-    public SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
+    public readonly SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
 
 
     //[Command]
@@ -53,7 +53,16 @@ public class StageManager : NetworkBehaviour
             if (userTasks != null && userTasks.All(ut => ut.GetComponent<UserTask>().isDone))
             {
                 Debug.Log($"All users are done! {userTasks.Count}");
-                RpcNotifyAllUsersDone();
+                foreach (var userTask in userTasks)
+                {
+                    if (userTask == null)
+                    {
+                        Debug.Log("user task identity null");
+                        continue;
+                    }
+
+                    RpcNotifyAllUsersDone(userTask);
+                }
             }
             Debug.Log($"is Server : not all users{userTasks.Count}");
         }
@@ -64,26 +73,17 @@ public class StageManager : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void RpcNotifyAllUsersDone()
+    private void RpcNotifyAllUsersDone(NetworkIdentity ni)
     {
         UIManager.Instance.WaitPanelActive(false);
 
-        foreach(var userTask in userTasks)
+        var ut = ni.GetComponent<UserTask>();
+        if (ut == null)
         {
-            if(userTask == null)
-            {
-                Debug.Log("user task identity null");
-                continue;
-            }
-
-            var ut = userTask.GetComponent<UserTask>();
-            if (ut == null)
-            {
-                Debug.Log("user task null");
-                continue;
-            }
-
-            ut.SetNextStage();
+            Debug.Log("user task null");
+            return;
         }
+
+        ut.SetNextStage();
     }
 }
