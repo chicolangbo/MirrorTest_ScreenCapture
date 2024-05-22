@@ -7,13 +7,25 @@ using UnityEngine;
 
 public class StageManager : NetworkBehaviour
 {
+    public static StageManager Instance;
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
 
     public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
 
     public SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
 
 
-    [Command]
+    //[Command]
     public void CmdRegisterUserTask(NetworkIdentity userTask)
     {
         Debug.Log("CmdRegisterUserTask");
@@ -24,7 +36,7 @@ public class StageManager : NetworkBehaviour
             }
     }
 
-    [Command]
+    //[Command]
     public void CmdUnregisterUserTask(NetworkIdentity userTask)
     {
         if (userTasks.Contains(userTask))
@@ -33,7 +45,7 @@ public class StageManager : NetworkBehaviour
         }
     }
 
-    [Command]
+    //[Command]
     public void CmdCheckAllUsersDone()
     {
         if (isServer)

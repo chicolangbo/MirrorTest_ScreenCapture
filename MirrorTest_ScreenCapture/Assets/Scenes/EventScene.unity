@@ -8054,7 +8054,6 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  userTasks: []
 --- !u!4 &2142508399
 Transform:
   m_ObjectHideFlags: 0

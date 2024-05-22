@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Mirror;
 using TMPro;
+using System.Linq;
 
 public class UserTask : NetworkBehaviour
 {
@@ -15,10 +16,7 @@ public class UserTask : NetworkBehaviour
     private static string myColor = "#FFEE4C";
     private TextMeshProUGUI workStage;
     private TextMeshProUGUI workState;
-
-    //[SyncVar]
-    //public List<UserTask> userTasks = new List<UserTask>();
-    private StageManager stageManager;
+    private NetworkIdentity id;
 
     private void Awake()
     {
@@ -26,7 +24,7 @@ public class UserTask : NetworkBehaviour
         contents = GameObject.FindGameObjectWithTag("Contents").GetComponent<Transform>();
         workStage = transform.GetChild(0).GetChild(0).GetComponent<TextMeshProUGUI>();
         workState = transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>();
-        stageManager = GameObject.FindGameObjectWithTag("StageManager").GetComponent<StageManager>();
+        id = GetComponent<NetworkIdentity>();
     }
 
     private void OnEnable()
@@ -52,9 +50,13 @@ public class UserTask : NetworkBehaviour
         SetParent();
         SetColor();
 
-        if (isClient && authority)
+        if(isClient && authority && isLocalPlayer)
         {
             CmdRegisterUserTaskOnServer();
+        }
+        else if(isServer)
+        {
+            StageManager.Instance.CmdRegisterUserTask(id);
         }
     }
 
@@ -77,7 +79,6 @@ public class UserTask : NetworkBehaviour
     {
         if(isLocalPlayer)
         {
-            Debug.Log("is local player");
             var bg = GetComponent<Image>();
             Color newColor;
             if (ColorUtility.TryParseHtmlString(myColor, out newColor))
@@ -87,7 +88,7 @@ public class UserTask : NetworkBehaviour
         }
     }
 
-    [Command]
+    [Command(requiresAuthority = true)]
     public void CmdUpdateWorkState()
     {
         Debug.Log("UserTask : CmdUpdateWorkState");
@@ -98,7 +99,7 @@ public class UserTask : NetworkBehaviour
         RpcReceiveWorkState();
 
         // 서버에 직접 모든 클라이언트 상태를 확인하도록 요청
-        stageManager.CmdCheckAllUsersDone(); // after work state update, state check
+        StageManager.Instance.CmdCheckAllUsersDone(); // after work state update, state check
     }
 
     [ClientRpc]
@@ -128,16 +129,28 @@ public class UserTask : NetworkBehaviour
         workState.text = working;
     }
 
-    [Command]
+    [Command(requiresAuthority = true)]
     private void CmdRegisterUserTaskOnServer()
     {
-        stageManager.CmdRegisterUserTask(GetComponent<NetworkIdentity>());
+        Debug.Log("CmdRegisterUserTaskOnServer");
+        if(isLocalPlayer)
+        {
+            Debug.Log("CmdRegisterUserTaskOnServer local");
+            StageManager.Instance.CmdRegisterUserTask(id);
+        }
+        else
+        {
+            Debug.Log("CmdRegisterUserTaskOnServer not local");
+        }
     }
 
-    [Command]
+    [Command(requiresAuthority = true)]
     private void CmdUnregisterUserTaskOnServer()
     {
-        stageManager.CmdUnregisterUserTask(GetComponent<NetworkIdentity>());
+        if(isLocalPlayer)
+        {
+            StageManager.Instance.CmdUnregisterUserTask(id);
+        }
+        Debug.Log("CmdUnregisterUserTaskOnServer");
     }
-
 }
