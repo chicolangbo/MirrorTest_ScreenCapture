@@ -64,7 +64,7 @@ public class UserTask : NetworkBehaviour
     {
         transform.SetParent(contents);
         var rect = GetComponent<RectTransform>();
-        rect.sizeDelta = UIManager.Instance.ClientProfileSize;
+        rect.sizeDelta = UIManager.Instance.UIRatioSetter.ClientProfileSize;
         rect.localScale = new Vector3(1, 1, 1);
         var tempPos = rect.position;
         tempPos.z = 0f;

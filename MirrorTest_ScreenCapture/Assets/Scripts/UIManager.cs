@@ -32,19 +32,14 @@ public class UIManager : MonoBehaviour
     public Button CompletionBtn;
     public TextMeshProUGUI stage;
     public GameObject waitPanel;
-
-    public Vector2 ClientProfileSize { get; private set; }
-
-    private UIVerticalRatioSetter uiVerticalRatioSetter;
-
-    public int ratioX;
-    public int ratioY;
+    public UIRatioSetter UIRatioSetter { get; private set; }
 
     private void OnEnable()
     {
-        uiVerticalRatioSetter = GetComponent<UIVerticalRatioSetter>();
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
+        UIRatioSetter = GetComponent<UIRatioSetter>();
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIPanelSize);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIObjectSize);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, UIRatioSetter.SetClientProfileSize);
 
         Init();
     }
@@ -62,8 +57,9 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
-        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, uiVerticalRatioSetter.SetUISize);
-        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, SetClientProfileSize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIPanelSize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIObjectSize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, UIRatioSetter.SetClientProfileSize);
 
         foreach(var t in tasks)
         {
@@ -80,22 +76,6 @@ public class UIManager : MonoBehaviour
             tasks.Add(t);
             t.onValueChanged.AddListener(delegate { CheckCompletion(t); });
         }
-
-        //// completion btn
-        //CompletionBtn = GameObject.FindGameObjectWithTag("SendBtn").GetComponent<Button>();
-
-        //// stage
-        //stage = tasksParent.GetChild(0).GetComponent<TextMeshProUGUI>();
-
-        //// wait
-        //waitPanel = GameObject.FindGameObjectWithTag("Wait");
-    }
-
-    public void SetClientProfileSize()
-    {
-        Debug.Log("UIManager : SetClientProfileSize");
-        var height = uiVerticalRatioSetter.uiObjects[2].sizeDelta.y - 20;
-        ClientProfileSize = Utils.GetImageSizeByRatio(height, ratioX, ratioY);
     }
 
     public void WaitPanelActive(bool active)
