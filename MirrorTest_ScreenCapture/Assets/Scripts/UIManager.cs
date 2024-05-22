@@ -37,11 +37,12 @@ public class UIManager : MonoBehaviour
     private void OnEnable()
     {
         UIRatioSetter = GetComponent<UIRatioSetter>();
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIPanelSize);
-        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIObjectSize);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUISize_Depth1);
+        EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUISize_Depth2);
         EventManager.instance.AddCallBackEvent(CallBackEventType.TYPES.OnUISet, UIRatioSetter.SetClientProfileSize);
 
         Init();
+        Debug.Log("ui panel set ¿Ï·á");
     }
 
     private void Start()
@@ -57,8 +58,8 @@ public class UIManager : MonoBehaviour
 
     private void OnDisable()
     {
-        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIPanelSize);
-        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUIObjectSize);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUISize_Depth1);
+        EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUIFrameSet, UIRatioSetter.SetUISize_Depth2);
         EventManager.instance.RemoveCallBackEvent(CallBackEventType.TYPES.OnUISet, UIRatioSetter.SetClientProfileSize);
 
         foreach(var t in tasks)

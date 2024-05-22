@@ -11,14 +11,14 @@ public enum UIPanel
 }
 
 [Serializable]
-public class UIPanelWithRatio
+public class UIPanelWithVerticalRatio
 {
     public RectTransform rectTr;
     public float verticalRatio;
 }
 
 [Serializable]
-public class UIObjectWithRatio
+public class UIPanelWithHorizontalRatio
 {
     public RectTransform rectTr;
     public UIPanel panelType;
@@ -29,10 +29,10 @@ public class UIObjectWithRatio
 public class UIRatioSetter : MonoBehaviour
 {
     // uiPanel, vertical ratio
-    public List<UIPanelWithRatio> uiPanelWithVerticalRatio = new List<UIPanelWithRatio>();
+    public List<UIPanelWithVerticalRatio> uiPanelWithVerticalRatio = new List<UIPanelWithVerticalRatio>();
 
     // uiObject, horizontal ratio
-    public List<UIObjectWithRatio> uiObjectWithHorizontalRatio = new List<UIObjectWithRatio>();
+    public List<UIPanelWithHorizontalRatio> uiPanelWithHorizontalRatio = new List<UIPanelWithHorizontalRatio>();
 
     // client x,y ratio
     public Vector2 clientRatio;
@@ -49,7 +49,7 @@ public class UIRatioSetter : MonoBehaviour
         screenWidth = (int)Screen.safeArea.width;
     }
     
-    public void SetUIPanelSize()
+    public void SetUISize_Depth1()
     {
         float tempHeight = 0f;
 
@@ -75,17 +75,16 @@ public class UIRatioSetter : MonoBehaviour
         }
     }
 
-    public void SetUIObjectSize()
+    public void SetUISize_Depth2()
     {
-        for (var i = 0; i < uiObjectWithHorizontalRatio.Count; ++i)
+        for (var i = 0; i < uiPanelWithHorizontalRatio.Count; ++i)
         {
             // size setting
-            var panelType = (int)uiObjectWithHorizontalRatio[i].panelType;
+            var panelType = (int)uiPanelWithHorizontalRatio[i].panelType;
             var height = uiPanelWithVerticalRatio[panelType].rectTr.rect.height;
-            Debug.Log(height);
-            var width = height * uiObjectWithHorizontalRatio[i].horizontalRatio;
+            var width = height * uiPanelWithHorizontalRatio[i].horizontalRatio;
             var tempSize = new Vector2(width,height);
-            uiObjectWithHorizontalRatio[i].rectTr.sizeDelta = tempSize;
+            uiPanelWithHorizontalRatio[i].rectTr.sizeDelta = tempSize;
         }
     }
 
