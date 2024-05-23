@@ -45,8 +45,17 @@ public class UIRatioSetter : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log("UIVerticalRatioSetter : OnEnable");
-        screenHeight = (int)Screen.safeArea.height;
-        screenWidth = (int)Screen.safeArea.width;
+
+        if(Application.platform == RuntimePlatform.WindowsPlayer)
+        {
+            screenHeight = Display.main.systemHeight;
+            screenWidth = Display.main.systemWidth;
+        }
+        else
+        {
+            screenHeight = (int)Screen.safeArea.height;
+            screenWidth = (int)Screen.safeArea.width;
+        }
     }
     
     public void SetUISize_Depth1()

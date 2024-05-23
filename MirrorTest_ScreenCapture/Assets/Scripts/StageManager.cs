@@ -1,7 +1,4 @@
 using Mirror;
-using Mono.CecilX.Cil;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
@@ -27,17 +24,13 @@ public class StageManager : NetworkBehaviour
 
 
     //[Command]
-    public void CmdRegisterUserTask(NetworkIdentity userTask, bool naming)
+    public void CmdRegisterUserTask(NetworkIdentity userTask)
     {
-        Debug.Log("CmdRegisterUserTask");
+        Debug.Log("StageManager : CmdRegisterUserTask");
         if (!userTasks.Contains(userTask))
         {
             userTasks.Add(userTask);
             Debug.Log($"CmdRegisterUserTask : {userTasks.Count}");
-            if(naming)
-            {
-                RpcSetUserName(userTask, userTasks.Count);
-            }
         }
     }
 
@@ -77,6 +70,18 @@ public class StageManager : NetworkBehaviour
         }
     }
 
+    public void CmdSetClientName(NetworkIdentity id)
+    {
+        for(int i = 0; i < userTasks.Count; ++i)
+        {
+            if(id == userTasks[i])
+            {
+                RpcSetUserName(id, i);
+                break;
+            }
+        }
+    }
+
     [ClientRpc]
     private void RpcNotifyAllUsersDone(NetworkIdentity ni)
     {
@@ -104,14 +109,9 @@ public class StageManager : NetworkBehaviour
             return;
         }
 
-        if(isLocalPlayer)
-        {
-            ut.clientName.text = "You";
-        }
-        else
+        if(ut.clientName.text == "Name")
         {
             ut.clientName.text = $"user {i}";
         }
-
-    }    
+    }
 }

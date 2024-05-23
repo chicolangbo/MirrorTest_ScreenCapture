@@ -56,7 +56,12 @@ public class UserTask : NetworkBehaviour
         }
         else if(isServer)
         {
-            StageManager.Instance.CmdRegisterUserTask(id, true);
+            StageManager.Instance.CmdRegisterUserTask(id);
+            CmdSetClientName(id);
+        }
+        else
+        {
+            CmdSetClientName(id);
         }
     }
 
@@ -136,12 +141,19 @@ public class UserTask : NetworkBehaviour
         if(isLocalPlayer)
         {
             Debug.Log("CmdRegisterUserTaskOnServer local");
-            StageManager.Instance.CmdRegisterUserTask(id, false);
+            StageManager.Instance.CmdRegisterUserTask(id);
         }
         else
         {
             Debug.Log("CmdRegisterUserTaskOnServer not local");
         }
+    }
+
+    [Command(requiresAuthority = false)]
+    private void CmdSetClientName(NetworkIdentity id)
+    {
+        Debug.Log("CmdSetClientName");
+        StageManager.Instance.CmdSetClientName(id);
     }
 
     [Command(requiresAuthority = true)]
