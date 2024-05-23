@@ -12,6 +12,8 @@ TagManager:
   - Task
   - Wait
   - StageManager
+  - RenderCamera
+  - UI
   layers:
   - Default
   - TransparentFX
