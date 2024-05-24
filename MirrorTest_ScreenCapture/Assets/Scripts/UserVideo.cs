@@ -59,15 +59,15 @@ public class UserVideo : NetworkBehaviour
         }
         else
         {
-            CmdSendCapture(targetPlayer);
+            CmdSendCapture(targetPlayer, connectionToClient);
         }
     }
 
     [Command(requiresAuthority = false)]
-    public void CmdSendCapture(NetworkIdentity targetPlayer)
+    public void CmdSendCapture(NetworkIdentity targetPlayer, NetworkConnectionToClient reciever = null)
     {
         Debug.Log("CmdSendCapture");
-        targetPlayer.GetComponent<UserVideo>().StartCoroutine(SendCapture(connectionToClient));
+        targetPlayer.GetComponent<UserVideo>().StartCoroutine(SendCapture(reciever));
     }
 
     [Server]
