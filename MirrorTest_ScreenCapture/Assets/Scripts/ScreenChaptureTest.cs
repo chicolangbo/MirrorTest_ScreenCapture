@@ -11,7 +11,6 @@ public class ScreenCaptureTest : MonoBehaviour
     private float maxWidth;
     private float maxHeight;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
-    private RenderTexture renderTexture;
     private Texture2D screenTexture;
 
     private void Start()
@@ -50,7 +49,8 @@ public class ScreenCaptureTest : MonoBehaviour
             yield return waitForEndOfFrame;
 
             // 화면 캡처하여 Texture2D로 저장
-            screenTexture = ScreenCapture.CaptureScreenshotAsTexture();
+            screenTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+            screenTexture.Apply();
 
             // UI에 텍스처 설정
             mainScreen.texture = screenTexture;
@@ -65,12 +65,6 @@ public class ScreenCaptureTest : MonoBehaviour
         if (screenTexture != null)
         {
             Destroy(screenTexture);
-        }
-
-        if (renderTexture != null)
-        {
-            renderTexture.Release();
-            Destroy(renderTexture);
         }
     }
 
@@ -103,7 +97,6 @@ public class ScreenCaptureTest : MonoBehaviour
         Debug.Log(heightRatio);
 
         // RenderTexture 및 Texture2D 초기화
-        renderTexture = new RenderTexture(Screen.width, Screen.height, 24);
         screenTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
 
         Debug.Log("RenderTexture and Texture2D initialized.");
