@@ -1,8 +1,9 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.UI;
 
-public class ScreenCaptureTest : MonoBehaviour
+public class MainScreenSetter : MonoBehaviour
 {
     public RawImage mainScreen;
     public RectTransform mainPanel;
@@ -20,10 +21,10 @@ public class ScreenCaptureTest : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            StartCoroutine(CaptureScreen());
-        }
+        //if(Input.GetMouseButtonDown(0))
+        //{
+        //    StartCoroutine(CaptureScreenByReadPixels());
+        //}
     }
 
     public void SetMainScreenSize(float heightRatio)
@@ -42,7 +43,14 @@ public class ScreenCaptureTest : MonoBehaviour
         }
     }
 
-    public IEnumerator CaptureScreen()
+    public void SetMainScreen(Texture2D newTexture)
+    {
+        Debug.Log("SetMainScreen");
+
+        mainScreen.texture = newTexture;
+    }
+
+    public IEnumerator CaptureScreenByReadPixels()
     {
         while (true)
         {
@@ -60,6 +68,33 @@ public class ScreenCaptureTest : MonoBehaviour
         }
     }
 
+    // UI 전용 카메라가 있어야 가능
+    //public IEnumerator CaptureScreenByRequest()
+    //{
+    //    while(true)
+    //    {
+    //        yield return waitForEndOfFrame;
+
+    //        renderCamera.targetTexture = renderTexture;
+    //        renderCamera.Render();
+
+    //        AsyncGPUReadback.Request(renderTexture, 0, request => {
+    //            if (request.hasError)
+    //            {
+    //                Debug.LogError("GPU readback error detected.");
+    //                return;
+    //            }
+    //            screenTexture.LoadRawTextureData(request.GetData<byte>());
+    //            screenTexture.Apply();
+    //            mainScreen.texture = screenTexture;
+    //        });
+
+    //        Camera.main.targetTexture = null;
+    //        Debug.Log("CaptureScreenByRequest");
+    //    }
+    //}
+
+
     private void OnDestroy()
     {
         if (screenTexture != null)
@@ -70,9 +105,10 @@ public class ScreenCaptureTest : MonoBehaviour
 
     public IEnumerator Init()
     {
+        screenTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
+
         yield return waitForEndOfFrame;
 
-        Debug.Log($"maxWidth : {mainPanel.rect.width}");
         maxWidth = mainPanel.rect.width - 2 * offset;
         maxHeight = mainPanel.rect.height;
 
@@ -94,11 +130,5 @@ public class ScreenCaptureTest : MonoBehaviour
         }
 
         SetMainScreenSize(heightRatio);
-        Debug.Log(heightRatio);
-
-        // RenderTexture 및 Texture2D 초기화
-        screenTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-
-        Debug.Log("RenderTexture and Texture2D initialized.");
     }
 }

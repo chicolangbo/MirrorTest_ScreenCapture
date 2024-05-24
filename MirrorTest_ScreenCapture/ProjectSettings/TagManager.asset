@@ -14,6 +14,7 @@ TagManager:
   - StageManager
   - RenderCamera
   - UI
+  - MainScreenSetter
   layers:
   - Default
   - TransparentFX
