@@ -1,6 +1,7 @@
 using Mirror;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public enum StreamingState
@@ -11,7 +12,7 @@ public enum StreamingState
 
 public class UserVideo : NetworkBehaviour
 {
-    public StreamingState streamingState;
+    public StreamingState streamingState = StreamingState.Stop;
 
     private Texture2D screenTexture;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
@@ -59,7 +60,8 @@ public class UserVideo : NetworkBehaviour
         }
         else
         {
-            CmdSendStopOthers();
+            streamingState = StreamingState.Sending;
+            //CmdSendStopOthers();
             CmdSendCapture(targetPlayer, connectionToClient);
         }
     }
@@ -78,16 +80,38 @@ public class UserVideo : NetworkBehaviour
     [Command(requiresAuthority = false)]
     public void CmdSendCapture(NetworkIdentity targetPlayer, NetworkConnectionToClient reciever = null)
     {
-        Debug.Log("CmdSendCapture");
-        targetPlayer.GetComponent<UserVideo>().StartCoroutine(SendCapture(reciever));
+        Debug.Log($"CmdSendCapture 캡처대상 {targetPlayer} / 호출한 애 {reciever}");
+        //targetPlayer.GetComponent<UserVideo>().StartCoroutine(SendCapture(reciever));
+        targetPlayer.GetComponent<UserVideo>().TargetStartCapture(connectionToClient, reciever.identity);
     }
 
-    [Server]
-    public IEnumerator SendCapture(NetworkConnection targetConnection)
+    [TargetRpc]
+    public void TargetStartCapture(NetworkConnection senderConnection, NetworkIdentity reciever)
+    {
+        if(isLocalPlayer)
+        {
+            StartCoroutine(SendCapture(reciever));
+        }
+        if(isServer)
+        {
+            Debug.Log("TargetStartCapture : is server");
+        }
+        if(isOwned)
+        {
+            Debug.Log("TargetStartCapture : is owned");
+        }
+        if(isClient)
+        {
+            Debug.Log("TargetStartCapture : is Client");
+        }
+
+    }
+
+    public IEnumerator SendCapture(NetworkIdentity targetid)
     {
         Debug.Log("SendCapture");
 
-        while (streamingState == StreamingState.Sending)
+        while (true/*streamingState == StreamingState.Sending*/)
         {
             yield return waitForEndOfFrame;
 
@@ -95,11 +119,18 @@ public class UserVideo : NetworkBehaviour
             screenTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
             screenTexture.Apply();
 
-            TargetUpdateScreen(targetConnection, screenTexture.EncodeToJPG());
+            CmdTargetUpdateScreen(targetid, screenTexture.EncodeToJPG());
 
             Debug.Log("Screen captured and texture updated.");
         }
     }
+
+    [Command]
+    private void CmdTargetUpdateScreen(NetworkIdentity reciever, byte[] screenData)
+    {
+        TargetUpdateScreen(reciever.connectionToClient, screenData);
+    }
+
 
     [TargetRpc] // 특정 클라이언트에게 화면 데이터 전송
     private void TargetUpdateScreen(NetworkConnection targetConnection, byte[] screenData)
