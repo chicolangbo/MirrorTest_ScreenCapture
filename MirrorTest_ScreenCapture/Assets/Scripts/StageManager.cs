@@ -19,39 +19,35 @@ public class StageManager : NetworkBehaviour
 
     public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
 
-    public readonly SyncListNetworkIdentity userTasks = new SyncListNetworkIdentity();
+    public readonly SyncListNetworkIdentity clientsId = new SyncListNetworkIdentity();
 
 
-
-    //[Command]
-    public void CmdRegisterUserTask(NetworkIdentity userTask)
+    public void CmdRegisterClients(NetworkIdentity userTask)
     {
         Debug.Log("StageManager : CmdRegisterUserTask");
-        if (!userTasks.Contains(userTask))
+        if (!clientsId.Contains(userTask))
         {
-            userTasks.Add(userTask);
-            Debug.Log($"CmdRegisterUserTask : {userTasks.Count}");
+            clientsId.Add(userTask);
+            Debug.Log($"CmdRegisterUserTask : {clientsId.Count}");
         }
     }
 
-    //[Command]
-    public void CmdUnregisterUserTask(NetworkIdentity userTask)
+    public void CmdUnregisterClients(NetworkIdentity userTask)
     {
-        if (userTasks.Contains(userTask))
+        if (clientsId.Contains(userTask))
         {
-            userTasks.Remove(userTask);
+            clientsId.Remove(userTask);
         }
     }
 
-    //[Command]
     public void CmdCheckAllUsersDone()
     {
         if (isServer)
         {
-            if (userTasks != null && userTasks.All(ut => ut.GetComponent<UserTask>().isDone))
+            if (clientsId != null && clientsId.All(ut => ut.GetComponent<UserTask>().isDone))
             {
-                Debug.Log($"All users are done! {userTasks.Count}");
-                foreach (var userTask in userTasks)
+                Debug.Log($"All users are done! {clientsId.Count}");
+                foreach (var userTask in clientsId)
                 {
                     if (userTask == null)
                     {
@@ -62,23 +58,50 @@ public class StageManager : NetworkBehaviour
                     RpcNotifyAllUsersDone(userTask);
                 }
             }
-            Debug.Log($"is Server : not all users{userTasks.Count}");
+            Debug.Log($"is Server : not all users{clientsId.Count}");
         }
         else
         {
-            Debug.Log($"is Not Server : {userTasks.Count}");
+            Debug.Log($"is Not Server : {clientsId.Count}");
         }
     }
 
     public void CmdSetClientName(NetworkIdentity id)
     {
-        for(int i = 0; i < userTasks.Count; ++i)
+        for(int i = 0; i < clientsId.Count; ++i)
         {
-            if(id == userTasks[i])
+            if(id == clientsId[i])
             {
                 RpcSetUserName(id, i);
                 break;
             }
+        }
+    }
+
+    public void CmdSendStopOthers(NetworkIdentity id)
+    {
+        if(isServer)
+        {
+            if(!clientsId.Contains(id))
+            {
+                Debug.Log("등록되지 않은 id");
+                return;
+            }
+            foreach(var client in clientsId)
+            {
+                var userVideo = client.GetComponent<UserVideo>();
+                if(client == id || userVideo.streamingState == StreamingState.Stop)
+                {
+                    Debug.Log($"전송할 비디오 : {id}");
+                    userVideo.streamingState = StreamingState.Sending;
+                    continue;
+                }
+                RpcSendStopVideo(client);
+            }
+        }
+        else
+        {
+            Debug.Log("CmdSendStopOthers");
         }
     }
 
@@ -113,5 +136,18 @@ public class StageManager : NetworkBehaviour
         {
             ut.clientName.text = $"user {i}";
         }
+    }
+
+    [ClientRpc]
+    private void RpcSendStopVideo(NetworkIdentity id)
+    {
+        var uv = id.GetComponent<UserVideo>();
+        if(uv == null)
+        {
+            Debug.Log("user video null");
+            return;
+        }
+
+        uv.SendStop();
     }
 }

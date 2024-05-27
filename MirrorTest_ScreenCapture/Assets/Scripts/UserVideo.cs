@@ -5,7 +5,6 @@ using UnityEngine;
 
 public enum StreamingState
 {
-    Start,
     Sending,
     Stop
 }
@@ -17,7 +16,7 @@ public class UserVideo : NetworkBehaviour
     private Texture2D screenTexture;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
     private MainScreenSetter mainScreenSetter;
-    private NetworkIdentity reciever;
+    public NetworkIdentity id;
 
     private void OnEnable()
     {
@@ -41,6 +40,7 @@ public class UserVideo : NetworkBehaviour
         {
             mainScreenSetter = GameObject.FindGameObjectWithTag("MainScreenSetter").GetComponent<MainScreenSetter>();
         }
+        id = GetComponent<NetworkIdentity>();
     }
 
     private void Update()
@@ -51,7 +51,7 @@ public class UserVideo : NetworkBehaviour
         //}
     }
 
-    public void SendCaptureTrigger(NetworkIdentity targetPlayer)
+    public void SendOn(NetworkIdentity targetPlayer)
     {
         if (isLocalPlayer)
         {
@@ -59,8 +59,20 @@ public class UserVideo : NetworkBehaviour
         }
         else
         {
+            CmdSendStopOthers();
             CmdSendCapture(targetPlayer, connectionToClient);
         }
+    }
+
+    public void SendStop()
+    {
+        streamingState = StreamingState.Stop;
+    }
+
+    [Command(requiresAuthority = false)]
+    public void CmdSendStopOthers()
+    {
+        StageManager.Instance.CmdSendStopOthers(id);
     }
 
     [Command(requiresAuthority = false)]
@@ -74,8 +86,6 @@ public class UserVideo : NetworkBehaviour
     public IEnumerator SendCapture(NetworkConnection targetConnection)
     {
         Debug.Log("SendCapture");
-
-        streamingState = StreamingState.Sending;
 
         while (streamingState == StreamingState.Sending)
         {
@@ -98,24 +108,5 @@ public class UserVideo : NetworkBehaviour
 
         screenTexture.LoadImage(screenData);
         mainScreenSetter.SetMainScreen(screenTexture);
-    }
-
-    public void SendOn()
-    {
-        //streamingState = StreamingState.Start;
-        //NetworkIdentity localPlayer = NetworkClient.connection.identity;
-        //if(localPlayer != null)
-        //{
-        //    var userVideo = localPlayer.GetComponent<UserVideo>();
-        //    if (userVideo != null)
-        //    {
-        //        userVideo.CmdSendCapture()
-        //    }
-        //}
-    }
-
-    public void SendStop()
-    {
-        streamingState = StreamingState.Stop;
     }
 }

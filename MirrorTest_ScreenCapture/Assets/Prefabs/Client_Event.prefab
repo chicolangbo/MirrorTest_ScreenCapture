@@ -146,6 +146,7 @@ MonoBehaviour:
   syncMode: 0
   syncInterval: 0
   streamingState: 2
+  id: {fileID: 0}
 --- !u!1 &2068987299087520663
 GameObject:
   m_ObjectHideFlags: 0
@@ -432,7 +433,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 7210957225136669985}
         m_TargetAssemblyTypeName: UserVideo, Assembly-CSharp
-        m_MethodName: SendCaptureTrigger
+        m_MethodName: SendOn
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 2801884674770877521}

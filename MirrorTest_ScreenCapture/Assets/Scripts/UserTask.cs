@@ -56,7 +56,7 @@ public class UserTask : NetworkBehaviour
         }
         else if(isServer)
         {
-            StageManager.Instance.CmdRegisterUserTask(id);
+            StageManager.Instance.CmdRegisterClients(id);
             CmdSetClientName(id);
         }
         else
@@ -141,7 +141,7 @@ public class UserTask : NetworkBehaviour
         if(isLocalPlayer)
         {
             Debug.Log("CmdRegisterUserTaskOnServer local");
-            StageManager.Instance.CmdRegisterUserTask(id);
+            StageManager.Instance.CmdRegisterClients(id);
         }
         else
         {
@@ -161,7 +161,7 @@ public class UserTask : NetworkBehaviour
     {
         if(isLocalPlayer)
         {
-            StageManager.Instance.CmdUnregisterUserTask(id);
+            StageManager.Instance.CmdUnregisterClients(id);
         }
         Debug.Log("CmdUnregisterUserTaskOnServer");
     }
