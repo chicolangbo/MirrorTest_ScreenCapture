@@ -4,15 +4,8 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public enum StreamingState
-{
-    Sending,
-    Stop
-}
-
 public class UserVideo : NetworkBehaviour
 {
-    public StreamingState streamingState = StreamingState.Stop;
     public Dictionary<NetworkIdentity, bool> chanel = new Dictionary<NetworkIdentity, bool>();
 
     public Texture2D screenTexture;
@@ -20,9 +13,11 @@ public class UserVideo : NetworkBehaviour
     private MainScreenSetter mainScreenSetter;
     public NetworkIdentity id;
 
+    //public Sprite defaultSprite;
+
     private void OnEnable()
     {
-        if(screenTexture == null)
+        if (screenTexture == null)
         {
             screenTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         }
@@ -30,7 +25,7 @@ public class UserVideo : NetworkBehaviour
 
     private void OnDisable()
     {
-        if(screenTexture != null)
+        if (screenTexture != null)
         {
             Destroy(screenTexture);
         }
@@ -38,7 +33,7 @@ public class UserVideo : NetworkBehaviour
 
     private void Start()
     {
-        if(mainScreenSetter == null)
+        if (mainScreenSetter == null)
         {
             mainScreenSetter = GameObject.FindGameObjectWithTag("MainScreenSetter").GetComponent<MainScreenSetter>();
         }
@@ -57,12 +52,11 @@ public class UserVideo : NetworkBehaviour
         {
             // 자기 자신을 클릭한 경우
             // texture null로 바꿔버리기
+            Debug.Log("자기자신 클릭");
             CmdChangeSender(targetPlayer, connectionToClient);
-            UpdateScreenWhite();
         }
         else
         {
-            streamingState = StreamingState.Sending;
             //CmdSendStopOthers();
             CmdChangeSender(targetPlayer, connectionToClient);
             CmdSendCapture(targetPlayer, connectionToClient);
@@ -91,13 +85,13 @@ public class UserVideo : NetworkBehaviour
     {
         Debug.Log($"CmdSendCapture 캡처대상 {targetPlayer} / 호출한 애 {reciever}");
         var userVideo = targetPlayer.GetComponent<UserVideo>();
-        userVideo.RegisterChanel(reciever.identity);
+        //userVideo.RegisterChanel(reciever.identity);
         userVideo.TargetStartCapture(connectionToClient, reciever.identity);
     }
 
     public void RegisterChanel(NetworkIdentity ni)
     {
-        if(!chanel.ContainsKey(ni))
+        if (!chanel.ContainsKey(ni))
         {
             chanel.Add(ni, true);
         }
@@ -106,36 +100,29 @@ public class UserVideo : NetworkBehaviour
     [TargetRpc]
     public void TargetStartCapture(NetworkConnection senderConnection, NetworkIdentity reciever)
     {
-        switch (reciever)
-        { }
-
-
         if (isLocalPlayer)
         {
             Debug.Log("TargetStartCapture : is LocalPlayer");
             StartCoroutine(SendCapture(reciever));
         }
-        if(isServer)
-        {
-            Debug.Log("TargetStartCapture : is server");
-        }
-        if(isOwned)
-        {
-            Debug.Log("TargetStartCapture : is owned");
-        }
-        if(isClient)
-        {
-            Debug.Log("TargetStartCapture : is Client");
-        }
-
     }
 
     public IEnumerator SendCapture(NetworkIdentity targetid)
     {
         Debug.Log("SendCapture");
 
+        RegisterChanel(targetid);
+        chanel[targetid] = true;
+
         while (true/*streamingState == StreamingState.Sending*/)
         {
+            if (!chanel[targetid])
+            {
+                Debug.Log("전송 중단");
+                CmdTargetUpdateScreen(targetid, null);
+                break;
+            }
+
             yield return waitForEndOfFrame;
 
             // 화면 캡처하여 Texture2D로 저장
@@ -145,11 +132,6 @@ public class UserVideo : NetworkBehaviour
             CmdTargetUpdateScreen(targetid, screenTexture.EncodeToJPG());
 
             Debug.Log("Screen captured and texture updated.");
-            if (!chanel[targetid])
-            {
-                Debug.Log("전송 중단");
-                break;
-            }
         }
     }
 
@@ -159,11 +141,12 @@ public class UserVideo : NetworkBehaviour
         TargetUpdateScreen(reciever.connectionToClient, screenData);
     }
 
-    private void UpdateScreenWhite()
-    {
-        screenTexture = null;
-        mainScreenSetter.SetMainScreen(screenTexture);
-    }
+    //private void UpdateScreenDefault()
+    //{
+    //    Debug.Log("UpdateScreenDefault");
+    //    screenTexture = defaultTexture;
+    //    mainScreenSetter.SetMainScreen(screenTexture);
+    //}
 
 
     [TargetRpc] // 특정 클라이언트에게 화면 데이터 전송
@@ -171,7 +154,14 @@ public class UserVideo : NetworkBehaviour
     {
         Debug.Log("TargetUpdateScreen");
 
-        screenTexture.LoadImage(screenData);
-        mainScreenSetter.SetMainScreen(screenTexture);
+        if(screenData != null)
+        {
+            screenTexture.LoadImage(screenData);
+            mainScreenSetter.SetMainScreen(screenTexture);
+        }
+        else
+        {
+            mainScreenSetter.SetMainScreen(null);
+        }
     }
 }

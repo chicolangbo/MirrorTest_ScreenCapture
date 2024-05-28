@@ -93,12 +93,19 @@ public class StageManager : NetworkBehaviour
         Debug.Log($"Å¸°Ù ¹Ù²ñ : {clientWithSender[reciever]} -> {targetPlayer}");
 
         var prevTarget = clientWithSender[reciever];
-        if (clientWithSender[reciever] != targetPlayer && clientWithSender[reciever] != null)
+        if (prevTarget != targetPlayer && prevTarget != null)
         {
             TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
 
         }
-        clientWithSender[reciever] = targetPlayer;
+        if(targetPlayer != reciever)
+        {
+            clientWithSender[reciever] = targetPlayer;
+        }
+        else
+        {
+            clientWithSender[reciever] = null;
+        }
     }
 
     [ClientRpc]
@@ -138,6 +145,10 @@ public class StageManager : NetworkBehaviour
     private void TargetRpcSendStopVideo(NetworkConnection sender, NetworkIdentity prevTarget, NetworkIdentity reciever)
     {
         Debug.Log($"sender : {prevTarget} / ¹Þ´ÂÀÌ : {reciever}");
+        if(prevTarget == reciever)
+        {
+            return;
+        }
         var uv = prevTarget.GetComponent<UserVideo>();
         uv.SendStop(reciever);
     }

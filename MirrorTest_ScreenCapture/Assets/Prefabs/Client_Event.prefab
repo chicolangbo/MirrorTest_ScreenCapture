@@ -145,8 +145,8 @@ MonoBehaviour:
   syncDirection: 0
   syncMode: 0
   syncInterval: 0
-  streamingState: 2
-  id: {fileID: 0}
+  screenTexture: {fileID: 0}
+  id: {fileID: 2801884674770877521}
 --- !u!1 &2068987299087520663
 GameObject:
   m_ObjectHideFlags: 0
