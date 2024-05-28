@@ -13,6 +13,7 @@ public enum StreamingState
 public class UserVideo : NetworkBehaviour
 {
     public StreamingState streamingState = StreamingState.Stop;
+    public Dictionary<NetworkIdentity, bool> chanel = new Dictionary<NetworkIdentity, bool>();
 
     private Texture2D screenTexture;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
@@ -46,50 +47,70 @@ public class UserVideo : NetworkBehaviour
 
     private void Update()
     {
-        //if(streamingState == StreamingState.Start)
-        //{
-        //    StartCoroutine(SendCapture());
-        //}
+        //screenTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
+        //screenTexture.Apply();
     }
 
     public void SendOn(NetworkIdentity targetPlayer)
     {
-        if (isLocalPlayer)
+        if (isLocalPlayer/*targetPlayer == connectionToClient.identity*/)
         {
-            return;
+            // 자기 자신을 클릭한 경우
+            // texture null로 바꿔버리기
+            CmdTargetUpdateScreenWhite(connectionToClient.identity);
         }
         else
         {
             streamingState = StreamingState.Sending;
             //CmdSendStopOthers();
+            CmdChangeSender(targetPlayer, connectionToClient);
             CmdSendCapture(targetPlayer, connectionToClient);
         }
     }
 
-    public void SendStop()
+    [Command(requiresAuthority = false)]
+    public void CmdChangeSender(NetworkIdentity targetPlayer, NetworkConnectionToClient reciever = null)
     {
-        streamingState = StreamingState.Stop;
+        StageManager.Instance.CmdChangeSender(targetPlayer, reciever.identity);
     }
 
-    [Command(requiresAuthority = false)]
-    public void CmdSendStopOthers()
+    public void SendStop(NetworkIdentity reciever)
     {
-        StageManager.Instance.CmdSendStopOthers(id);
+        if (!chanel.ContainsKey(reciever))
+        {
+            Debug.Log("등록되지 않은 채널에서 삭제하려고 함");
+            return;
+        }
+        chanel[reciever] = false;
     }
 
     [Command(requiresAuthority = false)]
     public void CmdSendCapture(NetworkIdentity targetPlayer, NetworkConnectionToClient reciever = null)
     {
         Debug.Log($"CmdSendCapture 캡처대상 {targetPlayer} / 호출한 애 {reciever}");
-        //targetPlayer.GetComponent<UserVideo>().StartCoroutine(SendCapture(reciever));
-        targetPlayer.GetComponent<UserVideo>().TargetStartCapture(connectionToClient, reciever.identity);
+        var userVideo = targetPlayer.GetComponent<UserVideo>();
+        userVideo.RegisterChanel(reciever.identity);
+        userVideo.TargetStartCapture(connectionToClient, reciever.identity);
+    }
+
+    public void RegisterChanel(NetworkIdentity ni)
+    {
+        if(!chanel.ContainsKey(ni))
+        {
+            chanel.Add(ni, true);
+        }
     }
 
     [TargetRpc]
     public void TargetStartCapture(NetworkConnection senderConnection, NetworkIdentity reciever)
     {
-        if(isLocalPlayer)
+        switch (reciever)
+        { }
+
+
+        if (isLocalPlayer)
         {
+            Debug.Log("TargetStartCapture : is LocalPlayer");
             StartCoroutine(SendCapture(reciever));
         }
         if(isServer)
@@ -122,6 +143,10 @@ public class UserVideo : NetworkBehaviour
             CmdTargetUpdateScreen(targetid, screenTexture.EncodeToJPG());
 
             Debug.Log("Screen captured and texture updated.");
+            if (!chanel[targetid])
+            {
+                break;
+            }
         }
     }
 
@@ -131,11 +156,24 @@ public class UserVideo : NetworkBehaviour
         TargetUpdateScreen(reciever.connectionToClient, screenData);
     }
 
+    [Command]
+    private void CmdTargetUpdateScreenWhite(NetworkIdentity reciever)
+    {
+        TargetUpdateScreenWhite(reciever.connectionToClient);
+    }
+
+    [TargetRpc]
+    private void TargetUpdateScreenWhite(NetworkConnection targetConnection)
+    {
+        screenTexture = null;
+        mainScreenSetter.SetMainScreen(screenTexture);
+    }
+
 
     [TargetRpc] // 특정 클라이언트에게 화면 데이터 전송
     private void TargetUpdateScreen(NetworkConnection targetConnection, byte[] screenData)
     {
-        Debug.Log("RpcUpdateScreen");
+        Debug.Log("TargetUpdateScreen");
 
         screenTexture.LoadImage(screenData);
         mainScreenSetter.SetMainScreen(screenTexture);
