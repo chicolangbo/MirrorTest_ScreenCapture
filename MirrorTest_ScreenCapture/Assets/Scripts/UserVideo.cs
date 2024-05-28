@@ -15,7 +15,7 @@ public class UserVideo : NetworkBehaviour
     public StreamingState streamingState = StreamingState.Stop;
     public Dictionary<NetworkIdentity, bool> chanel = new Dictionary<NetworkIdentity, bool>();
 
-    private Texture2D screenTexture;
+    public Texture2D screenTexture;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
     private MainScreenSetter mainScreenSetter;
     public NetworkIdentity id;
@@ -57,7 +57,8 @@ public class UserVideo : NetworkBehaviour
         {
             // 자기 자신을 클릭한 경우
             // texture null로 바꿔버리기
-            CmdTargetUpdateScreenWhite(connectionToClient.identity);
+            CmdChangeSender(targetPlayer, connectionToClient);
+            UpdateScreenWhite();
         }
         else
         {
@@ -76,6 +77,7 @@ public class UserVideo : NetworkBehaviour
 
     public void SendStop(NetworkIdentity reciever)
     {
+        Debug.Log("SendStop");
         if (!chanel.ContainsKey(reciever))
         {
             Debug.Log("등록되지 않은 채널에서 삭제하려고 함");
@@ -145,6 +147,7 @@ public class UserVideo : NetworkBehaviour
             Debug.Log("Screen captured and texture updated.");
             if (!chanel[targetid])
             {
+                Debug.Log("전송 중단");
                 break;
             }
         }
@@ -156,14 +159,7 @@ public class UserVideo : NetworkBehaviour
         TargetUpdateScreen(reciever.connectionToClient, screenData);
     }
 
-    [Command]
-    private void CmdTargetUpdateScreenWhite(NetworkIdentity reciever)
-    {
-        TargetUpdateScreenWhite(reciever.connectionToClient);
-    }
-
-    [TargetRpc]
-    private void TargetUpdateScreenWhite(NetworkConnection targetConnection)
+    private void UpdateScreenWhite()
     {
         screenTexture = null;
         mainScreenSetter.SetMainScreen(screenTexture);

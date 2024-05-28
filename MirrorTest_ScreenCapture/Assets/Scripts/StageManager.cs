@@ -84,59 +84,22 @@ public class StageManager : NetworkBehaviour
 
     public void CmdChangeSender(NetworkIdentity targetPlayer, NetworkIdentity reciever)
     {
-        if(clientWithSender[reciever] == null)
+        if (!clientWithSender.ContainsKey(reciever))
         {
             Debug.Log($"등록되지 않은 클라이언트 {reciever}");
             return;
         }
 
-        if (clientWithSender[reciever] != targetPlayer)
+        Debug.Log($"타겟 바뀜 : {clientWithSender[reciever]} -> {targetPlayer}");
+
+        var prevTarget = clientWithSender[reciever];
+        if (clientWithSender[reciever] != targetPlayer && clientWithSender[reciever] != null)
         {
-            Debug.Log("타겟 바뀜");
-            // 바뀌기 전 객체에 cmd, target으로 해당 채널의 트리거 변경해주기
-            RpcSendStopVideo(clientWithSender[reciever], reciever);
-            clientWithSender[reciever].GetComponent<UserVideo>().SendStop(reciever);
+            TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
 
-            clientWithSender[reciever] = targetPlayer;
         }
-        Debug.Log(clientWithSender[reciever]);
+        clientWithSender[reciever] = targetPlayer;
     }
-
-    //[Command(requiresAuthority = false)]
-    //public void CmdSendStop(NetworkIdentity target)
-    //{
-    //    Debug.Log("StageManager : CmdSendStop");
-        
-    //}
-
-    //public void CmdSendStopOthers(NetworkIdentity id)
-    //{
-    //    if(isServer)
-    //    {
-    //        if(!clientsId.Contains(id))
-    //        {
-    //            Debug.Log("등록되지 않은 id");
-    //            return;
-    //        }
-    //        foreach(var client in clientsId)
-    //        {
-    //            var userVideo = client.GetComponent<UserVideo>();
-    //            if(client == id || userVideo.streamingState == StreamingState.Stop)
-    //            {
-    //                Debug.Log($"전송할 비디오 : {id}");
-    //                userVideo.streamingState = StreamingState.Sending;
-    //                continue;
-    //            }
-    //            RpcSendStopVideo(client);
-    //        }
-    //    }
-    //    else
-    //    {
-    //        Debug.Log("CmdSendStopOthers");
-    //    }
-
-
-    //}
 
     [ClientRpc]
     private void RpcNotifyAllUsersDone(NetworkIdentity ni)
@@ -171,10 +134,11 @@ public class StageManager : NetworkBehaviour
         }
     }
 
-    [ClientRpc]
-    private void RpcSendStopVideo(NetworkIdentity sender, NetworkIdentity reciever)
+    [TargetRpc]
+    private void TargetRpcSendStopVideo(NetworkConnection sender, NetworkIdentity prevTarget, NetworkIdentity reciever)
     {
-        var uv = sender.GetComponent<UserVideo>();
+        Debug.Log($"sender : {prevTarget} / 받는이 : {reciever}");
+        var uv = prevTarget.GetComponent<UserVideo>();
         uv.SendStop(reciever);
     }
 }
