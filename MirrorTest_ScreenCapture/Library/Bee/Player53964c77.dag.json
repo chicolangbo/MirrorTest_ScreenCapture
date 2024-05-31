@@ -241,7 +241,19 @@
         233,
         234,
         235,
-        236
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247,
+        248
       ],
       "OverwriteOutputs": false,
       "DebugActionIndex": 0
@@ -395,7 +407,7 @@
       "DisplayName": "Writing boot.config_tyr4.info",
       "ActionType": "WriteFile",
       "PayloadOffset": 83,
-      "PayloadLength": 17299,
+      "PayloadLength": 18183,
       "PayloadDebugContentSnippet": "{\"System.Object\":null,\"Bee.Tun",
       "Inputs": [],
       "Outputs": [
@@ -492,20 +504,26 @@
         "C:/Program Files/Unity/Hub/Editor/2022.3.7f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/Variations/mono/Managed/UnityEngine.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Runtime.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Transports.dll",
-        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Sample.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Components.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Telepathy.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.WebRTC.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/SimpleWebTransport.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Authenticators.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Mirror.Examples.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/kcp2k.dll",
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.renderstreaming@3.1.0-exp.3/Runtime/Plugins/websocket-sharp.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Assets/Mirror/Plugins/BouncyCastle/BouncyCastle.Cryptography.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll",
         "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/AOT/Newtonsoft.Json.dll",
@@ -594,6 +612,18 @@
       "DebugActionIndex": 15
     },
     {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Plugins/x86_64/webrtc.dll",
+      "DisplayName": "Copying webrtc.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "Library/PackageCache/com.unity.webrtc@2.4.0-exp.6/Runtime/Plugins/x86_64/webrtc.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Plugins/x86_64/webrtc.dll"
+      ],
+      "DebugActionIndex": 16
+    },
+    {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.dll",
       "DisplayName": "Copying UnityEngine.AIModule.dll",
       "ActionType": "CopyFiles",
@@ -603,7 +633,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.dll"
       ],
-      "DebugActionIndex": 16
+      "DebugActionIndex": 17
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.dll",
@@ -615,7 +645,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.dll"
       ],
-      "DebugActionIndex": 17
+      "DebugActionIndex": 18
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.dll",
@@ -627,7 +657,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.dll"
       ],
-      "DebugActionIndex": 18
+      "DebugActionIndex": 19
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.dll",
@@ -639,7 +669,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.dll"
       ],
-      "DebugActionIndex": 19
+      "DebugActionIndex": 20
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.dll",
@@ -651,7 +681,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.dll"
       ],
-      "DebugActionIndex": 20
+      "DebugActionIndex": 21
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.dll",
@@ -663,7 +693,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.dll"
       ],
-      "DebugActionIndex": 21
+      "DebugActionIndex": 22
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.dll",
@@ -675,7 +705,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.dll"
       ],
-      "DebugActionIndex": 22
+      "DebugActionIndex": 23
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.dll",
@@ -687,7 +717,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.dll"
       ],
-      "DebugActionIndex": 23
+      "DebugActionIndex": 24
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.dll",
@@ -699,7 +729,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.dll"
       ],
-      "DebugActionIndex": 24
+      "DebugActionIndex": 25
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.dll",
@@ -711,7 +741,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.dll"
       ],
-      "DebugActionIndex": 25
+      "DebugActionIndex": 26
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.dll",
@@ -723,7 +753,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.dll"
       ],
-      "DebugActionIndex": 26
+      "DebugActionIndex": 27
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.dll",
@@ -735,7 +765,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.dll"
       ],
-      "DebugActionIndex": 27
+      "DebugActionIndex": 28
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.dll",
@@ -747,7 +777,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.dll"
       ],
-      "DebugActionIndex": 28
+      "DebugActionIndex": 29
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.dll",
@@ -759,7 +789,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.dll"
       ],
-      "DebugActionIndex": 29
+      "DebugActionIndex": 30
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.dll",
@@ -771,7 +801,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.dll"
       ],
-      "DebugActionIndex": 30
+      "DebugActionIndex": 31
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.dll",
@@ -783,7 +813,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.dll"
       ],
-      "DebugActionIndex": 31
+      "DebugActionIndex": 32
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.dll",
@@ -795,7 +825,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.dll"
       ],
-      "DebugActionIndex": 32
+      "DebugActionIndex": 33
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.dll",
@@ -807,7 +837,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.dll"
       ],
-      "DebugActionIndex": 33
+      "DebugActionIndex": 34
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.dll",
@@ -819,7 +849,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.dll"
       ],
-      "DebugActionIndex": 34
+      "DebugActionIndex": 35
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.dll",
@@ -831,7 +861,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.dll"
       ],
-      "DebugActionIndex": 35
+      "DebugActionIndex": 36
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.dll",
@@ -843,7 +873,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.dll"
       ],
-      "DebugActionIndex": 36
+      "DebugActionIndex": 37
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.dll",
@@ -855,7 +885,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.dll"
       ],
-      "DebugActionIndex": 37
+      "DebugActionIndex": 38
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.dll",
@@ -867,7 +897,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.dll"
       ],
-      "DebugActionIndex": 38
+      "DebugActionIndex": 39
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.dll",
@@ -879,7 +909,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.dll"
       ],
-      "DebugActionIndex": 39
+      "DebugActionIndex": 40
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.dll",
@@ -891,7 +921,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.dll"
       ],
-      "DebugActionIndex": 40
+      "DebugActionIndex": 41
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.dll",
@@ -903,7 +933,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.dll"
       ],
-      "DebugActionIndex": 41
+      "DebugActionIndex": 42
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.dll",
@@ -915,7 +945,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.dll"
       ],
-      "DebugActionIndex": 42
+      "DebugActionIndex": 43
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.dll",
@@ -927,7 +957,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.dll"
       ],
-      "DebugActionIndex": 43
+      "DebugActionIndex": 44
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.dll",
@@ -939,7 +969,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.dll"
       ],
-      "DebugActionIndex": 44
+      "DebugActionIndex": 45
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.dll",
@@ -951,7 +981,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.dll"
       ],
-      "DebugActionIndex": 45
+      "DebugActionIndex": 46
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.dll",
@@ -963,7 +993,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.dll"
       ],
-      "DebugActionIndex": 46
+      "DebugActionIndex": 47
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.dll",
@@ -975,7 +1005,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.dll"
       ],
-      "DebugActionIndex": 47
+      "DebugActionIndex": 48
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll",
@@ -987,7 +1017,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll"
       ],
-      "DebugActionIndex": 48
+      "DebugActionIndex": 49
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.dll",
@@ -999,7 +1029,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.dll"
       ],
-      "DebugActionIndex": 49
+      "DebugActionIndex": 50
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.dll",
@@ -1011,7 +1041,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.dll"
       ],
-      "DebugActionIndex": 50
+      "DebugActionIndex": 51
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.dll",
@@ -1023,7 +1053,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.dll"
       ],
-      "DebugActionIndex": 51
+      "DebugActionIndex": 52
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.dll",
@@ -1035,7 +1065,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.dll"
       ],
-      "DebugActionIndex": 52
+      "DebugActionIndex": 53
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.dll",
@@ -1047,7 +1077,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.dll"
       ],
-      "DebugActionIndex": 53
+      "DebugActionIndex": 54
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.dll",
@@ -1059,7 +1089,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.dll"
       ],
-      "DebugActionIndex": 54
+      "DebugActionIndex": 55
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.dll",
@@ -1071,7 +1101,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.dll"
       ],
-      "DebugActionIndex": 55
+      "DebugActionIndex": 56
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.dll",
@@ -1083,7 +1113,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.dll"
       ],
-      "DebugActionIndex": 56
+      "DebugActionIndex": 57
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.dll",
@@ -1095,7 +1125,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.dll"
       ],
-      "DebugActionIndex": 57
+      "DebugActionIndex": 58
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.dll",
@@ -1107,7 +1137,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.dll"
       ],
-      "DebugActionIndex": 58
+      "DebugActionIndex": 59
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll",
@@ -1119,7 +1149,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll"
       ],
-      "DebugActionIndex": 59
+      "DebugActionIndex": 60
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll",
@@ -1131,7 +1161,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll"
       ],
-      "DebugActionIndex": 60
+      "DebugActionIndex": 61
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.dll",
@@ -1143,7 +1173,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.dll"
       ],
-      "DebugActionIndex": 61
+      "DebugActionIndex": 62
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.dll",
@@ -1155,7 +1185,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.dll"
       ],
-      "DebugActionIndex": 62
+      "DebugActionIndex": 63
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.dll",
@@ -1167,7 +1197,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.dll"
       ],
-      "DebugActionIndex": 63
+      "DebugActionIndex": 64
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.dll",
@@ -1179,7 +1209,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.dll"
       ],
-      "DebugActionIndex": 64
+      "DebugActionIndex": 65
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.dll",
@@ -1191,7 +1221,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.dll"
       ],
-      "DebugActionIndex": 65
+      "DebugActionIndex": 66
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll",
@@ -1203,7 +1233,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll"
       ],
-      "DebugActionIndex": 66
+      "DebugActionIndex": 67
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.dll",
@@ -1215,7 +1245,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.dll"
       ],
-      "DebugActionIndex": 67
+      "DebugActionIndex": 68
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.dll",
@@ -1227,7 +1257,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.dll"
       ],
-      "DebugActionIndex": 68
+      "DebugActionIndex": 69
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.dll",
@@ -1239,7 +1269,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.dll"
       ],
-      "DebugActionIndex": 69
+      "DebugActionIndex": 70
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.dll",
@@ -1251,7 +1281,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.dll"
       ],
-      "DebugActionIndex": 70
+      "DebugActionIndex": 71
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll",
@@ -1263,7 +1293,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll"
       ],
-      "DebugActionIndex": 71
+      "DebugActionIndex": 72
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll",
@@ -1275,7 +1305,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll"
       ],
-      "DebugActionIndex": 72
+      "DebugActionIndex": 73
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.dll",
@@ -1287,7 +1317,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.dll"
       ],
-      "DebugActionIndex": 73
+      "DebugActionIndex": 74
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll",
@@ -1299,7 +1329,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll"
       ],
-      "DebugActionIndex": 74
+      "DebugActionIndex": 75
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll",
@@ -1311,7 +1341,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll"
       ],
-      "DebugActionIndex": 75
+      "DebugActionIndex": 76
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.dll",
@@ -1323,7 +1353,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.dll"
       ],
-      "DebugActionIndex": 76
+      "DebugActionIndex": 77
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.dll",
@@ -1335,7 +1365,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.dll"
       ],
-      "DebugActionIndex": 77
+      "DebugActionIndex": 78
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.dll",
@@ -1347,7 +1377,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.dll"
       ],
-      "DebugActionIndex": 78
+      "DebugActionIndex": 79
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.dll",
@@ -1359,7 +1389,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.dll"
       ],
-      "DebugActionIndex": 79
+      "DebugActionIndex": 80
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.dll",
@@ -1371,7 +1401,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.dll"
       ],
-      "DebugActionIndex": 80
+      "DebugActionIndex": 81
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.dll",
@@ -1383,7 +1413,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.dll"
       ],
-      "DebugActionIndex": 81
+      "DebugActionIndex": 82
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.dll",
@@ -1395,7 +1425,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.dll"
       ],
-      "DebugActionIndex": 82
+      "DebugActionIndex": 83
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.dll",
@@ -1407,7 +1437,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.dll"
       ],
-      "DebugActionIndex": 83
+      "DebugActionIndex": 84
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.dll",
@@ -1419,7 +1449,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.dll"
       ],
-      "DebugActionIndex": 84
+      "DebugActionIndex": 85
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.dll",
@@ -1431,7 +1461,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.dll"
       ],
-      "DebugActionIndex": 85
+      "DebugActionIndex": 86
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Runtime.dll",
+      "DisplayName": "Copying Unity.RenderStreaming.Runtime.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Runtime.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Runtime.dll"
+      ],
+      "DebugActionIndex": 87
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.dll",
@@ -1443,7 +1485,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.dll"
       ],
-      "DebugActionIndex": 86
+      "DebugActionIndex": 88
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.dll",
@@ -1455,7 +1497,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.dll"
       ],
-      "DebugActionIndex": 87
+      "DebugActionIndex": 89
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.dll",
@@ -1467,19 +1509,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.dll"
       ],
-      "DebugActionIndex": 88
+      "DebugActionIndex": 90
     },
     {
-      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll",
-      "DisplayName": "Copying UnityEngine.UI.dll",
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Sample.dll",
+      "DisplayName": "Copying Unity.RenderStreaming.Sample.dll",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Sample.dll"
       ],
       "Outputs": [
-        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll"
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Sample.dll"
       ],
-      "DebugActionIndex": 89
+      "DebugActionIndex": 91
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.dll",
@@ -1491,7 +1533,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.dll"
       ],
-      "DebugActionIndex": 90
+      "DebugActionIndex": 92
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll",
+      "DisplayName": "Copying UnityEngine.UI.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.dll"
+      ],
+      "DebugActionIndex": 93
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.dll",
@@ -1503,7 +1557,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.dll"
       ],
-      "DebugActionIndex": 91
+      "DebugActionIndex": 94
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.dll",
@@ -1515,7 +1569,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.dll"
       ],
-      "DebugActionIndex": 92
+      "DebugActionIndex": 95
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.WebRTC.dll",
+      "DisplayName": "Copying Unity.WebRTC.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.WebRTC.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.WebRTC.dll"
+      ],
+      "DebugActionIndex": 96
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.dll",
@@ -1527,7 +1593,31 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.dll"
       ],
-      "DebugActionIndex": 93
+      "DebugActionIndex": 97
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.dll",
+      "DisplayName": "Copying Unity.InputSystem.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.dll"
+      ],
+      "DebugActionIndex": 98
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.ForUI.dll",
+      "DisplayName": "Copying Unity.InputSystem.ForUI.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.ForUI.dll"
+      ],
+      "DebugActionIndex": 99
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.dll",
@@ -1539,7 +1629,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.dll"
       ],
-      "DebugActionIndex": 94
+      "DebugActionIndex": 100
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.dll",
@@ -1551,7 +1641,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.dll"
       ],
-      "DebugActionIndex": 95
+      "DebugActionIndex": 101
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.dll",
@@ -1563,7 +1653,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.dll"
       ],
-      "DebugActionIndex": 96
+      "DebugActionIndex": 102
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.dll",
@@ -1575,7 +1665,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.dll"
       ],
-      "DebugActionIndex": 97
+      "DebugActionIndex": 103
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.dll",
@@ -1587,7 +1677,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.dll"
       ],
-      "DebugActionIndex": 98
+      "DebugActionIndex": 104
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.dll",
@@ -1599,7 +1689,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.dll"
       ],
-      "DebugActionIndex": 99
+      "DebugActionIndex": 105
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/websocket-sharp.dll",
+      "DisplayName": "Copying websocket-sharp.dll",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.renderstreaming@3.1.0-exp.3/Runtime/Plugins/websocket-sharp.dll"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/websocket-sharp.dll"
+      ],
+      "DebugActionIndex": 106
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/BouncyCastle.Cryptography.dll",
@@ -1611,7 +1713,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/BouncyCastle.Cryptography.dll"
       ],
-      "DebugActionIndex": 100
+      "DebugActionIndex": 107
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll",
@@ -1623,7 +1725,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll"
       ],
-      "DebugActionIndex": 101
+      "DebugActionIndex": 108
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.dll",
@@ -1635,7 +1737,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.dll"
       ],
-      "DebugActionIndex": 102
+      "DebugActionIndex": 109
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/netstandard.dll",
@@ -1647,7 +1749,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/netstandard.dll"
       ],
-      "DebugActionIndex": 103
+      "DebugActionIndex": 110
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mono.Security.dll",
@@ -1659,7 +1761,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mono.Security.dll"
       ],
-      "DebugActionIndex": 104
+      "DebugActionIndex": 111
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.ComponentModel.Composition.dll",
@@ -1671,7 +1773,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.ComponentModel.Composition.dll"
       ],
-      "DebugActionIndex": 105
+      "DebugActionIndex": 112
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Configuration.dll",
@@ -1683,7 +1785,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Configuration.dll"
       ],
-      "DebugActionIndex": 106
+      "DebugActionIndex": 113
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Core.dll",
@@ -1695,7 +1797,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Core.dll"
       ],
-      "DebugActionIndex": 107
+      "DebugActionIndex": 114
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.DataSetExtensions.dll",
@@ -1707,7 +1809,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.DataSetExtensions.dll"
       ],
-      "DebugActionIndex": 108
+      "DebugActionIndex": 115
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.dll",
@@ -1719,7 +1821,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Data.dll"
       ],
-      "DebugActionIndex": 109
+      "DebugActionIndex": 116
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Drawing.dll",
@@ -1731,7 +1833,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Drawing.dll"
       ],
-      "DebugActionIndex": 110
+      "DebugActionIndex": 117
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.EnterpriseServices.dll",
@@ -1743,7 +1845,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.EnterpriseServices.dll"
       ],
-      "DebugActionIndex": 111
+      "DebugActionIndex": 118
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.FileSystem.dll",
@@ -1755,7 +1857,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.FileSystem.dll"
       ],
-      "DebugActionIndex": 112
+      "DebugActionIndex": 119
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.dll",
@@ -1767,7 +1869,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.IO.Compression.dll"
       ],
-      "DebugActionIndex": 113
+      "DebugActionIndex": 120
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Net.Http.dll",
@@ -1779,7 +1881,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Net.Http.dll"
       ],
-      "DebugActionIndex": 114
+      "DebugActionIndex": 121
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Numerics.dll",
@@ -1791,7 +1893,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Numerics.dll"
       ],
-      "DebugActionIndex": 115
+      "DebugActionIndex": 122
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Runtime.Serialization.dll",
@@ -1803,7 +1905,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Runtime.Serialization.dll"
       ],
-      "DebugActionIndex": 116
+      "DebugActionIndex": 123
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Security.dll",
@@ -1815,7 +1917,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Security.dll"
       ],
-      "DebugActionIndex": 117
+      "DebugActionIndex": 124
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.ServiceModel.Internals.dll",
@@ -1827,7 +1929,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.ServiceModel.Internals.dll"
       ],
-      "DebugActionIndex": 118
+      "DebugActionIndex": 125
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Transactions.dll",
@@ -1839,7 +1941,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Transactions.dll"
       ],
-      "DebugActionIndex": 119
+      "DebugActionIndex": 126
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.Linq.dll",
@@ -1851,7 +1953,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.Linq.dll"
       ],
-      "DebugActionIndex": 120
+      "DebugActionIndex": 127
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.dll",
@@ -1863,7 +1965,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.Xml.dll"
       ],
-      "DebugActionIndex": 121
+      "DebugActionIndex": 128
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/System.dll",
@@ -1875,7 +1977,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/System.dll"
       ],
-      "DebugActionIndex": 122
+      "DebugActionIndex": 129
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/mscorlib.dll",
@@ -1887,7 +1989,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/mscorlib.dll"
       ],
-      "DebugActionIndex": 123
+      "DebugActionIndex": 130
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.pdb",
@@ -1899,7 +2001,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AIModule.pdb"
       ],
-      "DebugActionIndex": 124
+      "DebugActionIndex": 131
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.pdb",
@@ -1911,7 +2013,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ARModule.pdb"
       ],
-      "DebugActionIndex": 125
+      "DebugActionIndex": 132
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.pdb",
@@ -1923,7 +2025,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AccessibilityModule.pdb"
       ],
-      "DebugActionIndex": 126
+      "DebugActionIndex": 133
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.pdb",
@@ -1935,7 +2037,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AndroidJNIModule.pdb"
       ],
-      "DebugActionIndex": 127
+      "DebugActionIndex": 134
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.pdb",
@@ -1947,7 +2049,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AnimationModule.pdb"
       ],
-      "DebugActionIndex": 128
+      "DebugActionIndex": 135
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.pdb",
@@ -1959,7 +2061,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AssetBundleModule.pdb"
       ],
-      "DebugActionIndex": 129
+      "DebugActionIndex": 136
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.pdb",
@@ -1971,7 +2073,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.AudioModule.pdb"
       ],
-      "DebugActionIndex": 130
+      "DebugActionIndex": 137
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.pdb",
@@ -1983,7 +2085,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClothModule.pdb"
       ],
-      "DebugActionIndex": 131
+      "DebugActionIndex": 138
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.pdb",
@@ -1995,7 +2097,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterInputModule.pdb"
       ],
-      "DebugActionIndex": 132
+      "DebugActionIndex": 139
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.pdb",
@@ -2007,7 +2109,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ClusterRendererModule.pdb"
       ],
-      "DebugActionIndex": 133
+      "DebugActionIndex": 140
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.pdb",
@@ -2019,7 +2121,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ContentLoadModule.pdb"
       ],
-      "DebugActionIndex": 134
+      "DebugActionIndex": 141
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.pdb",
@@ -2031,7 +2133,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CoreModule.pdb"
       ],
-      "DebugActionIndex": 135
+      "DebugActionIndex": 142
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.pdb",
@@ -2043,7 +2145,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.CrashReportingModule.pdb"
       ],
-      "DebugActionIndex": 136
+      "DebugActionIndex": 143
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.pdb",
@@ -2055,7 +2157,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DSPGraphModule.pdb"
       ],
-      "DebugActionIndex": 137
+      "DebugActionIndex": 144
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.pdb",
@@ -2067,7 +2169,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.DirectorModule.pdb"
       ],
-      "DebugActionIndex": 138
+      "DebugActionIndex": 145
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.pdb",
@@ -2079,7 +2181,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GIModule.pdb"
       ],
-      "DebugActionIndex": 139
+      "DebugActionIndex": 146
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.pdb",
@@ -2091,7 +2193,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GameCenterModule.pdb"
       ],
-      "DebugActionIndex": 140
+      "DebugActionIndex": 147
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.pdb",
@@ -2103,7 +2205,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.GridModule.pdb"
       ],
-      "DebugActionIndex": 141
+      "DebugActionIndex": 148
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.pdb",
@@ -2115,7 +2217,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.HotReloadModule.pdb"
       ],
-      "DebugActionIndex": 142
+      "DebugActionIndex": 149
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.pdb",
@@ -2127,7 +2229,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.IMGUIModule.pdb"
       ],
-      "DebugActionIndex": 143
+      "DebugActionIndex": 150
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.pdb",
@@ -2139,7 +2241,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ImageConversionModule.pdb"
       ],
-      "DebugActionIndex": 144
+      "DebugActionIndex": 151
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.pdb",
@@ -2151,7 +2253,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputLegacyModule.pdb"
       ],
-      "DebugActionIndex": 145
+      "DebugActionIndex": 152
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.pdb",
@@ -2163,7 +2265,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.InputModule.pdb"
       ],
-      "DebugActionIndex": 146
+      "DebugActionIndex": 153
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.pdb",
@@ -2175,7 +2277,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.JSONSerializeModule.pdb"
       ],
-      "DebugActionIndex": 147
+      "DebugActionIndex": 154
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.pdb",
@@ -2187,7 +2289,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.LocalizationModule.pdb"
       ],
-      "DebugActionIndex": 148
+      "DebugActionIndex": 155
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.pdb",
@@ -2199,7 +2301,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.NVIDIAModule.pdb"
       ],
-      "DebugActionIndex": 149
+      "DebugActionIndex": 156
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.pdb",
@@ -2211,7 +2313,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ParticleSystemModule.pdb"
       ],
-      "DebugActionIndex": 150
+      "DebugActionIndex": 157
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.pdb",
@@ -2223,7 +2325,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PerformanceReportingModule.pdb"
       ],
-      "DebugActionIndex": 151
+      "DebugActionIndex": 158
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.pdb",
@@ -2235,7 +2337,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.Physics2DModule.pdb"
       ],
-      "DebugActionIndex": 152
+      "DebugActionIndex": 159
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.pdb",
@@ -2247,7 +2349,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PhysicsModule.pdb"
       ],
-      "DebugActionIndex": 153
+      "DebugActionIndex": 160
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.pdb",
@@ -2259,7 +2361,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ProfilerModule.pdb"
       ],
-      "DebugActionIndex": 154
+      "DebugActionIndex": 161
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.pdb",
@@ -2271,7 +2373,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.PropertiesModule.pdb"
       ],
-      "DebugActionIndex": 155
+      "DebugActionIndex": 162
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb",
@@ -2283,7 +2385,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.pdb"
       ],
-      "DebugActionIndex": 156
+      "DebugActionIndex": 163
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.pdb",
@@ -2295,7 +2397,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.ScreenCaptureModule.pdb"
       ],
-      "DebugActionIndex": 157
+      "DebugActionIndex": 164
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.pdb",
@@ -2307,7 +2409,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SharedInternalsModule.pdb"
       ],
-      "DebugActionIndex": 158
+      "DebugActionIndex": 165
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.pdb",
@@ -2319,7 +2421,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteMaskModule.pdb"
       ],
-      "DebugActionIndex": 159
+      "DebugActionIndex": 166
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.pdb",
@@ -2331,7 +2433,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SpriteShapeModule.pdb"
       ],
-      "DebugActionIndex": 160
+      "DebugActionIndex": 167
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.pdb",
@@ -2343,7 +2445,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.StreamingModule.pdb"
       ],
-      "DebugActionIndex": 161
+      "DebugActionIndex": 168
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.pdb",
@@ -2355,7 +2457,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubstanceModule.pdb"
       ],
-      "DebugActionIndex": 162
+      "DebugActionIndex": 169
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.pdb",
@@ -2367,7 +2469,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.SubsystemsModule.pdb"
       ],
-      "DebugActionIndex": 163
+      "DebugActionIndex": 170
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.pdb",
@@ -2379,7 +2481,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TLSModule.pdb"
       ],
-      "DebugActionIndex": 164
+      "DebugActionIndex": 171
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.pdb",
@@ -2391,7 +2493,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainModule.pdb"
       ],
-      "DebugActionIndex": 165
+      "DebugActionIndex": 172
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb",
@@ -2403,7 +2505,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TerrainPhysicsModule.pdb"
       ],
-      "DebugActionIndex": 166
+      "DebugActionIndex": 173
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb",
@@ -2415,7 +2517,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreFontEngineModule.pdb"
       ],
-      "DebugActionIndex": 167
+      "DebugActionIndex": 174
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb",
@@ -2427,7 +2529,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextCoreTextEngineModule.pdb"
       ],
-      "DebugActionIndex": 168
+      "DebugActionIndex": 175
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.pdb",
@@ -2439,7 +2541,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TextRenderingModule.pdb"
       ],
-      "DebugActionIndex": 169
+      "DebugActionIndex": 176
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.pdb",
@@ -2451,7 +2553,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.TilemapModule.pdb"
       ],
-      "DebugActionIndex": 170
+      "DebugActionIndex": 177
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.pdb",
@@ -2463,7 +2565,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIElementsModule.pdb"
       ],
-      "DebugActionIndex": 171
+      "DebugActionIndex": 178
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.pdb",
@@ -2475,7 +2577,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UIModule.pdb"
       ],
-      "DebugActionIndex": 172
+      "DebugActionIndex": 179
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.pdb",
@@ -2487,7 +2589,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UmbraModule.pdb"
       ],
-      "DebugActionIndex": 173
+      "DebugActionIndex": 180
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb",
@@ -2499,7 +2601,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.pdb"
       ],
-      "DebugActionIndex": 174
+      "DebugActionIndex": 181
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb",
@@ -2511,7 +2613,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityAnalyticsModule.pdb"
       ],
-      "DebugActionIndex": 175
+      "DebugActionIndex": 182
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.pdb",
@@ -2523,7 +2625,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityConnectModule.pdb"
       ],
-      "DebugActionIndex": 176
+      "DebugActionIndex": 183
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.pdb",
@@ -2535,7 +2637,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityCurlModule.pdb"
       ],
-      "DebugActionIndex": 177
+      "DebugActionIndex": 184
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb",
@@ -2547,7 +2649,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityTestProtocolModule.pdb"
       ],
-      "DebugActionIndex": 178
+      "DebugActionIndex": 185
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb",
@@ -2559,7 +2661,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.pdb"
       ],
-      "DebugActionIndex": 179
+      "DebugActionIndex": 186
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb",
@@ -2571,7 +2673,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestAudioModule.pdb"
       ],
-      "DebugActionIndex": 180
+      "DebugActionIndex": 187
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.pdb",
@@ -2583,7 +2685,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestModule.pdb"
       ],
-      "DebugActionIndex": 181
+      "DebugActionIndex": 188
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb",
@@ -2595,7 +2697,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestTextureModule.pdb"
       ],
-      "DebugActionIndex": 182
+      "DebugActionIndex": 189
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb",
@@ -2607,7 +2709,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UnityWebRequestWWWModule.pdb"
       ],
-      "DebugActionIndex": 183
+      "DebugActionIndex": 190
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.pdb",
@@ -2619,7 +2721,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VFXModule.pdb"
       ],
-      "DebugActionIndex": 184
+      "DebugActionIndex": 191
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.pdb",
@@ -2631,7 +2733,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VRModule.pdb"
       ],
-      "DebugActionIndex": 185
+      "DebugActionIndex": 192
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.pdb",
@@ -2643,7 +2745,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VehiclesModule.pdb"
       ],
-      "DebugActionIndex": 186
+      "DebugActionIndex": 193
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.pdb",
@@ -2655,7 +2757,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VideoModule.pdb"
       ],
-      "DebugActionIndex": 187
+      "DebugActionIndex": 194
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.pdb",
@@ -2667,7 +2769,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.VirtualTexturingModule.pdb"
       ],
-      "DebugActionIndex": 188
+      "DebugActionIndex": 195
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.pdb",
@@ -2679,7 +2781,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.WindModule.pdb"
       ],
-      "DebugActionIndex": 189
+      "DebugActionIndex": 196
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.pdb",
@@ -2691,7 +2793,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.XRModule.pdb"
       ],
-      "DebugActionIndex": 190
+      "DebugActionIndex": 197
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.pdb",
@@ -2703,7 +2805,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.pdb"
       ],
-      "DebugActionIndex": 191
+      "DebugActionIndex": 198
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.pdb",
@@ -2715,7 +2817,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Assembly-CSharp.pdb"
       ],
-      "DebugActionIndex": 192
+      "DebugActionIndex": 199
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.pdb",
@@ -2727,7 +2829,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.MemoryProfiler.pdb"
       ],
-      "DebugActionIndex": 193
+      "DebugActionIndex": 200
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Runtime.pdb",
+      "DisplayName": "Copying Unity.RenderStreaming.Runtime.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Runtime.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Runtime.pdb"
+      ],
+      "DebugActionIndex": 201
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.pdb",
@@ -2739,7 +2853,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.pdb"
       ],
-      "DebugActionIndex": 194
+      "DebugActionIndex": 202
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.pdb",
@@ -2751,7 +2865,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Core.pdb"
       ],
-      "DebugActionIndex": 195
+      "DebugActionIndex": 203
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.pdb",
@@ -2763,19 +2877,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Transports.pdb"
       ],
-      "DebugActionIndex": 196
+      "DebugActionIndex": 204
     },
     {
-      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb",
-      "DisplayName": "Copying UnityEngine.UI.pdb",
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Sample.pdb",
+      "DisplayName": "Copying Unity.RenderStreaming.Sample.pdb",
       "ActionType": "CopyFiles",
       "Inputs": [
-        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Sample.pdb"
       ],
       "Outputs": [
-        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb"
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.RenderStreaming.Sample.pdb"
       ],
-      "DebugActionIndex": 197
+      "DebugActionIndex": 205
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.pdb",
@@ -2787,7 +2901,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Components.pdb"
       ],
-      "DebugActionIndex": 198
+      "DebugActionIndex": 206
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb",
+      "DisplayName": "Copying UnityEngine.UI.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/UnityEngine.UI.pdb"
+      ],
+      "DebugActionIndex": 207
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.pdb",
@@ -2799,7 +2925,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.Flow.pdb"
       ],
-      "DebugActionIndex": 199
+      "DebugActionIndex": 208
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.pdb",
@@ -2811,7 +2937,19 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Telepathy.pdb"
       ],
-      "DebugActionIndex": 200
+      "DebugActionIndex": 209
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.WebRTC.pdb",
+      "DisplayName": "Copying Unity.WebRTC.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.WebRTC.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.WebRTC.pdb"
+      ],
+      "DebugActionIndex": 210
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.pdb",
@@ -2823,7 +2961,31 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.Timeline.pdb"
       ],
-      "DebugActionIndex": 201
+      "DebugActionIndex": 211
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.pdb",
+      "DisplayName": "Copying Unity.InputSystem.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.pdb"
+      ],
+      "DebugActionIndex": 212
+    },
+    {
+      "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.ForUI.pdb",
+      "DisplayName": "Copying Unity.InputSystem.ForUI.pdb",
+      "ActionType": "CopyFiles",
+      "Inputs": [
+        "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.pdb"
+      ],
+      "Outputs": [
+        "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.InputSystem.ForUI.pdb"
+      ],
+      "DebugActionIndex": 213
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.pdb",
@@ -2835,7 +2997,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/SimpleWebTransport.pdb"
       ],
-      "DebugActionIndex": 202
+      "DebugActionIndex": 214
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.pdb",
@@ -2847,7 +3009,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Authenticators.pdb"
       ],
-      "DebugActionIndex": 203
+      "DebugActionIndex": 215
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.pdb",
@@ -2859,7 +3021,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Mirror.Examples.pdb"
       ],
-      "DebugActionIndex": 204
+      "DebugActionIndex": 216
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.pdb",
@@ -2871,7 +3033,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.TextMeshPro.pdb"
       ],
-      "DebugActionIndex": 205
+      "DebugActionIndex": 217
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.pdb",
@@ -2883,7 +3045,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Unity.VisualScripting.State.pdb"
       ],
-      "DebugActionIndex": 206
+      "DebugActionIndex": 218
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.pdb",
@@ -2895,7 +3057,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/kcp2k.pdb"
       ],
-      "DebugActionIndex": 207
+      "DebugActionIndex": 219
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.pdb",
@@ -2907,20 +3069,20 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Managed/Newtonsoft.Json.pdb"
       ],
-      "DebugActionIndex": 208
+      "DebugActionIndex": 220
     },
     {
       "Annotation": "WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info",
       "DisplayName": "Writing app.info",
       "ActionType": "WriteFile",
-      "PayloadOffset": 17471,
+      "PayloadOffset": 18355,
       "PayloadLength": 39,
       "PayloadDebugContentSnippet": "DefaultCompany\nMirrorTest_Scre",
       "Inputs": [],
       "Outputs": [
         "Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info"
       ],
-      "DebugActionIndex": 209
+      "DebugActionIndex": 221
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/app.info",
@@ -2933,9 +3095,9 @@
         "Build/MirrorTest_ScreenCapture_Data/app.info"
       ],
       "ToBuildDependencies": [
-        209
+        221
       ],
-      "DebugActionIndex": 210
+      "DebugActionIndex": 222
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources",
@@ -2947,7 +3109,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture_Data/Resources/unity default resources"
       ],
-      "DebugActionIndex": 211
+      "DebugActionIndex": 223
     },
     {
       "Annotation": "CopyFiles Build/MirrorTest_ScreenCapture.exe",
@@ -2959,7 +3121,7 @@
       "Outputs": [
         "Build/MirrorTest_ScreenCapture.exe"
       ],
-      "DebugActionIndex": 212
+      "DebugActionIndex": 224
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll",
@@ -2971,7 +3133,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll"
       ],
-      "DebugActionIndex": 213
+      "DebugActionIndex": 225
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll",
@@ -2983,7 +3145,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll"
       ],
-      "DebugActionIndex": 214
+      "DebugActionIndex": 226
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser",
@@ -2995,7 +3157,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 215
+      "DebugActionIndex": 227
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx",
@@ -3007,7 +3169,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 216
+      "DebugActionIndex": 228
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/machine.config",
@@ -3019,7 +3181,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/machine.config"
       ],
-      "DebugActionIndex": 217
+      "DebugActionIndex": 229
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/settings.map",
@@ -3031,7 +3193,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/settings.map"
       ],
-      "DebugActionIndex": 218
+      "DebugActionIndex": 230
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/2.0/web.config",
@@ -3043,7 +3205,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/2.0/web.config"
       ],
-      "DebugActionIndex": 219
+      "DebugActionIndex": 231
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser",
@@ -3055,7 +3217,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 220
+      "DebugActionIndex": 232
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx",
@@ -3067,7 +3229,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 221
+      "DebugActionIndex": 233
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/machine.config",
@@ -3079,7 +3241,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/machine.config"
       ],
-      "DebugActionIndex": 222
+      "DebugActionIndex": 234
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/settings.map",
@@ -3091,7 +3253,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/settings.map"
       ],
-      "DebugActionIndex": 223
+      "DebugActionIndex": 235
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.0/web.config",
@@ -3103,7 +3265,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.0/web.config"
       ],
-      "DebugActionIndex": 224
+      "DebugActionIndex": 236
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser",
@@ -3115,7 +3277,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser"
       ],
-      "DebugActionIndex": 225
+      "DebugActionIndex": 237
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx",
@@ -3127,7 +3289,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx"
       ],
-      "DebugActionIndex": 226
+      "DebugActionIndex": 238
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/machine.config",
@@ -3139,7 +3301,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/machine.config"
       ],
-      "DebugActionIndex": 227
+      "DebugActionIndex": 239
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/settings.map",
@@ -3151,7 +3313,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/settings.map"
       ],
-      "DebugActionIndex": 228
+      "DebugActionIndex": 240
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/4.5/web.config",
@@ -3163,7 +3325,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/4.5/web.config"
       ],
-      "DebugActionIndex": 229
+      "DebugActionIndex": 241
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/browscap.ini",
@@ -3175,7 +3337,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/browscap.ini"
       ],
-      "DebugActionIndex": 230
+      "DebugActionIndex": 242
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/config",
@@ -3187,7 +3349,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/config"
       ],
-      "DebugActionIndex": 231
+      "DebugActionIndex": 243
     },
     {
       "Annotation": "CopyFiles Build/MonoBleedingEdge/etc/mono/mconfig/config.xml",
@@ -3199,7 +3361,7 @@
       "Outputs": [
         "Build/MonoBleedingEdge/etc/mono/mconfig/config.xml"
       ],
-      "DebugActionIndex": 232
+      "DebugActionIndex": 244
     },
     {
       "Annotation": "CopyFiles Build/UnityCrashHandler64.exe",
@@ -3211,7 +3373,7 @@
       "Outputs": [
         "Build/UnityCrashHandler64.exe"
       ],
-      "DebugActionIndex": 233
+      "DebugActionIndex": 245
     },
     {
       "Annotation": "CopyFiles Build/UnityPlayer.dll",
@@ -3223,7 +3385,7 @@
       "Outputs": [
         "Build/UnityPlayer.dll"
       ],
-      "DebugActionIndex": 234
+      "DebugActionIndex": 246
     },
     {
       "Annotation": "CopyFiles Build/WinPixEventRuntime.dll",
@@ -3235,7 +3397,7 @@
       "Outputs": [
         "Build/WinPixEventRuntime.dll"
       ],
-      "DebugActionIndex": 235
+      "DebugActionIndex": 247
     },
     {
       "Annotation": "Player",
@@ -3449,6 +3611,7 @@
         206,
         207,
         208,
+        209,
         210,
         211,
         212,
@@ -3460,7 +3623,6 @@
         218,
         219,
         220,
-        221,
         222,
         223,
         224,
@@ -3474,10 +3636,22 @@
         232,
         233,
         234,
-        235
+        235,
+        236,
+        237,
+        238,
+        239,
+        240,
+        241,
+        242,
+        243,
+        244,
+        245,
+        246,
+        247
       ],
       "OverwriteOutputs": false,
-      "DebugActionIndex": 236
+      "DebugActionIndex": 248
     }
   ],
   "FileSignatures": [
@@ -3913,7 +4087,19 @@
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Telepathy.pdb"
     },
     {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.ForUI.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.InputSystem.pdb"
+    },
+    {
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.MemoryProfiler.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Runtime.pdb"
+    },
+    {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.RenderStreaming.Sample.pdb"
     },
     {
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.pdb"
@@ -3931,16 +4117,25 @@
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.pdb"
     },
     {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/Unity.WebRTC.pdb"
+    },
+    {
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.pdb"
     },
     {
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.2.1/Runtime/AOT/Newtonsoft.Json.pdb"
     },
     {
+      "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.renderstreaming@3.1.0-exp.3/Runtime/Plugins/websocket-sharp.pdb"
+    },
+    {
       "File": "C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Library/PackageCache/com.unity.visualscripting@1.8.0/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.pdb"
     },
     {
       "File": "Library/Bee/Player53964c77-inputdata.json"
+    },
+    {
+      "File": "Library/PackageCache/com.unity.webrtc@2.4.0-exp.6/Runtime/Plugins/x86_64/webrtc.dll"
     }
   ],
   "GlobSignatures": [
@@ -4002,7 +4197,7 @@
   "EmitDataForBeeWhy": 0,
         "NamedNodes": {
           "all_tundra_nodes": 0,
-          "Player": 236
+          "Player": 248
         }
 ,  "DefaultNodes": [
     0

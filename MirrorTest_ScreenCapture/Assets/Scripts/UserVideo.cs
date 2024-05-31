@@ -10,7 +10,7 @@ public class UserVideo : NetworkBehaviour
 
     public Texture2D screenTexture;
     private WaitForEndOfFrame waitForEndOfFrame = new WaitForEndOfFrame();
-    private MainScreenSetter mainScreenSetter;
+    private MainScreenSetter mainScreenSetter;  
     public NetworkIdentity id;
 
     //public Sprite defaultSprite;
