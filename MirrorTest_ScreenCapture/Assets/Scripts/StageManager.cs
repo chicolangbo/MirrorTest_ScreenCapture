@@ -178,7 +178,7 @@ public class StageManager : NetworkBehaviour
             return;
         }
 
-        if(ui.defaultTexture != null)
+        if(ui.defaultTexture == null)
         {
             ui.SetDefaultSprite(texture);
         }

@@ -20,10 +20,6 @@ public class UserImage : NetworkBehaviour
         {
             screenTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
         }
-        if (defaultTexture == null)
-        {
-            defaultTexture = new Texture2D(Screen.width, Screen.height, TextureFormat.RGB24, false);
-        }
         SetMainScreenSetter();
     }
 
@@ -127,10 +123,12 @@ public class UserImage : NetworkBehaviour
     public void SetDefaultSprite(byte[] texture)
     {
         Debug.Log("SetDefaultSprite");
-        if(defaultTexture != null)
+        if (defaultTexture == null)
         {
+            defaultTexture = new Texture2D(2,2);
             defaultTexture.LoadImage(texture);
         }
+
         InitImage();
     }
 
