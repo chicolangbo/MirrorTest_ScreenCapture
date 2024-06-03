@@ -1,10 +1,14 @@
 using Mirror;
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
 public class StageManager : NetworkBehaviour
 {
+    public List<Texture2D> sprites;
+
     public static StageManager Instance;
+
     private void Awake()
     {
         if (Instance == null)
@@ -32,7 +36,23 @@ public class StageManager : NetworkBehaviour
             clientsId.Add(ni);
             clientWithSender.Add(ni, null);
             Debug.Log($"CmdRegisterUserTask : {clientsId.Count}");
+
+            //2024.6.3 임시 추가
+
+            var texture = sprites[clientsId.Count - 1];
+
+            // 원본 텍스처의 픽셀 데이터를 복사
+            Color[] pixels = texture.GetPixels();
+
+            // 새로운 압축되지 않은 텍스처를 생성
+            Texture2D nonReadableTexture = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+            nonReadableTexture.SetPixels(pixels);
+            nonReadableTexture.Apply();
+
+            var bytes = nonReadableTexture.EncodeToPNG();
+            CmdSetClientDefaultImage(ni, bytes);
         }
+
     }
 
     public void CmdUnregisterClients(NetworkIdentity ni)
@@ -72,14 +92,19 @@ public class StageManager : NetworkBehaviour
 
     public void CmdSetClientName(NetworkIdentity id)
     {
-        for(int i = 0; i < clientsId.Count; ++i)
+        for (int i = 0; i < clientsId.Count; ++i)
         {
-            if(id == clientsId[i])
+            if (id == clientsId[i])
             {
                 RpcSetUserName(id, i);
                 break;
             }
         }
+    }
+
+    public void CmdSetClientDefaultImage(NetworkIdentity id, byte[] texture)
+    {
+        TargetRpcSetUserDefaultImage(id.connectionToClient, id, texture);
     }
 
     public void CmdChangeSender(NetworkIdentity targetPlayer, NetworkIdentity reciever)
@@ -138,6 +163,24 @@ public class StageManager : NetworkBehaviour
         if(ut.clientName.text == "Name")
         {
             ut.clientName.text = $"user {i}";
+        }
+    }
+
+    [TargetRpc]
+    private void TargetRpcSetUserDefaultImage(NetworkConnection connection, NetworkIdentity ni, byte[] texture)
+    {
+        Debug.Log("RpcSetUserDefaultImage");
+
+        var ui = ni.GetComponent<UserImage>();
+        if(ui == null)
+        {
+            Debug.Log("User Image null");
+            return;
+        }
+
+        if(ui.defaultTexture != null)
+        {
+            ui.SetDefaultSprite(texture);
         }
     }
 

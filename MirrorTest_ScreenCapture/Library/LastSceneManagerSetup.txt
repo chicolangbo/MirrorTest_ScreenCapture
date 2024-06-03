@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/VideoScene.unity
+- path: Assets/Scenes/PDR.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
