@@ -42,14 +42,14 @@ public class StartUIManager : MonoBehaviour
     public void SetIpAddress()
     {
         Debug.Log("StartUIManager : SetIpAddress");
-        if (IpAddress != null && IpAddress.text != "")
+        Debug.Log(IpAddress.text.Length);
+        if (IpAddress != null && IpAddress.text.Length != 1)
         {
             manager.networkAddress = IpAddress.text;
-            Debug.Log("ip 있음" + manager.networkAddress);
+            Debug.Log("ip 있음" + manager.networkAddress + ".");
         }
         else
         {
-            manager.networkAddress = "localhost";
             Debug.Log("ip 없음" + manager.networkAddress);
         }
     }
@@ -61,6 +61,7 @@ public class StartUIManager : MonoBehaviour
             if (ushort.TryParse(portTransport.Port.ToString(), out ushort port))
             {
                 portTransport.Port = port;
+                Debug.Log("SetPortID");
             }
         }
     }

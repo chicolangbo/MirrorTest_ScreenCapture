@@ -11,8 +11,9 @@ ScriptsOnlyBuild:
     - ToggleSizeSetter
     - UIManager
     - UIRatioSetter
+    - UserImage
     - UserTask
-    - UserVideo
+    - WaitPanelSizeSetter
     Mirror.Transports.dll:
     - Mirror.TelepathyTransport
     Mirror.dll:
@@ -109,7 +110,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Toggle/ToggleEvent
   methodsToPreserve:
   - assembly: Assembly-CSharp
-    fullTypeName: UserVideo
+    fullTypeName: UserImage
     methodName: SendOn
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
@@ -118,7 +119,7 @@ ScriptsOnlyBuild:
     fullTypeName: UIManager
     methodName: ExitApplication
   sceneClasses:
-    Assets/Scenes/VideoScene.unity:
+    Assets/Scenes/PDR.unity:
     - Class: 1
       Script: {instanceID: 0}
     - Class: 4
@@ -160,8 +161,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 17646}
     - Class: 114
-      Script: {instanceID: 17714}
-    - Class: 114
       Script: {instanceID: 18068}
     - Class: 114
       Script: {instanceID: 18334}
@@ -170,55 +169,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 18948}
     - Class: 114
-      Script: {instanceID: 19690}
+      Script: {instanceID: 19150}
     - Class: 114
-      Script: {instanceID: 19796}
+      Script: {instanceID: 19692}
     - Class: 114
-      Script: {instanceID: 19986}
+      Script: {instanceID: 19780}
     - Class: 114
-      Script: {instanceID: 20122}
+      Script: {instanceID: 19800}
     - Class: 114
-      Script: {instanceID: 20138}
+      Script: {instanceID: 19990}
     - Class: 114
-      Script: {instanceID: 20450}
+      Script: {instanceID: 20126}
     - Class: 114
-      Script: {instanceID: 20490}
+      Script: {instanceID: 20142}
     - Class: 114
-      Script: {instanceID: 20608}
+      Script: {instanceID: 20454}
     - Class: 114
-      Script: {instanceID: 20976}
+      Script: {instanceID: 20494}
     - Class: 114
-      Script: {instanceID: 21170}
+      Script: {instanceID: 20612}
     - Class: 114
-      Script: {instanceID: 21250}
+      Script: {instanceID: 20980}
     - Class: 114
-      Script: {instanceID: 21332}
+      Script: {instanceID: 21174}
     - Class: 114
-      Script: {instanceID: 21430}
+      Script: {instanceID: 21254}
     - Class: 114
-      Script: {instanceID: 21504}
+      Script: {instanceID: 21336}
     - Class: 114
-      Script: {instanceID: 22184}
+      Script: {instanceID: 21434}
     - Class: 114
-      Script: {instanceID: 22350}
+      Script: {instanceID: 21508}
     - Class: 114
-      Script: {instanceID: 22446}
+      Script: {instanceID: 22188}
     - Class: 114
-      Script: {instanceID: 22674}
+      Script: {instanceID: 22354}
+    - Class: 114
+      Script: {instanceID: 22450}
     - Class: 114
       Script: {instanceID: 22678}
     - Class: 114
-      Script: {instanceID: 22694}
+      Script: {instanceID: 22682}
     - Class: 114
-      Script: {instanceID: 22916}
+      Script: {instanceID: 22698}
     - Class: 114
-      Script: {instanceID: 22930}
+      Script: {instanceID: 22920}
     - Class: 114
-      Script: {instanceID: 23482}
+      Script: {instanceID: 22934}
     - Class: 114
-      Script: {instanceID: 23956}
+      Script: {instanceID: 23486}
     - Class: 114
-      Script: {instanceID: 24412}
+      Script: {instanceID: 23960}
+    - Class: 114
+      Script: {instanceID: 24416}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -886,6 +889,12 @@ ScriptsOnlyBuild:
     className: NetworkTransformUnreliable
   - hash:
       serializedVersion: 2
+      Hash: 4edfbe61bbb01d6e5197f71de621b624
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: WaitPanelSizeSetter
+  - hash:
+      serializedVersion: 2
       Hash: 751e5bae2a317288c2ab58d66687092b
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1034,6 +1043,12 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp
     namespaceName: TMPro.Examples
     className: TMP_UiFrameRateCounter
+  - hash:
+      serializedVersion: 2
+      Hash: 926069eadf2568a201e325d9380ce850
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: UserImage
   - hash:
       serializedVersion: 2
       Hash: ce670371265af50e12cc59c9b9e94af9
@@ -1588,7 +1603,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: cc0e2eb0e7289b6e34390f604f416990
+      Hash: 6eea31f1c9e82c0ba24e4ed862206aeb
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StageManager
@@ -2620,5 +2635,5 @@ ScriptsOnlyBuild:
     className: Multiplay
   platform: 19
   scenePathNames:
-  - Assets/Scenes/VideoScene.unity
+  - Assets/Scenes/PDR.unity
   playerPath: C:/Users/wabotech/Documents/MirrorTest_ScreenCapture/MirrorTest_ScreenCapture/Build/MirrorTest_ScreenCapture.exe

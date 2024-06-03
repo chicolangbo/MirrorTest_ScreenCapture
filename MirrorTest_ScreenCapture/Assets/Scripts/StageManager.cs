@@ -2,9 +2,18 @@ using Mirror;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UIElements;
+
+public class Client
+{
+    public int num;
+    public NetworkIdentity sender;
+    public string clientName;
+}
 
 public class StageManager : NetworkBehaviour
 {
+    public List<string> tempNames = new List<string>();
     public List<Texture2D> sprites;
 
     public static StageManager Instance;
@@ -24,22 +33,26 @@ public class StageManager : NetworkBehaviour
     public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
     public class SyncDictionaryIdentity : SyncDictionary<NetworkIdentity, NetworkIdentity> { }
 
-    public readonly SyncListNetworkIdentity clientsId = new SyncListNetworkIdentity();
-    public readonly SyncDictionaryIdentity clientWithSender = new SyncDictionaryIdentity();
+    public class SyncListClient : SyncDictionary<NetworkIdentity, Client> { }
 
+    //public readonly SyncListNetworkIdentity clientsId = new SyncListNetworkIdentity();
+    //public readonly SyncDictionaryIdentity clientWithSender = new SyncDictionaryIdentity();
+    public readonly SyncListClient clients = new SyncListClient();
 
     public void CmdRegisterClients(NetworkIdentity ni)
     {
         Debug.Log("StageManager : CmdRegisterUserTask");
-        if (!clientsId.Contains(ni))
+        if (!clients.ContainsKey(ni))
         {
-            clientsId.Add(ni);
-            clientWithSender.Add(ni, null);
-            Debug.Log($"CmdRegisterUserTask : {clientsId.Count}");
+            clients.Add(ni, new Client { num = clients.Count, clientName = "", sender = null });
+            //clientsId.Add(ni);
+            //clientWithSender.Add(ni, null);
+            Debug.Log($"CmdRegisterUserTask : {clients.Count}");
 
             //2024.6.3 임시 추가
 
-            var texture = sprites[clientsId.Count - 1];
+            //var texture = sprites[clientsId.Count - 1];
+            var texture = sprites[clients.Count - 1];
 
             // 원본 텍스처의 픽셀 데이터를 복사
             Color[] pixels = texture.GetPixels();
@@ -57,46 +70,82 @@ public class StageManager : NetworkBehaviour
 
     public void CmdUnregisterClients(NetworkIdentity ni)
     {
-        if (clientsId.Contains(ni))
+        //if (clientsId.Contains(ni))
+        //{
+        //    clientsId.Remove(ni);
+        //    clientWithSender.Remove(ni);
+        //}
+        if (clients.ContainsKey(ni))
         {
-            clientsId.Remove(ni);
-            clientWithSender.Remove(ni);
+            clients.Remove(ni);
         }
     }
 
     public void CmdCheckAllUsersDone()
     {
+        //if (isServer)
+        //{
+        //    if (clientsId != null && clientsId.All(ut => ut.GetComponent<UserTask>().isDone))
+        //    {
+        //        Debug.Log($"All users are done! {clientsId.Count}");
+        //        foreach (var ni in clientsId)
+        //        {
+        //            if (ni == null)
+        //            {
+        //                Debug.Log("user task identity null");
+        //                continue;
+        //            }
+
+        //            RpcNotifyAllUsersDone(ni);
+        //        }
+        //    }
+        //    Debug.Log($"is Server : not all users{clientsId.Count}");
+        //}
+        //else
+        //{
+        //    Debug.Log($"is Not Server : {clientsId.Count}");
+        //}
+
         if (isServer)
         {
-            if (clientsId != null && clientsId.All(ut => ut.GetComponent<UserTask>().isDone))
-            {
-                Debug.Log($"All users are done! {clientsId.Count}");
-                foreach (var ni in clientsId)
-                {
-                    if (ni == null)
-                    {
-                        Debug.Log("user task identity null");
-                        continue;
-                    }
 
-                    RpcNotifyAllUsersDone(ni);
+            // check all users done
+            foreach (var cl in clients)
+            {
+                if (cl.Key.GetComponent<UserTask>().isDone)
+                {
+                    continue;
+                }
+                else
+                {
+                    return;
                 }
             }
-            Debug.Log($"is Server : not all users{clientsId.Count}");
-        }
-        else
-        {
-            Debug.Log($"is Not Server : {clientsId.Count}");
+
+            // set next stage
+            foreach (var cl in clients)
+            {
+                RpcNotifyAllUsersDone(cl.Key);
+            }
         }
     }
 
     public void CmdSetClientName(NetworkIdentity id)
     {
-        for (int i = 0; i < clientsId.Count; ++i)
+        //for (int i = 0; i < clientsId.Count; ++i)
+        //{
+        //    if (id == clientsId[i])
+        //    {
+        //        RpcSetUserName(id, i);
+        //        break;
+        //    }
+        //}
+
+        foreach(var cl in clients)
         {
-            if (id == clientsId[i])
+            if(cl.Key == id)
             {
-                RpcSetUserName(id, i);
+                RpcSetUserName(id, cl.Value.num);
                 break;
             }
         }
@@ -109,15 +158,37 @@ public class StageManager : NetworkBehaviour
 
     public void CmdChangeSender(NetworkIdentity targetPlayer, NetworkIdentity reciever)
     {
-        if (!clientWithSender.ContainsKey(reciever))
+        //if (!clientWithSender.ContainsKey(reciever))
+        //{
+        //    Debug.Log($"등록되지 않은 클라이언트 {reciever}");
+        //    return;
+        //}
+
+        //Debug.Log($"타겟 바뀜 : {clientWithSender[reciever]} -> {targetPlayer}");
+
+        //var prevTarget = clientWithSender[reciever];
+        //if (prevTarget != targetPlayer && prevTarget != null)
+        //{
+        //    TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
+
+        //}
+        //if(targetPlayer != reciever)
+        //{
+        //    clientWithSender[reciever] = targetPlayer;
+        //}
+        //else
+        //{
+        //    clientWithSender[reciever] = null;
+        //}
+        if (!clients.ContainsKey(reciever))
         {
             Debug.Log($"등록되지 않은 클라이언트 {reciever}");
             return;
         }
 
-        Debug.Log($"타겟 바뀜 : {clientWithSender[reciever]} -> {targetPlayer}");
+        Debug.Log($"타겟 바뀜 : {clients[reciever].sender} -> {targetPlayer}");
 
-        var prevTarget = clientWithSender[reciever];
+        var prevTarget = clients[reciever].sender;
         if (prevTarget != targetPlayer && prevTarget != null)
         {
             TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
@@ -125,11 +196,11 @@ public class StageManager : NetworkBehaviour
         }
         if(targetPlayer != reciever)
         {
-            clientWithSender[reciever] = targetPlayer;
+            clients[reciever].sender = targetPlayer;
         }
         else
         {
-            clientWithSender[reciever] = null;
+            clients[reciever].sender = null;
         }
     }
 
