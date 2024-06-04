@@ -112,12 +112,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: UserImage
     methodName: SendOn
+  - assembly: Mirror
+    fullTypeName: Mirror.NetworkManager
+    methodName: StartHost
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ExitApplication
   - assembly: Assembly-CSharp
     fullTypeName: UIManager
     methodName: ExitApplication
+  - assembly: Mirror
+    fullTypeName: Mirror.NetworkManager
+    methodName: StartClient
   sceneClasses:
     Assets/Scenes/PDR.unity:
     - Class: 1
@@ -1603,7 +1609,7 @@ ScriptsOnlyBuild:
     className: PlayerController
   - hash:
       serializedVersion: 2
-      Hash: 6eea31f1c9e82c0ba24e4ed862206aeb
+      Hash: 0a9290c6e313951f5bf20cbf6c086c0e
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: StageManager

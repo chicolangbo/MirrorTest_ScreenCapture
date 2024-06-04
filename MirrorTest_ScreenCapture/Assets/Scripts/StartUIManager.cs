@@ -23,6 +23,23 @@ public class StartUIManager : MonoBehaviour
         }
     }
 
+    private void Update()
+    {
+        if (NetworkClient.isConnected && !NetworkClient.ready)
+        {
+            // client ready
+            NetworkClient.Ready();
+            //if (NetworkClient.localPlayer == null)
+            //    NetworkClient.AddPlayer();
+        }
+
+        if(IpAddress.text.Length >= 14)
+        {
+            manager.networkAddress = IpAddress.text.Trim();
+            startClientBtn.interactable = true;
+        }
+    }
+
     public void StartButtons()
     {
         if (!NetworkClient.active)
