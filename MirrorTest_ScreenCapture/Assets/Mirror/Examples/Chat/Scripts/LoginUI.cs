@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using TMPro;
+using UnityEngine;
 using UnityEngine.UI;
 
 namespace Mirror.Examples.Chat
@@ -6,11 +7,11 @@ namespace Mirror.Examples.Chat
     public class LoginUI : MonoBehaviour
     {
         [Header("UI Elements")]
-        [SerializeField] internal InputField networkAddressInput;
-        [SerializeField] internal InputField usernameInput;
+        [SerializeField] internal TMP_InputField networkAddressInput;
+        [SerializeField] internal TMP_InputField usernameInput;
         [SerializeField] internal Button hostButton;
         [SerializeField] internal Button clientButton;
-        [SerializeField] internal Text errorText;
+        [SerializeField] internal TextMeshProUGUI errorText;
 
         public static LoginUI instance;
 

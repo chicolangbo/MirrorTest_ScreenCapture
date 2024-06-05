@@ -24,6 +24,11 @@ public class NewNetworkManager : NetworkManager
     {
         base.Awake();
     }
+    
+    public void SetHostName(string hostname)
+    {
+        networkAddress = hostname;
+    }
 
     #region Unity Callbacks
 
@@ -152,15 +157,9 @@ public class NewNetworkManager : NetworkManager
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
         Debug.Log("NewNetworkManager : OnServerAddPlayer");
-        //base.OnServerAddPlayer(conn);
-
         // 이미 플레이어가 추가된 경우 무시
         if (conn.identity != null) return;
-
-        // 기본 플레이어 프리팹 생성 및 추가
         base.OnServerAddPlayer(conn);
-        //GameObject player = Instantiate(playerPrefab);
-        //NetworkServer.AddPlayerForConnection(conn, player);
     }
 
     /// <summary>
@@ -237,7 +236,9 @@ public class NewNetworkManager : NetworkManager
     /// <summary>
     /// This is invoked when the client is started.
     /// </summary>
-    public override void OnStartClient() { }
+    public override void OnStartClient()
+    {
+    }
 
     /// <summary>
     /// This is called when a host is stopped.

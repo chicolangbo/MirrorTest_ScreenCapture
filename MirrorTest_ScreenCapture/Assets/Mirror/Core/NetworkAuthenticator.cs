@@ -49,6 +49,7 @@ namespace Mirror
 
         protected void ClientAccept()
         {
+            Debug.Log("ClientAccept");
             OnClientAuthenticated.Invoke();
         }
 

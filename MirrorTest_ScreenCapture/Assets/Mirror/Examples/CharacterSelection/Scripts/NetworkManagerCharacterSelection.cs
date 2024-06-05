@@ -46,6 +46,7 @@ namespace Mirror.Examples.CharacterSelection
 
         public override void OnClientConnect()
         {
+            Debug.Log("NetworkManagerCharacterSelection.OnClientConnect");
             base.OnClientConnect();
 
             if (SpawnAsCharacter)

@@ -112,7 +112,7 @@ public class StageManager : NetworkBehaviour
             // check all users done
             foreach (var cl in clients)
             {
-                if (cl.Key.GetComponent<UserTask>().isDone)
+                if (cl.Key.GetComponent<UserState>().isDone)
                 {
                     continue;
                 }
@@ -209,7 +209,7 @@ public class StageManager : NetworkBehaviour
     {
         UIManager.Instance.WaitPanelActive(false);
 
-        var ut = ni.GetComponent<UserTask>();
+        var ut = ni.GetComponent<UserState>();
         if (ut == null)
         {
             Debug.Log("user task null");
@@ -224,7 +224,7 @@ public class StageManager : NetworkBehaviour
     {
         Debug.Log("RpcSetUserName");
 
-        var ut = ni.GetComponent<UserTask>();
+        var ut = ni.GetComponent<UserState>();
         if(ut == null)
         {
             Debug.Log("user task null");

@@ -30,15 +30,19 @@ namespace Mirror
                 StartButtons();
             else
                 StatusLabels();
-
+            //Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
             if (NetworkClient.isConnected && !NetworkClient.ready)
             {
                 if (GUILayout.Button("Client Ready"))
                 {
+                    Debug.Log("ready");
                     // client ready
                     NetworkClient.Ready();
                     if (NetworkClient.localPlayer == null)
+                    {
                         NetworkClient.AddPlayer();
+                        Debug.Log("AddPlayer");
+                    }
                 }
             }
 
@@ -68,7 +72,10 @@ namespace Mirror
                 GUILayout.BeginHorizontal();
 
                 if (GUILayout.Button("Client"))
+                {
                     manager.StartClient();
+                    Debug.Log($"클라이언트버튼 : NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
+                }
 
                 manager.networkAddress = GUILayout.TextField(manager.networkAddress);
                 // only show a port field if we have a port transport
@@ -78,6 +85,7 @@ namespace Mirror
                 // 2001:0db8:0000:0000:0000:ff00:0042:8329
                 if (Transport.active is PortTransport portTransport)
                 {
+                    Debug.Log($"포트 : NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
                     // use TryParse in case someone tries to enter non-numeric characters
                     if (ushort.TryParse(GUILayout.TextField(portTransport.Port.ToString()), out ushort port))
                         portTransport.Port = port;

@@ -59,6 +59,7 @@ namespace Mirror.Examples.MultipleMatch
         /// </summary>
         public override void OnClientConnect()
         {
+            Debug.Log("MatchNetworkManager.OnClientConnect");
             base.OnClientConnect();
             canvasController.OnClientConnect();
         }

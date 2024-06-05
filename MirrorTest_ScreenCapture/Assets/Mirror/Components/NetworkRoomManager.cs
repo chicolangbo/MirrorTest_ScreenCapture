@@ -446,6 +446,7 @@ namespace Mirror
         /// </summary>
         public override void OnClientConnect()
         {
+            Debug.Log("OnRoomClientConnect");
             OnRoomClientConnect();
             base.OnClientConnect();
         }

@@ -420,6 +420,8 @@ namespace Mirror
         /// <summary>Starts the client, connects it to the server with networkAddress.</summary>
         public void StartClient()
         {
+            Debug.Log("StartClient");
+
             // Do checks and short circuits before setting anything up.
             // If / when we retry, we won't have conflict issues.
             if (NetworkClient.active)
@@ -475,6 +477,8 @@ namespace Mirror
         /// <summary>Starts a network "host" - a server and client in the same application.</summary>
         public void StartHost()
         {
+            Debug.Log("StartHost");
+
             if (NetworkServer.active || NetworkClient.active)
             {
                 Debug.LogWarning("Server or Client already started.");
@@ -782,6 +786,7 @@ namespace Mirror
 
         void RegisterClientMessages()
         {
+            Debug.Log("RegisterClientMessages");
             NetworkClient.OnConnectedEvent = OnClientConnectInternal;
             NetworkClient.OnDisconnectedEvent = OnClientDisconnectInternal;
             NetworkClient.OnErrorEvent = OnClientError;
@@ -1243,6 +1248,7 @@ namespace Mirror
         {
             //Debug.Log("NetworkManager.OnClientConnectInternal");
 
+            Debug.Log("OnClientConnectInternal");
             if (authenticator != null)
             {
                 // we have an authenticator - let it handle authentication
@@ -1276,6 +1282,7 @@ namespace Mirror
             }
 
             // Call virtual method regardless of whether a scene change is expected or not.
+            Debug.Log("OnClientAuthenticated");
             OnClientConnect();
         }
 
@@ -1413,6 +1420,8 @@ namespace Mirror
         /// <summary>Called on the client when connected to a server. By default it sets client as ready and adds a player.</summary>
         public virtual void OnClientConnect()
         {
+            Debug.Log("OnClientConnect");
+            Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
             // OnClientConnect by default calls AddPlayer but it should not do
             // that when we have online/offline scenes. so we need the
             // clientLoadedScene flag to prevent it.
@@ -1424,7 +1433,11 @@ namespace Mirror
                     NetworkClient.Ready();
 
                 if (autoCreatePlayer)
+                {
                     NetworkClient.AddPlayer();
+                    Debug.Log("OnClientConnect -> AddPlayer");
+                    Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
+                }
             }
         }
 
@@ -1465,6 +1478,7 @@ namespace Mirror
         // add a player object for the connection if no player object exists.
         public virtual void OnClientSceneChanged()
         {
+            Debug.Log("OnClientSceneChanged");
             // always become ready.
             if (NetworkClient.connection.isAuthenticated && !NetworkClient.ready) NetworkClient.Ready();
 

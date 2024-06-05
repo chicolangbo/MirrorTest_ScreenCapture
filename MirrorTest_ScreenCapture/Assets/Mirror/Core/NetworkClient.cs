@@ -150,6 +150,8 @@ namespace Mirror
             Transport.active.OnClientDataReceived += OnTransportData;
             Transport.active.OnClientDisconnected += OnTransportDisconnected;
             Transport.active.OnClientError += OnTransportError;
+
+            Debug.Log($"AddTransportHandlers : {Transport.active.OnClientConnected}");
         }
 
         static void RemoveTransportHandlers()
@@ -194,12 +196,14 @@ namespace Mirror
         /// <summary>Connect client to a NetworkServer by address.</summary>
         public static void Connect(string address)
         {
+            
             Initialize(false);
 
             AddTransportHandlers();
             connectState = ConnectState.Connecting;
             Transport.active.ClientConnect(address);
             connection = new NetworkConnectionToServer();
+            Debug.Log("Connect");
         }
 
         /// <summary>Connect client to a NetworkServer by Uri.</summary>
@@ -263,6 +267,7 @@ namespace Mirror
                 connectState = ConnectState.Connected;
                 // ping right away after connecting so client gets new time asap
                 NetworkTime.SendPing();
+                Debug.Log($"NetworkClient : {OnConnectedEvent}");
                 OnConnectedEvent?.Invoke();
             }
             else Debug.LogError("Skipped Connect message handling because connection is null.");
@@ -1760,7 +1765,7 @@ namespace Mirror
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         public static void Shutdown()
         {
-            //Debug.Log("Shutting down client.");
+            Debug.Log("Shutting down client.");
 
             // objects need to be destroyed before spawners are cleared
             // fixes: https://github.com/MirrorNetworking/Mirror/issues/3334
