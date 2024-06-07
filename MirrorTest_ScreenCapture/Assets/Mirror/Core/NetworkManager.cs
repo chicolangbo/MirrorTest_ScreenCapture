@@ -313,7 +313,7 @@ namespace Mirror
         // full server setup code, without spawning objects yet
         void SetupServer()
         {
-            // Debug.Log("NetworkManager SetupServer");
+            Debug.Log("NetworkManager SetupServer");
             InitializeSingleton();
 
             // apply settings before initializing anything
@@ -326,6 +326,7 @@ namespace Mirror
 
             if (authenticator != null)
             {
+                Debug.Log("NeworkManager : SetupServer : authenticator");
                 authenticator.OnStartServer();
                 authenticator.OnServerAuthenticated.AddListener(OnServerAuthenticated);
             }
@@ -786,7 +787,7 @@ namespace Mirror
 
         void RegisterClientMessages()
         {
-            Debug.Log("RegisterClientMessages");
+            //Debug.Log("RegisterClientMessages");
             NetworkClient.OnConnectedEvent = OnClientConnectInternal;
             NetworkClient.OnDisconnectedEvent = OnClientDisconnectInternal;
             NetworkClient.OnErrorEvent = OnClientError;
@@ -1221,7 +1222,7 @@ namespace Mirror
 
         void OnServerAddPlayerInternal(NetworkConnectionToClient conn, AddPlayerMessage msg)
         {
-            Debug.Log("NetworkManager.OnServerAddPlayer");
+            //Debug.Log("NetworkManager.OnServerAddPlayer");
 
             if (autoCreatePlayer && playerPrefab == null)
             {
@@ -1248,7 +1249,7 @@ namespace Mirror
         {
             //Debug.Log("NetworkManager.OnClientConnectInternal");
 
-            Debug.Log("OnClientConnectInternal");
+            //Debug.Log("OnClientConnectInternal");
             if (authenticator != null)
             {
                 // we have an authenticator - let it handle authentication
@@ -1282,7 +1283,7 @@ namespace Mirror
             }
 
             // Call virtual method regardless of whether a scene change is expected or not.
-            Debug.Log("OnClientAuthenticated");
+            //Debug.Log("OnClientAuthenticated");
             OnClientConnect();
         }
 
@@ -1395,7 +1396,7 @@ namespace Mirror
         // The default implementation for this function creates a new player object from the playerPrefab.
         public virtual void OnServerAddPlayer(NetworkConnectionToClient conn)
         {
-            Debug.Log("NetworkManager : OnServerAddPlayer");
+            //Debug.Log("NetworkManager : OnServerAddPlayer");
             Transform startPos = GetStartPosition();
             GameObject player = startPos != null
                 ? Instantiate(playerPrefab, startPos.position, startPos.rotation)
@@ -1420,8 +1421,8 @@ namespace Mirror
         /// <summary>Called on the client when connected to a server. By default it sets client as ready and adds a player.</summary>
         public virtual void OnClientConnect()
         {
-            Debug.Log("OnClientConnect");
-            Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
+            //Debug.Log("OnClientConnect");
+            //Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
             // OnClientConnect by default calls AddPlayer but it should not do
             // that when we have online/offline scenes. so we need the
             // clientLoadedScene flag to prevent it.
@@ -1435,8 +1436,8 @@ namespace Mirror
                 if (autoCreatePlayer)
                 {
                     NetworkClient.AddPlayer();
-                    Debug.Log("OnClientConnect -> AddPlayer");
-                    Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
+                    //Debug.Log("OnClientConnect -> AddPlayer");
+                    //Debug.Log($"NeworkClient is connected : {NetworkClient.isConnected} /  NeworkClient is ready : {NetworkClient.ready}");
                 }
             }
         }

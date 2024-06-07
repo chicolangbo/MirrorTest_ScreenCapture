@@ -46,7 +46,7 @@ namespace Mirror
             // should we still process a connected event?
             if (connectedEventPending)
             {
-                Debug.Log($"LocalConnectionToServer : {NetworkClient.OnConnectedEvent}");
+                //Debug.Log($"LocalConnectionToServer : {NetworkClient.OnConnectedEvent}");
                 connectedEventPending = false;
                 NetworkClient.OnConnectedEvent?.Invoke();
             }

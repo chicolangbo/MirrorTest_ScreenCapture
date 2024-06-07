@@ -9,6 +9,9 @@ public class Client
     public int num;
     public NetworkIdentity sender;
     public string clientName;
+
+    public int stageNum;
+    public bool isDone;
 }
 
 public class StageManager : NetworkBehaviour
@@ -44,14 +47,11 @@ public class StageManager : NetworkBehaviour
         Debug.Log("StageManager : CmdRegisterUserTask");
         if (!clients.ContainsKey(ni))
         {
-            clients.Add(ni, new Client { num = clients.Count, clientName = "", sender = null });
-            //clientsId.Add(ni);
-            //clientWithSender.Add(ni, null);
+            clients.Add(ni, new Client { num = clients.Count, clientName = ni.GetComponent<UserState>().clientNameCash, sender = null });
             Debug.Log($"CmdRegisterUserTask : {clients.Count}");
 
             //2024.6.3 임시 추가
 
-            //var texture = sprites[clientsId.Count - 1];
             var texture = sprites[clients.Count - 1];
 
             // 원본 텍스처의 픽셀 데이터를 복사
@@ -70,11 +70,6 @@ public class StageManager : NetworkBehaviour
 
     public void CmdUnregisterClients(NetworkIdentity ni)
     {
-        //if (clientsId.Contains(ni))
-        //{
-        //    clientsId.Remove(ni);
-        //    clientWithSender.Remove(ni);
-        //}
         if (clients.ContainsKey(ni))
         {
             clients.Remove(ni);
@@ -83,29 +78,6 @@ public class StageManager : NetworkBehaviour
 
     public void CmdCheckAllUsersDone()
     {
-        //if (isServer)
-        //{
-        //    if (clientsId != null && clientsId.All(ut => ut.GetComponent<UserTask>().isDone))
-        //    {
-        //        Debug.Log($"All users are done! {clientsId.Count}");
-        //        foreach (var ni in clientsId)
-        //        {
-        //            if (ni == null)
-        //            {
-        //                Debug.Log("user task identity null");
-        //                continue;
-        //            }
-
-        //            RpcNotifyAllUsersDone(ni);
-        //        }
-        //    }
-        //    Debug.Log($"is Server : not all users{clientsId.Count}");
-        //}
-        //else
-        //{
-        //    Debug.Log($"is Not Server : {clientsId.Count}");
-        //}
-
         if (isServer)
         {
 
@@ -132,20 +104,11 @@ public class StageManager : NetworkBehaviour
 
     public void CmdSetClientName(NetworkIdentity id)
     {
-        //for (int i = 0; i < clientsId.Count; ++i)
-        //{
-        //    if (id == clientsId[i])
-        //    {
-        //        RpcSetUserName(id, i);
-        //        break;
-        //    }
-        //}
-
         foreach(var cl in clients)
         {
             if(cl.Key == id)
             {
-                RpcSetUserName(id, cl.Value.num);
+                RpcSetUserName(id, cl.Value.clientName);
                 break;
             }
         }
@@ -158,28 +121,6 @@ public class StageManager : NetworkBehaviour
 
     public void CmdChangeSender(NetworkIdentity targetPlayer, NetworkIdentity reciever)
     {
-        //if (!clientWithSender.ContainsKey(reciever))
-        //{
-        //    Debug.Log($"등록되지 않은 클라이언트 {reciever}");
-        //    return;
-        //}
-
-        //Debug.Log($"타겟 바뀜 : {clientWithSender[reciever]} -> {targetPlayer}");
-
-        //var prevTarget = clientWithSender[reciever];
-        //if (prevTarget != targetPlayer && prevTarget != null)
-        //{
-        //    TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
-
-        //}
-        //if(targetPlayer != reciever)
-        //{
-        //    clientWithSender[reciever] = targetPlayer;
-        //}
-        //else
-        //{
-        //    clientWithSender[reciever] = null;
-        //}
         if (!clients.ContainsKey(reciever))
         {
             Debug.Log($"등록되지 않은 클라이언트 {reciever}");
@@ -220,20 +161,25 @@ public class StageManager : NetworkBehaviour
     }
 
     [ClientRpc]
-    private void RpcSetUserName(NetworkIdentity ni, int i)
+    private void RpcSetUserName(NetworkIdentity ni, string name)
     {
         Debug.Log("RpcSetUserName");
 
         var ut = ni.GetComponent<UserState>();
-        if(ut == null)
+        if (ut == null)
         {
             Debug.Log("user task null");
             return;
         }
 
-        if(ut.clientName.text == "Name")
+        //if(ut.clientName.text == "Name")
+        //{
+        //    ut.clientName.text = $"user {i}";
+        //}
+
+        if (ut.clientName.text == "Name")
         {
-            ut.clientName.text = $"user {i}";
+            ut.clientName.text = ut.clientNameCash;
         }
     }
 

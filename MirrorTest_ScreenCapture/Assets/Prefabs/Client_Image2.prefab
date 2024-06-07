@@ -112,7 +112,7 @@ GameObject:
   - component: {fileID: 1537309149549213858}
   - component: {fileID: 7872062138194104611}
   - component: {fileID: 6187383663106156653}
-  - component: {fileID: 1111904666628971725}
+  - component: {fileID: 2422240933609133208}
   m_Layer: 5
   m_Name: Client_Image2
   m_TagString: Untagged
@@ -280,8 +280,8 @@ MonoBehaviour:
   syncInterval: 0
   id: {fileID: 2801884674770877521}
   screenTexture: {fileID: 0}
-  defaultTexture: 
---- !u!114 &1111904666628971725
+  defaultTexture: {fileID: 0}
+--- !u!114 &2422240933609133208
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605624482868289197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17688bceea66280489a270f8201608d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b16565d37034e4dbc2053221334d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncDirection: 0
@@ -298,6 +298,7 @@ MonoBehaviour:
   syncInterval: 0
   isDone: 0
   stageNum: 1
+  clientNameCash: 
   clientName: {fileID: 5250421026822269871}
   stage: {fileID: 973940629996795389}
   workState: {fileID: 8318847716157753985}

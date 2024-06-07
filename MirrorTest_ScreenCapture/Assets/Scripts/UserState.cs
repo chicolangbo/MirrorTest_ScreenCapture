@@ -15,7 +15,9 @@ public class UserState : NetworkBehaviour
     private static string done = "Done";
     private static string myColor = "#FFEE4C";
 
+    [SyncVar]
     public string clientNameCash;
+
     public TextMeshProUGUI clientName;
     public TextMeshProUGUI stage;
     public TextMeshProUGUI workState;
@@ -42,6 +44,12 @@ public class UserState : NetworkBehaviour
         {
             CmdUnregisterUserTaskOnServer();
         }
+    }
+
+    public override void OnStartServer()
+    {
+        clientNameCash = (string)connectionToClient.authenticationData;
+        Debug.Log($"UserState : OnStartServer : {clientNameCash}");
     }
 
     private void Start()

@@ -45,6 +45,7 @@ public class NewAuthenticater : NetworkAuthenticator
     public override void OnStartServer()
     {
         // register a handler for the authentication request we expect from client
+        Debug.Log("NewAuthenticatoer : OnStartServer");
         NetworkServer.RegisterHandler<AuthRequestMessage>(OnAuthRequestMessage, false);
     }
 
@@ -88,6 +89,7 @@ public class NewAuthenticater : NetworkAuthenticator
             // This will be read in Player.OnStartServer
             // to set the playerName SyncVar.
             conn.authenticationData = msg.authUsername;
+            Debug.Log($"NewAuthenticator : OnAuthRequestMessage : {conn.authenticationData}");
 
             // create and send msg to client so it knows to proceed
             AuthResponseMessage authResponseMessage = new AuthResponseMessage

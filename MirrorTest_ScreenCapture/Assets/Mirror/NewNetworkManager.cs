@@ -156,9 +156,8 @@ public class NewNetworkManager : NetworkManager
     /// <param name="conn">Connection from client.</param>
     public override void OnServerAddPlayer(NetworkConnectionToClient conn)
     {
-        Debug.Log("NewNetworkManager : OnServerAddPlayer");
+        //Debug.Log("NewNetworkManager : OnServerAddPlayer");
         // 이미 플레이어가 추가된 경우 무시
-        if (conn.identity != null) return;
         base.OnServerAddPlayer(conn);
     }
 
