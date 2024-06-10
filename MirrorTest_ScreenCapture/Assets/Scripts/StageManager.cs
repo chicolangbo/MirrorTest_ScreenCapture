@@ -50,22 +50,15 @@ public class StageManager : NetworkBehaviour
             clients.Add(ni, new Client { num = clients.Count, clientName = ni.GetComponent<UserState>().clientNameCash, sender = null });
             Debug.Log($"CmdRegisterUserTask : {clients.Count}");
 
-            //2024.6.3 임시 추가
-
-            var texture = sprites[clients.Count - 1];
-
-            // 원본 텍스처의 픽셀 데이터를 복사
-            Color[] pixels = texture.GetPixels();
-
-            // 새로운 압축되지 않은 텍스처를 생성
-            Texture2D nonReadableTexture = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
-            nonReadableTexture.SetPixels(pixels);
-            nonReadableTexture.Apply();
-
-            var bytes = nonReadableTexture.EncodeToPNG();
-            CmdSetClientDefaultImage(ni, bytes);
+            // for image sending
+            //var texture = sprites[clients.Count - 1];
+            //Color[] pixels = texture.GetPixels();
+            //Texture2D nonReadableTexture = new Texture2D(texture.width, texture.height, TextureFormat.RGBA32, false);
+            //nonReadableTexture.SetPixels(pixels);
+            //nonReadableTexture.Apply();
+            //var bytes = nonReadableTexture.EncodeToPNG();
+            //CmdSetClientDefaultImage(ni, bytes);
         }
-
     }
 
     public void CmdUnregisterClients(NetworkIdentity ni)
@@ -171,11 +164,6 @@ public class StageManager : NetworkBehaviour
             Debug.Log("user task null");
             return;
         }
-
-        //if(ut.clientName.text == "Name")
-        //{
-        //    ut.clientName.text = $"user {i}";
-        //}
 
         if (ut.clientName.text == "Name")
         {

@@ -118,7 +118,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1605624482868289197}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 17688bceea66280489a270f8201608d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 76b16565d37034e4dbc2053221334d41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   syncDirection: 0
@@ -126,6 +126,7 @@ MonoBehaviour:
   syncInterval: 0
   isDone: 0
   stageNum: 1
+  clientNameCash: 
   clientName: {fileID: 4630526510290375974}
   stage: {fileID: 8036071476452698153}
   workState: {fileID: 4558388422481125653}
