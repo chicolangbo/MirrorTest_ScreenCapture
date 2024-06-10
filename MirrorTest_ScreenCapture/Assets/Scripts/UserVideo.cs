@@ -13,6 +13,8 @@ public class UserVideo : NetworkBehaviour
     private MainScreenSetter mainScreenSetter;  
     public NetworkIdentity id;
 
+    private NetworkIdentity prevTarget;
+
     //public Sprite defaultSprite;
 
     private void OnEnable()
@@ -40,15 +42,9 @@ public class UserVideo : NetworkBehaviour
         id = GetComponent<NetworkIdentity>();
     }
 
-    private void Update()
-    {
-        //screenTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
-        //screenTexture.Apply();
-    }
-
     public void SendOn(NetworkIdentity targetPlayer)
     {
-        if (isLocalPlayer/*targetPlayer == connectionToClient.identity*/)
+        if (isLocalPlayer)
         {
             // 자기 자신을 클릭한 경우
             // texture null로 바꿔버리기
@@ -59,8 +55,14 @@ public class UserVideo : NetworkBehaviour
         {
             //CmdSendStopOthers();
             CmdChangeSender(targetPlayer, connectionToClient);
-            CmdSendCapture(targetPlayer, connectionToClient);
+
+            if(!prevTarget == targetPlayer)
+            {
+                Debug.Log("SendOn");
+                CmdRequestScreen(targetPlayer, connectionToClient);
+            }
         }
+        prevTarget = targetPlayer;
     }
 
     [Command(requiresAuthority = false)]
@@ -81,19 +83,19 @@ public class UserVideo : NetworkBehaviour
     }
 
     [Command(requiresAuthority = false)]
-    public void CmdSendCapture(NetworkIdentity targetPlayer, NetworkConnectionToClient reciever = null)
+    public void CmdRequestScreen(NetworkIdentity target, NetworkConnectionToClient recieverConnection = null)
     {
-        Debug.Log($"CmdSendCapture 캡처대상 {targetPlayer} / 호출한 애 {reciever}");
-        var userVideo = targetPlayer.GetComponent<UserVideo>();
-        //userVideo.RegisterChanel(reciever.identity);
-        userVideo.TargetStartCapture(connectionToClient, reciever.identity);
+        Debug.Log("CmdRequestScreen : " + recieverConnection.identity);
+        var userVideo = target.GetComponent<UserVideo>();
+        userVideo.TargetStartCapture(target.connectionToClient, recieverConnection.identity);
     }
 
-    public void RegisterChanel(NetworkIdentity ni)
+    public void RegisterChanel(NetworkIdentity recieverConnection)
     {
-        if (!chanel.ContainsKey(ni))
+        Debug.Log("RegisterChanel, networkconnection : " + recieverConnection);
+        if (!chanel.ContainsKey(recieverConnection))
         {
-            chanel.Add(ni, true);
+            chanel.Add(recieverConnection, true);
         }
     }
 
@@ -102,24 +104,24 @@ public class UserVideo : NetworkBehaviour
     {
         if (isLocalPlayer)
         {
-            Debug.Log("TargetStartCapture : is LocalPlayer");
-            StartCoroutine(SendCapture(reciever));
+            Debug.Log("TargetStartCapture, sender : " + senderConnection);
+            Debug.Log("TargetStartCapture, reciever : " + reciever);
+            StartCoroutine(CaptureAndSend(reciever));
         }
     }
 
-    public IEnumerator SendCapture(NetworkIdentity targetid)
+    public IEnumerator CaptureAndSend(NetworkIdentity targetID)
     {
-        Debug.Log("SendCapture");
+        RegisterChanel(targetID);
+        chanel[targetID] = true;
+        var target = targetID.GetComponent<UserVideo>();
 
-        RegisterChanel(targetid);
-        chanel[targetid] = true;
-
-        while (true/*streamingState == StreamingState.Sending*/)
+        while (true)
         {
-            if (!chanel[targetid])
+            if (!chanel[targetID])
             {
                 Debug.Log("전송 중단");
-                CmdTargetUpdateScreen(targetid, null);
+                target.CmdTargetUpdateScreen(targetID, null);
                 break;
             }
 
@@ -128,33 +130,28 @@ public class UserVideo : NetworkBehaviour
             // 화면 캡처하여 Texture2D로 저장
             screenTexture.ReadPixels(new Rect(0, 0, Screen.width, Screen.height), 0, 0);
             screenTexture.Apply();
-
-            CmdTargetUpdateScreen(targetid, screenTexture.EncodeToJPG());
-
-            Debug.Log("Screen captured and texture updated.");
+            target.CmdTargetUpdateScreen(targetID, screenTexture.EncodeToJPG(50));
         }
     }
 
-    [Command]
-    private void CmdTargetUpdateScreen(NetworkIdentity reciever, byte[] screenData)
+    [Command(requiresAuthority = false)]
+    private void CmdTargetUpdateScreen(NetworkIdentity targetID, byte[] screenData)
     {
-        TargetUpdateScreen(reciever.connectionToClient, screenData);
+        TargetUpdateScreen(targetID, screenData);
     }
 
-    //private void UpdateScreenDefault()
-    //{
-    //    Debug.Log("UpdateScreenDefault");
-    //    screenTexture = defaultTexture;
-    //    mainScreenSetter.SetMainScreen(screenTexture);
-    //}
-
-
     [TargetRpc] // 특정 클라이언트에게 화면 데이터 전송
-    private void TargetUpdateScreen(NetworkConnection targetConnection, byte[] screenData)
+    private void TargetUpdateScreen(NetworkIdentity targetID, byte[] screenData)
     {
         Debug.Log("TargetUpdateScreen");
 
-        if(screenData != null)
+        var targetUserVideo = targetID.GetComponent<UserVideo>();
+        targetUserVideo.UpdateScreenData(screenData);
+    }
+
+    public void UpdateScreenData(byte[] screenData)
+    {
+        if (screenData != null)
         {
             screenTexture.LoadImage(screenData);
             mainScreenSetter.SetMainScreen(screenTexture);

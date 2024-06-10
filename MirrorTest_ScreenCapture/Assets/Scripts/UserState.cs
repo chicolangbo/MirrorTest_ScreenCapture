@@ -60,8 +60,9 @@ public class UserState : NetworkBehaviour
 
         if(isClient && isLocalPlayer)
         {
-            clientName.text = "You";
+            //clientName.text = "You";
             CmdRegisterUserTaskOnServer();
+            CmdSetClientName(id);
         }
         else if(isServer)
         {

@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/VideoScene.unity
     guid: 49706beecaa1cb141b07fbddf6724124
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PDR.unity
     guid: c3b58999f1fbe62428bb0bbbf55f3741
+  - enabled: 1
+    path: Assets/Scenes/VideoScene_2.unity
+    guid: 7e69e15db7d97f6458c2db3887d8521b
   m_configObjects: {}

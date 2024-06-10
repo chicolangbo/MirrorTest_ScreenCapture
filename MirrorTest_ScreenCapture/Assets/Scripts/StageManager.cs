@@ -33,13 +33,7 @@ public class StageManager : NetworkBehaviour
         }
     }
 
-    public class SyncListNetworkIdentity : SyncList<NetworkIdentity> { }
-    public class SyncDictionaryIdentity : SyncDictionary<NetworkIdentity, NetworkIdentity> { }
-
     public class SyncListClient : SyncDictionary<NetworkIdentity, Client> { }
-
-    //public readonly SyncListNetworkIdentity clientsId = new SyncListNetworkIdentity();
-    //public readonly SyncDictionaryIdentity clientWithSender = new SyncDictionaryIdentity();
     public readonly SyncListClient clients = new SyncListClient();
 
     public void CmdRegisterClients(NetworkIdentity ni)
@@ -123,7 +117,8 @@ public class StageManager : NetworkBehaviour
         Debug.Log($"Å¸°Ù ¹Ù²ñ : {clients[reciever].sender} -> {targetPlayer}");
 
         var prevTarget = clients[reciever].sender;
-        if (prevTarget != targetPlayer && prevTarget != null)
+        var isTargetChanged = (prevTarget != targetPlayer && prevTarget != null);
+        if (isTargetChanged)
         {
             TargetRpcSendStopVideo(prevTarget.connectionToClient, prevTarget, reciever);
 
