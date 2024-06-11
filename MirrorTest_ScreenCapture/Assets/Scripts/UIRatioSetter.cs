@@ -60,6 +60,7 @@ public class UIRatioSetter : MonoBehaviour
     
     public void SetUISize_Depth1()
     {
+        Debug.Log("SetUISize_Depth1");
         float tempHeight = 0f;
 
         for(var i = 0; i < uiPanelWithVerticalRatio.Count; ++i)
@@ -86,6 +87,8 @@ public class UIRatioSetter : MonoBehaviour
 
     public void SetUISize_Depth2()
     {
+        Debug.Log("SetUISize_Depth2");
+
         for (var i = 0; i < uiPanelWithHorizontalRatio.Count; ++i)
         {
             // size setting
@@ -99,6 +102,7 @@ public class UIRatioSetter : MonoBehaviour
 
     public void SetClientProfileSize()
     {
+        Debug.Log("SetClientProfileSize");
         var height = uiPanelWithVerticalRatio[2].rectTr.sizeDelta.y - 20;
         ClientProfileSize = Utils.GetImageSizeByRatio(height, clientRatio.x, clientRatio.y);
     }
